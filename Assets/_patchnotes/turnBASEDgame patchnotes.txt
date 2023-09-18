@@ -1,0 +1,26 @@
+0.1
+
+-- added TurnController.cs, TurnTaker.cs, interface ITakeTurn, enum TurnTakerID
+
+-- added logic to let TurnController flip the Dealer being in control when both Players end their turn, and let Players control when Dealer ends their turn
+
+-- added TurnControllerView.cs to display logic
+
+-- added GameObjectStateManager.cs
+
+0.1
+
+-- added Health.cs. Health uses sbyte to change health from 0 to 100 and alive to dead and vice versa
+
+0.2
+
+-- added StatsBase.cs (uses health system but modular for multiple stats). Added StatsEnum
+
+-- added Stats HP, Mind, Accuracy, PhysDamage, PhysDefense, MagDamage, MagDefense, Speed, Luck
+
+0.3
+
+-- added IStatus, TraitsBase, TraitsInventory.cs. TraitsBase effects the target StatsBase. TraitsInventory holds Statuses which effect stats.
+
+-- added NegativeTraitAfraid.cs. Decreases Accuracy and increases Speed.
+
