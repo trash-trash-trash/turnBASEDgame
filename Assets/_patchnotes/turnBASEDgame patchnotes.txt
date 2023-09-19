@@ -24,3 +24,18 @@
 
 -- added NegativeTraitAfraid.cs. Decreases Accuracy and increases Speed.
 
+-- added TMPro package
+
+0.4
+
+-- added Unity New Input System package
+
+-- added PlayerInputs controls. added Movement and Interact. added PlayerControls which creates the inputs and announces events based on them
+
+-- added WalkerBase.cs, PlayerInteract.cs and PlayerOverworldMovement.cs. Interact and Movement listen to Controls events. Added the ability to fire spherecasts based on last movement input and when Interact is pressed. if it hits an ITalk, triggers OpenDialogue().
+
+-- Player can now walk around the overworld with 2D movement with PlayerMovement. Moves rigidbody in chosen direction. brakes to a stop when nothing is input. rb velocity is clamped by maxSpeed
+
+-- added DialogueSingleton.cs and DialgueView. ITalk now opens a canvas thru DialogueSingleton and submits a custom string to be displayed
+
+-- added logic that stops Player moving while talking
