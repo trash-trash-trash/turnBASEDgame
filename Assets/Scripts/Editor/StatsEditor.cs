@@ -17,7 +17,7 @@ public class StatsEditor : Editor
         {
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField(kvp.Key.ToString(), GUILayout.Width(100));
-            sbyte newValue = (sbyte)EditorGUILayout.IntField(kvp.Value);
+            int newValue = (int)EditorGUILayout.IntField(kvp.Value);
             if (newValue != kvp.Value)
             {
                 stats.statsDictionary[kvp.Key] = newValue;

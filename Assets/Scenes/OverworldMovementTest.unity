@@ -263,6 +263,57 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 652569200}
   dialogueText: {fileID: 1210931718}
   singleton: {fileID: 0}
+--- !u!1 &488737856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488737858}
+  - component: {fileID: 488737857}
+  m_Layer: 0
+  m_Name: Party
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &488737857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488737856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4771a211f8ddb024da4a1c2e0cfbfa11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partyPrefab: {fileID: 7965393901603538662, guid: 08e8044621aa90a47b10bf007c799c76, type: 3}
+  mainMember: {fileID: 0}
+  party:
+  - {fileID: 11400000, guid: 6a9456db9ccbb5d449f3eef9a7970614, type: 2}
+  - {fileID: 11400000, guid: 42b88595de3e65b4ca696a71438e18c8, type: 2}
+  - {fileID: 11400000, guid: 516e57d3b689bae4e977680631d20b3c, type: 2}
+  - {fileID: 11400000, guid: 780295bcb16b5dc40bca926e5b80a062, type: 2}
+--- !u!4 &488737858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488737856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &652569200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,8 +1250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls: {fileID: 2146425384}
   movement: {fileID: 2146425386}
-  raycastLength: 0.01
-  interactSphereRadius: 2
+  lineLength: 1
+  interactSphereRadius: 1
   talking: 0
 --- !u!114 &2146425386
 MonoBehaviour:
@@ -1231,3 +1282,4 @@ SceneRoots:
   - {fileID: 1786090595}
   - {fileID: 2143456778}
   - {fileID: 878907610}
+  - {fileID: 488737858}

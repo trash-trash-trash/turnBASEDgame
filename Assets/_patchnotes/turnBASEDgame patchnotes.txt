@@ -39,3 +39,15 @@
 -- added DialogueSingleton.cs and DialgueView. ITalk now opens a canvas thru DialogueSingleton and submits a custom string to be displayed
 
 -- added logic that stops Player moving while talking
+
+0.5
+
+-- added MainMenu scene, MainMenuBrain.cs with state manager logic. added MainMenuState and Enum. added PressStart, MainMenu, Options, Quit and some logic for jumping between them
+
+0.6 
+
+-- added PartyMemberScriptableObjects and a PartyInventory. you can set custom stats (which are then set thru StatBase) for party members. you can also select a "main" party member which reshuffles the rest of the party.
+
+TODO: allow player to customise party order
+
+-- fixed a bug with PlayerInteract where the raycast would result in the spherecast being in unexpected places. replaced logic for a consistent interact sphere

@@ -6,17 +6,17 @@ using UnityEngine;
 [System.Serializable]
 public class StatsBase : MonoBehaviour
 {
-    public sbyte maxStat = 100;
-    public sbyte currentStat;
+    public int maxStat=999;
+    public int currentStat;
     
-    public event Action<StatsEnum, sbyte> DeclareStatEvent;
+    public event Action<StatsEnum, int> DeclareStatEvent;
 
     public StatsEnum testEnum;
 
-    public sbyte testAmount;
+    public int testAmount;
 
-    public Dictionary<StatsEnum, sbyte> statsDictionary = new Dictionary<StatsEnum, sbyte>();
-    public bool initialised = false;
+    public Dictionary<StatsEnum, int> statsDictionary = new Dictionary<StatsEnum, int>();
+    public bool initialized = false;
 
     public void Awake()
     {
@@ -34,7 +34,7 @@ public class StatsBase : MonoBehaviour
         statsDictionary.Add(StatsEnum.Speed, maxStat);
         statsDictionary.Add(StatsEnum.Luck, maxStat);
 
-        initialised = true;
+        initialized = true;
     }
 
     public void TestChangeStat()
@@ -42,14 +42,14 @@ public class StatsBase : MonoBehaviour
         ChangeStat(testEnum, testAmount);
     }
 
-    public void ChangeStat(StatsEnum statInput, sbyte amount)
+    public void ChangeStat(StatsEnum statInput, int amount)
     {
-        if (initialised)
+        if (initialized)
         {
             if (statsDictionary.ContainsKey(statInput))
             {
-                int newStat = statsDictionary[statInput] + amount;
-                statsDictionary[statInput] = (sbyte)Mathf.Clamp(newStat, 0, maxStat);
+                int newStatInt = statsDictionary[statInput] + amount;
+                statsDictionary[statInput] = newStatInt;
                 currentStat = statsDictionary[statInput];
 
                 if (currentStat <= 0)

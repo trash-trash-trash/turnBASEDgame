@@ -7,6 +7,7 @@ public class PlayerInteract : MonoBehaviour
     //listens to PlayerControls events for Movement and Interact
     //Reads movement to determine what angle to fire the raycast at. If movement is 0, uses the last vector read
     //Fires a sphere cast the looks for ITalk at the raycast hit point
+    //Note: changed raycast to line as it shortened when it hit something
 
     public PlayerControls controls;
 
@@ -18,7 +19,7 @@ public class PlayerInteract : MonoBehaviour
 
     private Vector3 direction;
 
-    public float raycastLength;
+    public float lineLength;
 
     public float interactSphereRadius;
 
@@ -62,26 +63,30 @@ public class PlayerInteract : MonoBehaviour
 
         Vector3 origin = transform.position;
 
-        Vector3 endPosition = origin + direction * raycastLength;
+        // Calculate the end point based on a custom length.
+        Vector3 endPosition = origin + direction.normalized * lineLength;
 
-        RaycastHit hitInfo;
-        bool hit = Physics.SphereCast(origin, interactSphereRadius, direction, out hitInfo, interactSphereRadius);
+        // Create an array to store the hits.
+        RaycastHit[] hits = Physics.SphereCastAll(origin, interactSphereRadius, direction, lineLength);
 
-        if (hit)
+        // Check if any hits were detected.
+        if (hits.Length > 0)
         {
-            Debug.DrawLine(origin, hitInfo.point, Color.red);
-
-            ITalk talker = hitInfo.collider.gameObject.GetComponent<ITalk>();
-            if (talker != null)
+            foreach (var hit in hits)
             {
-                talker.OpenDialogue();
-                movement.Brake();
-                talking = true;
+                ITalk talker = hit.collider.gameObject.GetComponent<ITalk>();
+                if (talker != null)
+                {
+                    talker.OpenDialogue();
+                    movement.Brake();
+                    talking = true;
+                    break; // Exit the loop after the first hit.
+                }
             }
         }
         else
         {
-            Debug.DrawRay(origin, direction * interactSphereRadius, Color.green);
+            Debug.DrawRay(origin, direction.normalized * lineLength, Color.green);
         }
     }
 }
