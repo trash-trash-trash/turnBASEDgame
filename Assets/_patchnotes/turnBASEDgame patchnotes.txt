@@ -51,3 +51,7 @@
 TODO: allow player to customise party order
 
 -- fixed a bug with PlayerInteract where the raycast would result in the spherecast being in unexpected places. replaced logic for a consistent interact sphere
+
+0.7
+
+-- added OverworldPatrol.cs. NPCs can now Patrol the overworld using WalkerBase, with custom patrol paths, moveSpeed, moveTime, waitTime, etc. You can also talk to NPCs to pause their patrol which resumes upon CloseDialogue.

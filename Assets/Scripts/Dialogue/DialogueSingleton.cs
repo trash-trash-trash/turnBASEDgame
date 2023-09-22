@@ -46,6 +46,8 @@ public class DialogueSingleton : MonoBehaviour
     public event Action<bool> OpenCloseDialogueEvent;
 
     public event Action<string> NewDialogueEvent;
+
+    public ITalk talker;
     
     public void OnNewDialogue(string input)
     {
@@ -56,5 +58,8 @@ public class DialogueSingleton : MonoBehaviour
     public void OnOpenCloseDialogue(bool input)
     {
         OpenCloseDialogueEvent?.Invoke(input);
+
+        if(!input && talker!=null)
+            talker.CloseDialogue();
     }
 }

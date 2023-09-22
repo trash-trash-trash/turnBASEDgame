@@ -37,6 +37,11 @@ public class WalkerBase : MonoBehaviour
         }
     }
 
+    public void Accelerate()
+    {
+        canMove = true;
+    }
+
     public void Brake()
     {
         canMove = false;
