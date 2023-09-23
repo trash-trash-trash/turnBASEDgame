@@ -6,7 +6,7 @@ using UnityEngine;
 public class Talker : MonoBehaviour, ITalk
 {
     //TODO: change to list? support multiple lines / branching lines / etc
-    public string dialogue;
+    public List<string> dialogue;
 
     public event Action OpenDialogueEvent;
     public event Action CloseDialogueEvent;
@@ -15,7 +15,7 @@ public class Talker : MonoBehaviour, ITalk
     {
         DialogueSingleton.Instance.talker = this;
         DialogueSingleton.Instance.OnOpenCloseDialogue(true);
-        DialogueSingleton.Instance.OnNewDialogue(dialogue);
+        DialogueSingleton.Instance.OnNewDialogue(dialogue);  
         OpenDialogueEvent?.Invoke();
     }
 

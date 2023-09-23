@@ -9,6 +9,8 @@ public class PlayerInteract : MonoBehaviour
     //Fires a sphere cast the looks for ITalk at the raycast hit point
     //Note: changed raycast to line as it shortened when it hit something
 
+    public DialogueSingleton singleton;
+
     public PlayerControls controls;
 
     public PlayerOverworldMovement movement;
@@ -27,12 +29,18 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnEnable()
     {
+        singleton = DialogueSingleton.Instance;
+
+        singleton.OpenCloseDialogueEvent += StopTalking;
+
         controls.MovementEvent += AimVector;
         controls.InteractEvent += Interact;
     }
 
     private void OnDisable()
     {
+        singleton.OpenCloseDialogueEvent -= StopTalking;
+
         controls.MovementEvent -= AimVector;
         controls.InteractEvent -= Interact;
     }
@@ -50,26 +58,29 @@ public class PlayerInteract : MonoBehaviour
             direction = lastVector;
     }
 
+    private void StopTalking(bool input)
+    {
+        if (input)
+            return;
+
+        movement.canMove = true;
+        talking = false;
+    }
+
     private void Interact()
     {
         if (talking)
         {
-            Debug.Log("Interact Script");
-            DialogueSingleton.Instance.OnOpenCloseDialogue(false);
-            movement.canMove = true;
-            talking = false;
+            singleton.NextLine();
             return;
         }
 
         Vector3 origin = transform.position;
 
-        // Calculate the end point based on a custom length.
         Vector3 endPosition = origin + direction.normalized * lineLength;
 
-        // Create an array to store the hits.
         RaycastHit[] hits = Physics.SphereCastAll(origin, interactSphereRadius, direction, lineLength);
 
-        // Check if any hits were detected.
         if (hits.Length > 0)
         {
             foreach (var hit in hits)

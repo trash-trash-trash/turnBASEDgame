@@ -38,7 +38,6 @@ public class PlayerControls : MonoBehaviour
     private void Interact(InputAction.CallbackContext context)
     {
         InteractEvent?.Invoke();
-        Debug.Log("Interact Input");
     }
 
     private void OnDisable()

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 117442755}
   - component: {fileID: 117442754}
   - component: {fileID: 117442753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7188e2272a8b0c249977a7d1e520bddb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 1057540471}
   - component: {fileID: 1057540470}
   - component: {fileID: 1057540469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NPC (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3582cd757b22984438dba77ed59bef66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: Sup homie
+  dialogue:
+  - I talk! Thrilling, isn't it?
+  - How do you do how do you do?
+  - This is test dialogue!
+  - It just goes on and on!
 --- !u!54 &1057540471
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -842,7 +846,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -924,7 +928,7 @@ GameObject:
   - component: {fileID: 1406282210}
   - component: {fileID: 1406282209}
   - component: {fileID: 1406282208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NPC (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +977,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3582cd757b22984438dba77ed59bef66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: Umbasa
+  dialogue:
+  - It was a poor crop yield this season. My family doesn't have two Dunbar to rub
+    together...
+  - Umbasa...
 --- !u!54 &1406282210
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1102,7 +1109,7 @@ GameObject:
   - component: {fileID: 1786090591}
   - component: {fileID: 1786090590}
   - component: {fileID: 1786090596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3582cd757b22984438dba77ed59bef66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: I talk! Thrilling, isn't it?
+  dialogue:
+  - Thirsty...
+  - So thirsty...
+  - Thirsty...
 --- !u!54 &1786090591
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1479,6 +1489,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43906e38a797e7740ab3354de95e65b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lines: []
+  delayBetweenCharacters: 0.075
+  minDelayBetweenCharacters: 0.01
+  currentLineIndex: 0
+  nextLinePressed: 0
+  talking: 0
 --- !u!1 &2146425378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1511,7 @@ GameObject:
   - component: {fileID: 2146425384}
   - component: {fileID: 2146425385}
   - component: {fileID: 2146425386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1641,6 +1657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f613d2db2d4f2848be7565a968f2aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  singleton: {fileID: 0}
   controls: {fileID: 2146425384}
   movement: {fileID: 2146425386}
   lineLength: 1

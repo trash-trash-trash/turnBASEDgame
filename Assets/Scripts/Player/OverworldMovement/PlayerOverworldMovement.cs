@@ -10,6 +10,7 @@ public class PlayerOverworldMovement : WalkerBase
     private void OnEnable()
     {
         controls.MovementEvent += AimVector;
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("NPC"), true);
     }
 
     private void AimVector(Vector2 vector2)

@@ -55,3 +55,11 @@ TODO: allow player to customise party order
 0.7
 
 -- added OverworldPatrol.cs. NPCs can now Patrol the overworld using WalkerBase, with custom patrol paths, moveSpeed, moveTime, waitTime, etc. You can also talk to NPCs to pause their patrol which resumes upon CloseDialogue.
+
+0.8
+
+-- added the ability for NPCs to have multiple lines of dialogue. dialogue prints one letter at a time at a custom speed
+
+-- updated talking. pressing talking while an NPC is talking now speeds dialogue up. pressing talk when the line is finished will proceed to the next line.
+
+-- added Player and NPC Layers, players ignore NPCs when walking (HACK; fix later)
