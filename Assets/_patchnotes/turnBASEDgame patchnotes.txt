@@ -63,3 +63,11 @@ TODO: allow player to customise party order
 -- updated talking. pressing talking while an NPC is talking now speeds dialogue up. pressing talk when the line is finished will proceed to the next line.
 
 -- added Player and NPC Layers, players ignore NPCs when walking (HACK; fix later)
+
+0.9
+
+-- added IPlayer
+
+-- added LookTowards.cs, rotates transform to look at MovementVector2 from WalkerBase
+
+--- added VisionBase.cs, NPCs can now "see" and detect the Player

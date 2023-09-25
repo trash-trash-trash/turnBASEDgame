@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.AnimatedValues;
 using UnityEngine;
 
-public class PlayerOverworldMovement : WalkerBase
+public class PlayerOverworldMovement : WalkerBase, IPlayer
 {
     public PlayerControls controls;
 

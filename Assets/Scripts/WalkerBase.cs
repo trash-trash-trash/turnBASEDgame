@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class WalkerBase : MonoBehaviour
     public float walkSpeed;  
     
     public float brakeForce;
+
+    public event Action<Vector3> MovementVector3Event; 
 
     private void FixedUpdate()
     {
@@ -34,6 +37,8 @@ public class WalkerBase : MonoBehaviour
                 Vector3 dampingForce = -currentVelocity * brakeForce;
                 rb.AddForce(dampingForce, ForceMode.Acceleration);
             }
+
+            MovementVector3Event?.Invoke(movementDirection);
         }
     }
 
