@@ -24,14 +24,27 @@ public class OverworldPatrol : WalkerBase
 
     private IEnumerator waitCoroutine;
 
-    private void Start()
+    private void OnEnable()
     {
         iTalk = talker.GetComponent<ITalk>();
         iTalk.OpenDialogueEvent += StopPatrol;
         iTalk.CloseDialogueEvent += StartPatrol;
 
+        StartPatrol();
+    }
+
+    private void StartPatrol()
+    {
         patrol = true;
+        Accelerate();
         StartCoroutine(Patrol());
+    }
+
+    private void StopPatrol()
+    {
+        patrol = false;
+        StopAllCoroutines();
+        Brake();
     }
 
     private IEnumerator Patrol()
@@ -54,20 +67,6 @@ public class OverworldPatrol : WalkerBase
             if (selectInt >= movementVectors.Count)
                 selectInt = 0;
         }
-    }
-
-    private void StartPatrol()
-    {
-        patrol = true;
-        Accelerate();
-        StartCoroutine(Patrol());
-    }
-
-    private void StopPatrol()
-    {
-        patrol = false;
-        StopAllCoroutines();
-        Brake();
     }
 
     private void OnDisable()

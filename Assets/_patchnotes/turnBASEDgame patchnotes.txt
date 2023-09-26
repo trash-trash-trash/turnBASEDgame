@@ -71,3 +71,7 @@ TODO: allow player to customise party order
 -- added LookTowards.cs, rotates transform to look at MovementVector2 from WalkerBase
 
 --- added VisionBase.cs, NPCs can now "see" and detect the Player
+
+1.0
+
+-- added NPCBrain.cs, NPCStateEnum. Added Attack, Patrol, Talk, Follow, Death States to NPC. Added FollowState to allow NPCs to follow behind the Player at a custom distance. Definitely hacked some stuff along the way. TODO: ADD "RETURN HOME STATE"

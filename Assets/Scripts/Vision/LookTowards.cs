@@ -9,23 +9,9 @@ public class LookTowards : MonoBehaviour
     public Vector3 targetPosition;
     public float rotationSpeed;
 
-    public Rigidbody rb;
-
-    public WalkerBase walker;
-
-    private void OnEnable()
-    {
-        walker.MovementVector3Event += SetTarget;
-    }
-
-    private void SetTarget(Vector3 newTargetPosition)
+    public void SetTarget(Vector3 newTargetPosition)
     {
         targetPosition = newTargetPosition;
-    }
-
-    private void OnDisable()
-    {
-        walker.MovementVector3Event -= SetTarget;
     }
 
     private void Update()

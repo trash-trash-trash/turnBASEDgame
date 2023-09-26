@@ -10,6 +10,11 @@ public class VisionBase : MonoBehaviour
     public float raycastDistance;
     public float angle;
 
+    private void OnEnable()
+    {
+        ChangeSight(true);
+    }
+
     void Update()
     {
         if (canSee)

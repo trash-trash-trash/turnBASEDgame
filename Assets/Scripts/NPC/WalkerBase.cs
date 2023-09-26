@@ -19,7 +19,7 @@ public class WalkerBase : MonoBehaviour
 
     public event Action<Vector3> MovementVector3Event; 
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         if (canMove)
         {
