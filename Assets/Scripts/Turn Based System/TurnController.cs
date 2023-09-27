@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 
 public class TurnController : MonoBehaviour
 {
@@ -84,6 +85,12 @@ public class TurnController : MonoBehaviour
         playerTwo.SetItsMyTurn(false);
 
         SetControllerText("Dealer's Turn");
+    }
+
+    public void EndFight()
+    {
+        BattleManagerSingleton battleManager = BattleManagerSingleton.BattleManagerSingletonInstance;
+        battleManager.EndFight();
     }
 
     public void OnDisable()

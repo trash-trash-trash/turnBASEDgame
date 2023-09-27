@@ -10,39 +10,39 @@ public class DialogueSingleton : MonoBehaviour
     //waits until waitForNextLine is False if there are lines remaining
     //NextLine() detects if there are more lines to display or closes dialogue
 
-    private static DialogueSingleton _instance;
-
     #region Singleton
 
-    public static DialogueSingleton Instance
+    private static DialogueSingleton instance;
+
+    public static DialogueSingleton DiaglogueSingletonInstance
     {
         get
         {
-            if (_instance == null)
+            if (instance == null)
             {
-                _instance = FindObjectOfType<DialogueSingleton>();
+                instance = FindObjectOfType<DialogueSingleton>();
 
-                if (_instance == null)
+                if (instance == null)
                 {
                     GameObject singletonObject = new GameObject("singleton");
-                    _instance = singletonObject.AddComponent<DialogueSingleton>();
+                    instance = singletonObject.AddComponent<DialogueSingleton>();
                 }
             }
 
-            return _instance;
+            return instance;
         }
     }
 
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            _instance = this;
+            instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
     }
@@ -126,7 +126,7 @@ public class DialogueSingleton : MonoBehaviour
         characterIndex = 0;
         currentLineIndex++;
 
-        if (currentLineIndex < lines.Capacity)
+        if (currentLineIndex < lines.Count)
         {
             NextLineEvent?.Invoke();
             displayComplete = false;
@@ -146,6 +146,8 @@ public class DialogueSingleton : MonoBehaviour
         OpenCloseDialogueEvent?.Invoke(input);
 
         if (!input && talker != null)
+        {
             talker.CloseDialogue();
+        }
     }
 }

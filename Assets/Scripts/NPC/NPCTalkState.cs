@@ -12,14 +12,23 @@ public class NPCTalkState : MonoBehaviour
 
     public Vector3 prevVector;
 
+    public NPCBrain brain;
+
     public void OnEnable()
     {
-        prevVector = lookTowards.targetPosition;
-        lookTowards.SetTarget(playerTransform.position.normalized);
+        if (brain.isAlive)
+        {
+            prevVector = lookTowards.targetPosition;
+            lookTowards.SetTarget(playerTransform.position.normalized);
+        }
     }
+
 
     public void OnDisable()
     {
-        lookTowards.SetTarget(prevVector);
+        if (brain.isAlive)
+        {
+            lookTowards.SetTarget(prevVector);
+        }
     }
 }

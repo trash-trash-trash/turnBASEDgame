@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,11 @@ public class VisionBase : MonoBehaviour
     public int numberOfRaycasts;
     public float raycastDistance;
     public float angle;
+
+    public event Action<bool> SeePlayerBoolEvent;
+
+    public bool seePlayer = false;
+    private bool prevSeePlayer = false;
 
     private void OnEnable()
     {
@@ -51,8 +57,18 @@ public class VisionBase : MonoBehaviour
                 {
                     IPlayer player;
                     if (hit.transform.GetComponent<IPlayer>() != null)
-                        Debug.Log("Player spotted");
+                        seePlayer = true;
                 }
+                else
+                {
+                    seePlayer = false;
+                }
+            }
+
+            if (seePlayer != prevSeePlayer)
+            {
+                prevSeePlayer = seePlayer;
+                SeePlayerBoolEvent?.Invoke(seePlayer);
             }
         }
     }

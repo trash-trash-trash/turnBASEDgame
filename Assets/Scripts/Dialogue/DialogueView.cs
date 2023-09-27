@@ -15,7 +15,7 @@ public class DialogueView : MonoBehaviour
 
     void Start()
     {
-        singleton = DialogueSingleton.Instance;
+        singleton = DialogueSingleton.DiaglogueSingletonInstance;
 
         singleton.OpenCloseDialogueEvent += FlipCanvasOnOff;
         singleton.NextLineEvent += NextLine;

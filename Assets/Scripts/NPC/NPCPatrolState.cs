@@ -12,6 +12,8 @@ public class NPCPatrolState : MonoBehaviour
 
     public Vector3 prevVector;
 
+    public WalkerBase walker;
+
     public void OnEnable()
     {
         patrol.MovementVector3Event += ChangeVector;
@@ -28,6 +30,7 @@ public class NPCPatrolState : MonoBehaviour
 
     public void OnDisable()
     {
+        walker.Brake();
         patrol.MovementVector3Event -= ChangeVector;
     }
 }

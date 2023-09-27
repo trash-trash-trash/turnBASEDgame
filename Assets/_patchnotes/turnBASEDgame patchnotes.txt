@@ -75,3 +75,17 @@ TODO: allow player to customise party order
 1.0
 
 -- added NPCBrain.cs, NPCStateEnum. Added Attack, Patrol, Talk, Follow, Death States to NPC. Added FollowState to allow NPCs to follow behind the Player at a custom distance. Definitely hacked some stuff along the way. TODO: ADD "RETURN HOME STATE"
+
+1.1 
+
+-- added NPC Types. Stationary will obv stand still. Enemy NPCs will enter "Attack" mode when the Player is spotted. TODO: transition to battle screen
+
+1.2
+
+-- added IStartFights interface. Added BattleManagerSingleton.cs, FightStarter.cs, PlayerFightStarter.cs. If the Player collides with a NPC with FightStarter, both FightStarters set the current Party (list of PartyScriptableObjects) in the BattleManager singleton, which serves as a middleman between overworld movement and turn-based battle scenes.
+
+-- The Player and NPCs can now start fights
+
+-- Starting a fight loads the turn-based scene and sets it to Active, ending the turn-based scene unloads it and set OverworldScene to Active
+
+-- NPCs change their dialogue and behavior upon death

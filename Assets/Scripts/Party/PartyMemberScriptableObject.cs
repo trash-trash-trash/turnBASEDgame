@@ -20,6 +20,5 @@ public class PartyMemberScriptableObject : ScriptableObject
 
     public int Luck;
 
-
     //class?
 }

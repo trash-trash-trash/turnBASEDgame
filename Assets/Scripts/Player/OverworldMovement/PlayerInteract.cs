@@ -29,7 +29,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnEnable()
     {
-        singleton = DialogueSingleton.Instance;
+        singleton = DialogueSingleton.DiaglogueSingletonInstance;
 
         singleton.OpenCloseDialogueEvent += StopTalking;
 
@@ -86,7 +86,7 @@ public class PlayerInteract : MonoBehaviour
             foreach (var hit in hits)
             {
                 ITalk talker = hit.collider.gameObject.GetComponent<ITalk>();
-                if (talker != null)
+                if (talker != null && talker.CanTalk())
                 {
                     talker.OpenDialogue();
                     movement.Brake();
