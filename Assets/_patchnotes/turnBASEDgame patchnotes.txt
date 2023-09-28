@@ -89,3 +89,7 @@ TODO: allow player to customise party order
 -- Starting a fight loads the turn-based scene and sets it to Active, ending the turn-based scene unloads it and set OverworldScene to Active
 
 -- NPCs change their dialogue and behavior upon death
+
+1.3
+
+-- added Torch.cs as a proof of concept. Torch is hardcoded to a Unity Light and decreases its range according to the currentTorchLevel. will need to experiment with sprites
