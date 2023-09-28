@@ -93,3 +93,13 @@ TODO: allow player to customise party order
 1.3
 
 -- added Torch.cs as a proof of concept. Torch is hardcoded to a Unity Light and decreases its range according to the currentTorchLevel. will need to experiment with sprites
+
+-- changed PlayerControls to be a singleton that persists between scenes. Added a StateManager and PlayerBrains.cs to the Player, as well as Overworld and Combat states (prevents inputs while in combat mode)
+
+-- updated TurnController.cs to support multiple TurnTakers for each player
+
+1.4
+
+-- added Castrado and Cleric sprites and animations
+
+--

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class TurnTaker : MonoBehaviour, ITakeTurn
 {
-    public TurnTakerID turnTakerID;
-
     public bool turnTaken;
 
     public bool TurnTaken()
@@ -15,8 +13,9 @@ public class TurnTaker : MonoBehaviour, ITakeTurn
     }
 
     public event Action DeclareStartTurnEvent;
+    public event Action DeclareHighlightedEvent;
 
-    public event Action<TurnTakerID, bool> PlayerReadyEvent;
+    public event Action<TurnTaker, bool> PlayerReadyEvent;
 
     public bool itsMyTurn;
 
@@ -54,10 +53,10 @@ public class TurnTaker : MonoBehaviour, ITakeTurn
     public void EndTurn()
     {
         turnTaken = true;
-        AnnouncePlayerReady(turnTakerID, true);
+        AnnouncePlayerReady(this, true);
     }
 
-    public void AnnouncePlayerReady(TurnTakerID turnInput, bool input)
+    public void AnnouncePlayerReady(TurnTaker turnInput, bool input)
     {
         PlayerReadyEvent?.Invoke(turnInput, input);
     }

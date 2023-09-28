@@ -2,15 +2,17 @@ using System;
 
 public interface ITakeTurn
 {
+    public event Action<TurnTaker, bool> PlayerReadyEvent;
+
+    public event Action DeclareStartTurnEvent;
+
+    public event Action DeclareHighlightedEvent;
+
     public bool ItsMyTurn();
 
     public bool TurnLocked();
 
     public bool TurnTaken();
-
-    public event Action<TurnTakerID, bool> PlayerReadyEvent;
-
-    public event Action DeclareStartTurnEvent;
 
     public void SetItsMyTurn(bool input);
 

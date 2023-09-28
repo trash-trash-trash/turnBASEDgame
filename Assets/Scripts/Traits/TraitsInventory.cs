@@ -13,7 +13,7 @@ public class TraitsInventory : MonoBehaviour
 
     public List<IStatus> statusList = new List<IStatus>();
 
-    public void Awake()
+    public void CheckTraits()
     {
         foreach (GameObject targetObj in statusObjList)
         {

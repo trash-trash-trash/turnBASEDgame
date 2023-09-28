@@ -20,5 +20,6 @@ public class PartyMemberScriptableObject : ScriptableObject
 
     public int Luck;
 
+    public Sprite combatSprite;
     //class?
 }

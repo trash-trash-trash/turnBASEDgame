@@ -11,6 +11,7 @@ public class PlayerOverworldMovement : WalkerBase, IPlayer
 
     private void OnEnable()
     {
+        controls = PlayerControls.PlayerControlsInstance;
         controls.MovementEvent += AimVector;
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("NPC"), true);
     }

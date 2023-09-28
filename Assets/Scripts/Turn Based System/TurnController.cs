@@ -2,42 +2,81 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts;
+using JetBrains.Annotations;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class TurnController : MonoBehaviour
 {
-    public GameObject dealerTurn;
+    public List<PartyMemberScriptableObject> playerOneParty;
 
-    public GameObject playerTurn;
+    public List<PartyMemberScriptableObject> playerTwoParty;
+
+    public GameObject playerOneObj;
+    public GameObject playerTwoObj;
 
     public GameObject dealerObj;
     public ITakeTurn dealer;
 
-    public GameObject playerOneObj;
-    public ITakeTurn playerOne;
-
-    public GameObject playerTwoObj;
-    public ITakeTurn playerTwo;
-
-    public Dictionary<TurnTakerID, ITakeTurn> ITakeTurnDictionary = new Dictionary<TurnTakerID, ITakeTurn>();
+    public Dictionary<TurnTaker, bool> playerOneTurnTakersDict = new Dictionary<TurnTaker, bool>();
+    public Dictionary<TurnTaker, bool> playerTwoTurnTakersDict = new Dictionary<TurnTaker, bool>();
 
     public event Action<string> AnnounceControllerString;
 
+    public BattleManagerSingleton battleManager;
+
+    public GameObject turnTakerPrefab;
+
     public void Awake()
     {
-        dealer = dealerObj.GetComponent<ITakeTurn>();
-        playerOne = playerOneObj.GetComponent<ITakeTurn>();
-        playerTwo = playerTwoObj.GetComponent<ITakeTurn>();
+        battleManager = BattleManagerSingleton.BattleManagerSingletonInstance;
+        playerOneParty = battleManager.playerOneParty;
+        playerTwoParty = battleManager.playerTwoParty;
 
-        ITakeTurnDictionary.Add(TurnTakerID.Dealer, dealer);
-        ITakeTurnDictionary.Add(TurnTakerID.PlayerOne, playerOne);
-        ITakeTurnDictionary.Add(TurnTakerID.PlayerTwo, playerTwo);
+        dealer = dealerObj.GetComponent<ITakeTurn>();
 
         dealer.PlayerReadyEvent += DealerReady;
-        playerOne.PlayerReadyEvent += PlayerReady;
-        playerTwo.PlayerReadyEvent += PlayerReady;
+
+        StartGame();
+    }
+
+    private void StartGame()
+    {
+        foreach (PartyMemberScriptableObject member in playerOneParty)
+        {
+            turnTakerPrefab = Instantiate(turnTakerPrefab) as GameObject;
+
+            StatsBase stats = turnTakerPrefab.GetComponent<StatsBase>();
+            stats.member = member;
+            stats.Initialize();
+
+            turnTakerPrefab.name = member.name;
+            turnTakerPrefab.transform.SetParent(playerOneObj.transform);
+
+            TurnTaker taker = turnTakerPrefab.GetComponent<TurnTaker>();
+            taker.PlayerReadyEvent += PlayerReady;
+
+            playerOneTurnTakersDict.Add(taker, false);
+        }
+
+        foreach (PartyMemberScriptableObject member in playerTwoParty)
+        {
+            turnTakerPrefab = Instantiate(turnTakerPrefab) as GameObject;
+
+            StatsBase stats = turnTakerPrefab.GetComponent<StatsBase>();
+            stats.member = member;
+            stats.Initialize();
+
+            turnTakerPrefab.name = member.name;
+            turnTakerPrefab.transform.SetParent(playerTwoObj.transform);
+
+            TurnTaker taker = turnTakerPrefab.GetComponent<TurnTaker>();
+            taker.PlayerReadyEvent += PlayerReady;
+
+            playerTwoTurnTakersDict.Add(taker, false);
+        }
 
         PlayerTurn();
     }
@@ -47,42 +86,73 @@ public class TurnController : MonoBehaviour
         AnnounceControllerString?.Invoke(input);
     }
 
-    public void PlayerReady(TurnTakerID turnTakerID, bool b)
+    public void PlayerReady(TurnTaker turnTaker, bool input)
     {
-        SetControllerText("Player's turn\n" + turnTakerID + " ended turn");
+        if (playerOneTurnTakersDict.ContainsKey(turnTaker))
+        {
+            playerOneTurnTakersDict[turnTaker] = input;
+        }
 
-        if (playerOne.TurnTaken() && playerTwo.TurnTaken())
-            DealerTurn();
+        else if (playerTwoTurnTakersDict.ContainsKey(turnTaker))
+        {
+            playerTwoTurnTakersDict[turnTaker] = input;
+        }
+
+        //for each thru each dictionary and return if any results are false
+        //chat gpt says var kvp
+
+        foreach (var kvp in playerOneTurnTakersDict)
+        {
+            if (!kvp.Value)
+            {
+                return;
+            }
+        }
+
+        foreach (var kvp in playerTwoTurnTakersDict)
+        {
+            if (!kvp.Value)
+            {
+                return;
+            }
+        }
+
+        DealerTurn();
+    }
+
+    public void SetShit(Dictionary<TurnTaker, bool> targetDict, bool turnLocked, bool itsMyTurn)
+    {
+        foreach (TurnTaker member in targetDict.Keys)
+        {
+            member.SetTurnLocked(turnLocked);
+            member.SetItsMyTurn(itsMyTurn);
+        }
     }
 
     public void PlayerTurn()
     {
         dealer.SetTurnLocked(true);
-        playerOne.SetTurnLocked(false);
-        playerTwo.SetTurnLocked(false);
-
         dealer.SetItsMyTurn(false);
-        playerOne.SetItsMyTurn(true);
-        playerTwo.SetItsMyTurn(true);
+
+        SetShit(playerOneTurnTakersDict, false, true);
+        SetShit(playerTwoTurnTakersDict, false, true);
 
         SetControllerText("Player's turn");
     }
 
-    public void DealerReady(TurnTakerID turnTakerId, bool input)
+    public void DealerReady(TurnTaker turnTakerId, bool input)
     {
         if (input)
             PlayerTurn();
     }
 
     public void DealerTurn()
-    {
-        dealer.SetTurnLocked(false);
-        playerOne.SetTurnLocked(true);
-        playerTwo.SetTurnLocked(true);
-
+    {        
         dealer.SetItsMyTurn(true);
-        playerOne.SetItsMyTurn(false);
-        playerTwo.SetItsMyTurn(false);
+        dealer.SetTurnLocked(false);
+        
+        SetShit(playerOneTurnTakersDict, true, false);
+        SetShit(playerTwoTurnTakersDict, true, false);
 
         SetControllerText("Dealer's Turn");
     }
@@ -96,7 +166,18 @@ public class TurnController : MonoBehaviour
     public void OnDisable()
     {
         dealer.PlayerReadyEvent -= DealerReady;
-        playerOne.PlayerReadyEvent -= PlayerReady;
-        playerTwo.PlayerReadyEvent -= PlayerReady;
+
+        foreach (TurnTaker member in playerOneTurnTakersDict.Keys)
+        {
+            member.PlayerReadyEvent -= PlayerReady;
+        }
+
+        foreach (TurnTaker member in playerTwoTurnTakersDict.Keys)
+        {
+            member.PlayerReadyEvent -= PlayerReady;
+        }
+
+        playerOneTurnTakersDict.Clear();
+        playerTwoTurnTakersDict.Clear();
     }
 }

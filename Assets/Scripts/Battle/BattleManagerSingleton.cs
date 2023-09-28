@@ -71,8 +71,18 @@ public class BattleManagerSingleton : MonoBehaviour
 
         FightStartedEvent?.Invoke();
         SceneManager.LoadScene("DealerTest", LoadSceneMode.Additive);
+        Time.timeScale = 0f;
         Scene battleScene = SceneManager.GetSceneByName("DealerTest");
-        SceneManager.SetActiveScene(battleScene);
+        StartCoroutine(Load(battleScene));
+    }
+
+    private IEnumerator Load(Scene input)
+    {
+        while (!input.isLoaded)
+        {
+            yield return null;
+        }
+        SceneManager.SetActiveScene(input);
     }
 
     public void SetParty(List<PartyMemberScriptableObject>targetList, List<PartyMemberScriptableObject> newList)
@@ -87,6 +97,7 @@ public class BattleManagerSingleton : MonoBehaviour
     public void EndFight()
     {
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("OverworldTest"));
+        Time.timeScale = 1f;
 
         Scene battleScene = SceneManager.GetSceneByName("DealerTest");
         if (battleScene.isLoaded)

@@ -6,6 +6,10 @@ using UnityEngine;
 [System.Serializable]
 public class StatsBase : MonoBehaviour
 {
+    public PartyMemberScriptableObject member;
+
+    public string name;
+
     public int maxStat=999;
     public int currentStat;
     
@@ -18,21 +22,23 @@ public class StatsBase : MonoBehaviour
     public Dictionary<StatsEnum, int> statsDictionary = new Dictionary<StatsEnum, int>();
     public bool initialized = false;
 
-    public void Awake()
+    public void Initialize()
     {
         SetDictionary();
     }
 
     public void SetDictionary()
     {
-        statsDictionary.Add(StatsEnum.HP, maxStat);
-        statsDictionary.Add(StatsEnum.Accuracy, maxStat);
-        statsDictionary.Add(StatsEnum.Mind, maxStat);
-        statsDictionary.Add(StatsEnum.PhysDamage, maxStat);
-        statsDictionary.Add(StatsEnum.PhyDefense, maxStat);
-        statsDictionary.Add(StatsEnum.MagDamage, maxStat);
-        statsDictionary.Add(StatsEnum.Speed, maxStat);
-        statsDictionary.Add(StatsEnum.Luck, maxStat);
+        name = member.name;
+
+        statsDictionary.Add(StatsEnum.HP, member.HP);
+        statsDictionary.Add(StatsEnum.Accuracy, member.Accuracy);
+        statsDictionary.Add(StatsEnum.Mind, member.Mind);
+        statsDictionary.Add(StatsEnum.PhysDamage, member.PhysDamage);
+        statsDictionary.Add(StatsEnum.PhyDefense, member.PhysDefense);
+        statsDictionary.Add(StatsEnum.MagDamage, member.MagDamage);
+        statsDictionary.Add(StatsEnum.Speed, member.MagDefense);
+        statsDictionary.Add(StatsEnum.Luck, member.Luck);
 
         initialized = true;
     }

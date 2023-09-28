@@ -31,6 +31,8 @@ public class PlayerInteract : MonoBehaviour
     {
         singleton = DialogueSingleton.DiaglogueSingletonInstance;
 
+        controls = PlayerControls.PlayerControlsInstance;
+
         singleton.OpenCloseDialogueEvent += StopTalking;
 
         controls.MovementEvent += AimVector;

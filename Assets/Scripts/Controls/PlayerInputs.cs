@@ -180,6 +180,184 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""TurnBasedCombat"",
+            ""id"": ""72411ef0-94ac-4ab7-a255-c906aebc0243"",
+            ""actions"": [
+                {
+                    ""name"": ""MoveInput"",
+                    ""type"": ""Value"",
+                    ""id"": ""1163abac-4f15-49a8-8876-8be4588dabdf"",
+                    ""expectedControlType"": ""Dpad"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""89a840b8-4a9f-4e17-bd40-71900d7621ab"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""da21b615-d999-4a4f-bd40-b9e2eb5dc627"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""499b3078-5858-4b64-920a-be6b964ee9ea"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""7a14ef32-5955-4746-8247-18aa3b7a4147"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""cd8b8115-ec90-4c3f-bfc2-49aac011b258"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""16167375-24f3-46ec-a8e2-68d355eb089e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""c9ebfa7a-d99a-4036-bac4-ea1a78afea9d"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""76b1d0fa-d47d-401f-95fc-39c492d32467"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""10628f67-9a79-40e3-a326-a03d5927be15"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""c83872a8-d3c1-4368-88ee-f543e4e43b62"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b685b4f1-dbcc-4c06-a874-e75d73a97082"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""ed8cb632-13ae-4ba7-b99b-87e44344ff1e"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ef7cd02-ac59-4a33-b3b3-ce4e89870e9a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""20aa9bde-3135-4500-9309-c7145de037ab"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ce95f40-5ac3-480a-a4d2-421cc3c6d115"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -188,6 +366,11 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_OverworldMovement = asset.FindActionMap("OverworldMovement", throwIfNotFound: true);
         m_OverworldMovement_MoveInput = m_OverworldMovement.FindAction("MoveInput", throwIfNotFound: true);
         m_OverworldMovement_Interact = m_OverworldMovement.FindAction("Interact", throwIfNotFound: true);
+        // TurnBasedCombat
+        m_TurnBasedCombat = asset.FindActionMap("TurnBasedCombat", throwIfNotFound: true);
+        m_TurnBasedCombat_MoveInput = m_TurnBasedCombat.FindAction("MoveInput", throwIfNotFound: true);
+        m_TurnBasedCombat_Confirm = m_TurnBasedCombat.FindAction("Confirm", throwIfNotFound: true);
+        m_TurnBasedCombat_Cancel = m_TurnBasedCombat.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -299,9 +482,77 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         }
     }
     public OverworldMovementActions @OverworldMovement => new OverworldMovementActions(this);
+
+    // TurnBasedCombat
+    private readonly InputActionMap m_TurnBasedCombat;
+    private List<ITurnBasedCombatActions> m_TurnBasedCombatActionsCallbackInterfaces = new List<ITurnBasedCombatActions>();
+    private readonly InputAction m_TurnBasedCombat_MoveInput;
+    private readonly InputAction m_TurnBasedCombat_Confirm;
+    private readonly InputAction m_TurnBasedCombat_Cancel;
+    public struct TurnBasedCombatActions
+    {
+        private @PlayerInputs m_Wrapper;
+        public TurnBasedCombatActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MoveInput => m_Wrapper.m_TurnBasedCombat_MoveInput;
+        public InputAction @Confirm => m_Wrapper.m_TurnBasedCombat_Confirm;
+        public InputAction @Cancel => m_Wrapper.m_TurnBasedCombat_Cancel;
+        public InputActionMap Get() { return m_Wrapper.m_TurnBasedCombat; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TurnBasedCombatActions set) { return set.Get(); }
+        public void AddCallbacks(ITurnBasedCombatActions instance)
+        {
+            if (instance == null || m_Wrapper.m_TurnBasedCombatActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TurnBasedCombatActionsCallbackInterfaces.Add(instance);
+            @MoveInput.started += instance.OnMoveInput;
+            @MoveInput.performed += instance.OnMoveInput;
+            @MoveInput.canceled += instance.OnMoveInput;
+            @Confirm.started += instance.OnConfirm;
+            @Confirm.performed += instance.OnConfirm;
+            @Confirm.canceled += instance.OnConfirm;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
+        }
+
+        private void UnregisterCallbacks(ITurnBasedCombatActions instance)
+        {
+            @MoveInput.started -= instance.OnMoveInput;
+            @MoveInput.performed -= instance.OnMoveInput;
+            @MoveInput.canceled -= instance.OnMoveInput;
+            @Confirm.started -= instance.OnConfirm;
+            @Confirm.performed -= instance.OnConfirm;
+            @Confirm.canceled -= instance.OnConfirm;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
+        }
+
+        public void RemoveCallbacks(ITurnBasedCombatActions instance)
+        {
+            if (m_Wrapper.m_TurnBasedCombatActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ITurnBasedCombatActions instance)
+        {
+            foreach (var item in m_Wrapper.m_TurnBasedCombatActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_TurnBasedCombatActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public TurnBasedCombatActions @TurnBasedCombat => new TurnBasedCombatActions(this);
     public interface IOverworldMovementActions
     {
         void OnMoveInput(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface ITurnBasedCombatActions
+    {
+        void OnMoveInput(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }
