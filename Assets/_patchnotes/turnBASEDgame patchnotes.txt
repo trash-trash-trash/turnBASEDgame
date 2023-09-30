@@ -102,4 +102,15 @@ TODO: allow player to customise party order
 
 -- added Castrado and Cleric sprites and animations
 
---
+-- added PartyController.cs. PartyController subscribes to PlayerControls to select int depending on input
+
+-- hacked up a way to spawn TurnTakers with the correct sprites (HACK FIX LATER)
+
+1.5
+
+-- added 2D Sprite Outline free package and Unity's 2D Sprite package
+
+-- vastly updated PlayerController.cs. added Action sprites and Action enum. current Actions are Attack, Spells, Items, Guard, Flee. PlayerController now selects and highlights 
+
+-- hooked TurnController up to PlayerController to set player and enemy parties. 
+

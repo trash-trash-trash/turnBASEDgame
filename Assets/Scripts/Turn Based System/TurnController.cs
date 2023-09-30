@@ -10,9 +10,13 @@ using UnityEngine.SceneManagement;
 
 public class TurnController : MonoBehaviour
 {
+    //player Two will have to be an AI
+    public PartyController playerOnePartyController;
     public List<PartyMemberScriptableObject> playerOneParty;
+    public List<Transform> partyOneObjSpawnPoints;
 
     public List<PartyMemberScriptableObject> playerTwoParty;
+    public List<Transform> partyTwoObjSpawnPoints;
 
     public GameObject playerOneObj;
     public GameObject playerTwoObj;
@@ -44,9 +48,12 @@ public class TurnController : MonoBehaviour
 
     private void StartGame()
     {
-        foreach (PartyMemberScriptableObject member in playerOneParty)
+        for (int i = 0; i < playerOneParty.Count; i++)
         {
-            turnTakerPrefab = Instantiate(turnTakerPrefab) as GameObject;
+            PartyMemberScriptableObject member = playerOneParty[i];
+            Transform spawnPoint = partyOneObjSpawnPoints[i]; // Get the corresponding spawn point
+
+            turnTakerPrefab = Instantiate(turnTakerPrefab, spawnPoint.position, Quaternion.identity);
 
             StatsBase stats = turnTakerPrefab.GetComponent<StatsBase>();
             stats.member = member;
@@ -61,9 +68,12 @@ public class TurnController : MonoBehaviour
             playerOneTurnTakersDict.Add(taker, false);
         }
 
-        foreach (PartyMemberScriptableObject member in playerTwoParty)
+        for (int i = 0; i < playerTwoParty.Count; i++)
         {
-            turnTakerPrefab = Instantiate(turnTakerPrefab) as GameObject;
+            PartyMemberScriptableObject member = playerTwoParty[i];
+            Transform spawnPoint = partyTwoObjSpawnPoints[i];
+
+            turnTakerPrefab = Instantiate(turnTakerPrefab, spawnPoint.position, Quaternion.identity);
 
             StatsBase stats = turnTakerPrefab.GetComponent<StatsBase>();
             stats.member = member;
@@ -131,6 +141,8 @@ public class TurnController : MonoBehaviour
 
     public void PlayerTurn()
     {
+        playerOnePartyController.SetParty(playerOneParty, playerTwoParty, new List<TurnTaker>(playerOneTurnTakersDict.Keys), new List<TurnTaker> (playerTwoTurnTakersDict.Keys));
+
         dealer.SetTurnLocked(true);
         dealer.SetItsMyTurn(false);
 

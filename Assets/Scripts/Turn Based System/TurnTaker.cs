@@ -13,7 +13,7 @@ public class TurnTaker : MonoBehaviour, ITakeTurn
     }
 
     public event Action DeclareStartTurnEvent;
-    public event Action DeclareHighlightedEvent;
+    public event Action <bool>DeclareHighlightedEvent;
 
     public event Action<TurnTaker, bool> PlayerReadyEvent;
 
@@ -29,6 +29,11 @@ public class TurnTaker : MonoBehaviour, ITakeTurn
     public bool TurnLocked()
     {
         return turnLocked;
+    }
+
+    public void SetHighlighted(bool input)
+    {
+        DeclareHighlightedEvent?.Invoke(input);
     }
 
     public void SetItsMyTurn(bool input)

@@ -6,7 +6,7 @@ public interface ITakeTurn
 
     public event Action DeclareStartTurnEvent;
 
-    public event Action DeclareHighlightedEvent;
+    public event Action <bool>DeclareHighlightedEvent;
 
     public bool ItsMyTurn();
 

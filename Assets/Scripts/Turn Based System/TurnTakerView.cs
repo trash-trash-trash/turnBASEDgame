@@ -21,21 +21,34 @@ public class TurnTakerView : MonoBehaviour
 
     public TurnTaker turnTaker;
 
-    public Canvas highlightCanvas;
+    public SpriteRenderer spr;
+
+    public Material highlightedMat;
+
+    public Material defaultMat;
 
     public void OnEnable()
     {
         partyControllers.Add("Cleric", clericController);
         partyControllers.Add("Castrado", castradoController);
 
+        turnTaker.DeclareHighlightedEvent += Highlight;
         turnTaker.DeclareStartTurnEvent += StartTurn;
 
-        //turnTaker.DeclareHighlightedEvent += Highlight;
+        Highlight(false);
     }
 
-    public void Highlight()
+    public void Highlight(bool input)
     {
+        if (input)
+        {
+            spr.material = highlightedMat;
+        }
 
+        else
+        {
+            spr.material = defaultMat;
+        }
     }
 
     public void StartTurn()
@@ -68,6 +81,7 @@ public class TurnTakerView : MonoBehaviour
 
     public void OnDisable()
     {
+        turnTaker.DeclareHighlightedEvent -= Highlight;
         turnTaker.DeclareStartTurnEvent -= StartTurn;
     }
 }
