@@ -8,10 +8,22 @@ public class SelectTargetState : PartyControllerStateBase
     {
         base.OnEnable();
 
-        //is -1 needed? still need clarification on this
-        maxSelectInt = partyController.enemyParty.Count -1;
+        maxSelectInt = partyController.enemyParty.Count - 1;
         selectInt = 0;
 
+        //random target, put smart AI logic in here
+        if (ID == TurnTakerID.PlayerTwo)
+        {
+            int newInt = Random.Range(0, partyController.enemyParty.Count);
+            selectInt = newInt;
+        }
+
+        StartCoroutine(Hack());
+    }
+
+    private IEnumerator Hack()
+    {
+        yield return new WaitForFixedUpdate();
         ChangeSelectInt(0);
     }
 
@@ -39,6 +51,11 @@ public class SelectTargetState : PartyControllerStateBase
             }
 
             partyController.ChangeText("Use " + partyController.currentAction + " on " + partyController.selectedEnemyPartyMember.name + "...", ID);
+        }
+
+        if (ID == TurnTakerID.PlayerTwo)
+        {
+            Confirm();
         }
     }
 

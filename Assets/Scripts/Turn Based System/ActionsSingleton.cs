@@ -7,6 +7,8 @@ public class ActionsSingleton : MonoBehaviour
     private static ActionsSingleton instance;
     
     public Dictionary<int, Actions> actionsDict = new Dictionary<int, Actions>();
+
+    public bool initialized = false;
     
     public enum Actions
     {
@@ -55,5 +57,6 @@ public class ActionsSingleton : MonoBehaviour
         actionsDict.Add(2, Actions.Items);
         actionsDict.Add(3, Actions.Guard);
         actionsDict.Add(4, Actions.Flee);
+        initialized = true;
     }
 }

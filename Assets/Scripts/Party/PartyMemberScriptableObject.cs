@@ -14,6 +14,8 @@ public class PartyMemberScriptableObject : ScriptableObject
 
     public string HiddenTurnDescription;
 
+    public string ContemplateTurnDescription;
+
     public string description;
 
     public bool equipped = false;

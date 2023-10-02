@@ -32,9 +32,13 @@ public class TurnController : MonoBehaviour
 
     public event Action PlayerTurnStartedEvent;
 
+    public event Action<TurnTakerID, bool> DeclareIDTurnStatusEvent;
+
     public BattleManagerSingleton battleManager;
 
     public GameObject turnTakerPrefab;
+
+    public ActionsSingleton actionsSingleton;
 
     public void Awake()
     {
@@ -45,6 +49,16 @@ public class TurnController : MonoBehaviour
         dealer = dealerObj.GetComponent<ITakeTurn>();
 
         dealer.DeclareTurnTakenEvent += DealerReady;
+
+        actionsSingleton = ActionsSingleton.Instance;
+
+        StartCoroutine(WaitForActionsDictionary());
+    }
+
+    private IEnumerator WaitForActionsDictionary()
+    {
+        while (!actionsSingleton.initialized)
+            yield return null;
 
         StartGame();
     }
@@ -96,6 +110,10 @@ public class TurnController : MonoBehaviour
             playerTwoTurnTakersDict.Add(taker, false);
         }
 
+        DeclareIDTurnStatusEvent?.Invoke(TurnTakerID.PlayerOne, false);
+        DeclareIDTurnStatusEvent(TurnTakerID.PlayerTwo, false);
+        DeclareIDTurnStatusEvent(TurnTakerID.Dealer, true);
+
         PlayerTurn();
     }
 
@@ -142,21 +160,28 @@ public class TurnController : MonoBehaviour
     {
         SetPartyEvent?.Invoke(playerOneParty, playerTwoParty, new List<TurnTaker>(playerOneTurnTakersDict.Keys),
             new List<TurnTaker>(playerTwoTurnTakersDict.Keys));
-
-        SetControllerText("Player's turn", TurnTakerID.Dealer);
-
+        
         PlayerTurnStartedEvent?.Invoke();
     }
 
     public void DealerReady(TurnTaker turnTakerId, bool input)
     {
-        if (input)
-            PlayerTurn();
+        StartCoroutine(HackWait());
+    }
+
+    private IEnumerator HackWait()
+    {
+        SetControllerText("Your fate wavers uncertainly...", TurnTakerID.PlayerOne);
+        SetControllerText("Your fate wavers uncertainly...", TurnTakerID.PlayerTwo);
+        yield return new WaitForSeconds(3);
+        PlayerTurn();
     }
 
     public void DealerTurn()
     {
-        SetControllerText("Dealer's Turn", TurnTakerID.Dealer);
+        DeclareIDTurnStatusEvent?.Invoke(TurnTakerID.PlayerOne, true);
+        DeclareIDTurnStatusEvent(TurnTakerID.PlayerTwo, true);
+        DeclareIDTurnStatusEvent(TurnTakerID.Dealer, false);
     }
 
     public void EndFight()

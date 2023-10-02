@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Castrado
   stats: {fileID: 0}
-  selectedAction: {fileID: 0}
+  selectedAction: {fileID: 11400000, guid: ef64158ecbe63d7449eb4b598ed6f51c, type: 2}
   actions:
   - {fileID: 11400000, guid: ef64158ecbe63d7449eb4b598ed6f51c, type: 2}
   HiddenTurnDescription: Castrado lurches forwards...
+  ContemplateTurnDescription: Castrado smiles an eyeless smile...
   description: 
   equipped: 0
   HP: 100

@@ -10,12 +10,23 @@ public class SelectActionState : PartyControllerStateBase
     {
         base.OnEnable();
 
-        partyController.DeclareActionOnOff(true);
+        if(ID==TurnTakerID.PlayerOne)
+         partyController.DeclareActionOnOff(true);
 
         maxSelectInt = 4;
         selectInt = 0;
 
-        ChangeSelectInt(0);
+        StartCoroutine(Hack());
+    }
+
+    private IEnumerator Hack()
+    {
+        yield return new WaitForFixedUpdate();
+
+        if (ID == TurnTakerID.PlayerTwo)
+            yield return new WaitForSeconds(AIController.logicWaitTime);
+
+        ChangeSelectInt(selectInt);
     }
 
     protected override void ChangeSelectInt(int x)
@@ -32,9 +43,15 @@ public class SelectActionState : PartyControllerStateBase
 
         partyController.DeclareActionSelect(x);
 
-
         if (ID == TurnTakerID.PlayerOne)
             partyController.ChangeText(partyController.selectedPartyMember.name + " wants to use " + partyController.currentAction + "...", ID);
+
+        //figure out custom AI behaviour later
+        if (ID == TurnTakerID.PlayerTwo)
+        {
+            partyController.ChangeText(partyController.selectedPartyMember.ContemplateTurnDescription, ID);
+            Confirm();
+        }
     }
 
     protected override void Confirm()
@@ -52,6 +69,8 @@ public class SelectActionState : PartyControllerStateBase
     protected override void OnDisable()
     {
         base.OnDisable();
-        partyController.DeclareActionOnOff(false);
+
+        if(ID==TurnTakerID.PlayerOne)
+            partyController.DeclareActionOnOff(false);
     }
 }

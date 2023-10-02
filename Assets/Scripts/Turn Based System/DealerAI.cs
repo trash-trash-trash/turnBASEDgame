@@ -12,12 +12,24 @@ public class DealerAI : MonoBehaviour
 
     public void OnEnable()
     {
+        controller.DeclareIDTurnStatusEvent += TakeTurn;
+    }
 
+    private void TakeTurn(TurnTakerID turnTakerId, bool input)
+    {
+        if (turnTakerId == TurnTakerID.Dealer)
+        {
+            if(input)
+                turnTaker.StartTurn();
+
+                else
+                turnTaker.EndTurn();
+        }
     }
 
     private void OnDisable()
     {
-
+        controller.DeclareIDTurnStatusEvent -= TakeTurn;
     }
 
     // Define a structure to hold attack data

@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class SelectPartyMemberState : PartyControllerStateBase
 {
-
+    //TO DO: PUT A CHECK IF THERE IS ONLY ONE PARTY MEMBER LEFT TO CONFIRM AND INSTA CONFIRM IT
     protected override void OnEnable()
     {
         base.OnEnable();
         
         maxSelectInt = partyController.party.Count - 1;
-
-        if (ID == TurnTakerID.PlayerTwo)
-        {
-            int randomIndex = Random.Range(0, party.Count);
-
-            selectInt = randomIndex;
-        }
-
         selectInt = 0;
+
+        StartCoroutine(Hack());
+    }
+
+    private IEnumerator Hack()
+    {
+        yield return new WaitForFixedUpdate();
         ChangeSelectedPartyMember(selectInt);
     }
 
@@ -34,6 +33,22 @@ public class SelectPartyMemberState : PartyControllerStateBase
         ChangeSelectedPartyMember(selectInt);
     }
 
+    protected void HighlightNextUnfinishedTurnTaker(int startIndex)
+    {
+        for (int i = startIndex + 1; i < turnTakers.Count; i++)
+        {
+            if (!partyController.turnTakers[i].TurnTaken())
+            {
+                ChangeSelectedPartyMember(i);
+                return;
+            }
+            else
+            {
+                Debug.Log("Out of turn takers");
+            }
+        }
+    }
+
     protected virtual void ChangeSelectedPartyMember(int x)
     {
         partyController.selectedPartyMember = party[x];
@@ -41,8 +56,7 @@ public class SelectPartyMemberState : PartyControllerStateBase
 
         if (partyController.selectedTurnTaker.TurnTaken())
         {
-            x++;
-            ChangeSelectedPartyMember(x);
+            HighlightNextUnfinishedTurnTaker(x);
             return;
         }
 
@@ -60,5 +74,11 @@ public class SelectPartyMemberState : PartyControllerStateBase
 
             partyController.ChangeText(partyController.selectedPartyMember.name, ID);
         }
+
+        if (partyController.party.Count -1 <= 0)
+            Confirm();
+
+        if (ID == TurnTakerID.PlayerTwo)
+            Confirm();
     }
 }

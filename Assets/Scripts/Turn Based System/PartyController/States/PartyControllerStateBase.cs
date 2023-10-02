@@ -6,7 +6,7 @@ public class PartyControllerStateBase : MonoBehaviour
 {
     public PartyController partyController;
 
-    public TurnController turnController;
+    public EnemyAIPartyController AIController;
 
     public PlayerControls playerControls;
 
@@ -77,11 +77,6 @@ public class PartyControllerStateBase : MonoBehaviour
     }
 
     protected virtual void Cancel()
-    {
-
-    }
-
-    protected virtual void NextState()
     {
 
     }

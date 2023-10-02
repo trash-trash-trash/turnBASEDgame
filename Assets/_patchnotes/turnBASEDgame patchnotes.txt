@@ -131,3 +131,11 @@ TODO: allow player to customise party order
 -- scrapped inheritances. Made PartyController.cs a state manager. Spent A LOT of time cleaning up PartyController and dividing it into states. Added SelectPartyMemberState, SelectActionState, SelectTargetState, CalculateState, WaitForNextTurnState, and logic for moving between them.
 
 -- cleaned up TurnController.cs and TurnTaker.cs
+
+1.8
+
+-- added EnemyAIPartyController.cs
+
+-- hooked EnemyAI stuff up to states and turncontroller
+
+-- dummy AI can now take turns for the enemy party (TODO: behaviour for interesting picking of enemies)

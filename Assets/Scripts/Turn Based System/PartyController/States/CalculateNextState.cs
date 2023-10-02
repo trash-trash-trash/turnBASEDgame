@@ -4,65 +4,40 @@ using UnityEngine;
 
 public class CalculateNextState : PartyControllerStateBase
 {
+
     protected override void OnEnable()
     {
-        base.OnEnable(); 
-        CheckTurnTakers(); // Call CheckTurnTakers when the state is enabled
+        base.OnEnable();
+        StartCoroutine(Hack());
     }
 
-    private void CheckTurnTakers()
+    private IEnumerator Hack()
     {
-        bool anyFalse = false; // Initialize anyFalse as false
+        yield return new WaitForFixedUpdate();
 
-        foreach (TurnTaker tt in turnTakers)
-        {
-            if (!tt.TurnTaken()) // Check if TurnTaken is false
-            {
-                anyFalse = true; // Set anyFalse to true when a false value is encountered
-                break; // No need to continue checking, we found one false value
-            }
-        }
+        if (ID == TurnTakerID.PlayerTwo)
+            yield return new WaitForSeconds(AIController.logicWaitTime);
 
-        if (anyFalse)
-        {
-            NextPartyMember();
-        }
-        else
-        {
-            WaitForNextTurn();
-        }
-    }
-
-    private void NextPartyMember()
-    {
-       partyController.ChangeState(PartyController.PartyControllerEnum.SelectPartyMember);
-       Debug.Log("still turns to be taken");
-    }
-
-    private void WaitForNextTurn()
-    {
-        if (ID == TurnTakerID.PlayerOne)
-            partyController.selectedTurnTaker.SetHighlighted(false);
-        
-        partyController.myTurn = false;
-       partyController.ChangeState(PartyController.PartyControllerEnum.WaitingForNextTurn);
-       Debug.Log("all turns used");
+        Confirm();
     }
 
     protected override void Confirm()
     {
         base.Confirm();
-        partyController.ChangeState(PartyController.PartyControllerEnum.SelectPartyMember);
+        TurnTaker newTurnTaker = partyController.CalculateNextTurnTaker();
+
+        if (newTurnTaker != null)
+            partyController.ChangeState(PartyController.PartyControllerEnum.SelectPartyMember);
+
+        else
+        {
+            partyController.ChangeState(PartyController.PartyControllerEnum.WaitingForNextTurn);
+        }
     }
 
     protected override void Cancel()
     {
         base.Cancel();
         partyController.ChangeState(PartyController.PartyControllerEnum.SelectTarget);
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
     }
 }

@@ -51,9 +51,17 @@ public class PartyController : MonoBehaviour
 
     public ActionsSingleton actionsSingleton;
 
+    public event Action<PartyControllerEnum> DeclareCurrentActionEvent;
+
     protected virtual void OnEnable()
     {
         turnController.SetPartyEvent += SetParty;
+
+        statesDictionary.Add(PartyControllerEnum.SelectPartyMember, selectPartyMemberObj);
+        statesDictionary.Add(PartyControllerEnum.SelectAction, selectActionObj);
+        statesDictionary.Add(PartyControllerEnum.SelectTarget, selectTargetObj);
+        statesDictionary.Add(PartyControllerEnum.Calculate, calculateStateObj);
+        statesDictionary.Add(PartyControllerEnum.WaitingForNextTurn, waitForNextTurnObj);
     }
 
     public void DeclareActionSelect(int x)
@@ -81,9 +89,14 @@ public class PartyController : MonoBehaviour
         {
             stateManager.ChangeState(statesDictionary[newState]);
             currentState = newState;
+            DeclareCurrentActionEvent?.Invoke(currentState);
         }
     }
 
+    public void ChangeAction(ActionsSingleton.Actions newAction)
+    {
+        currentAction = newAction;
+    }
 
     protected virtual void OnDisable()
     {
@@ -92,8 +105,6 @@ public class PartyController : MonoBehaviour
 
     protected virtual void UseActionOnTarget()
     {
-        
-
         StartCoroutine(ConfirmAction());
     }
 
@@ -105,10 +116,7 @@ public class PartyController : MonoBehaviour
 
         yield return new WaitForSeconds(useActionWaitTime);
 
-       
-
         dealerAI.AddAttack(selectedPartyMember, selectedEnemyPartyMember, selectedPartyMember.selectedAction);
-
     }
 
 
@@ -136,11 +144,10 @@ public class PartyController : MonoBehaviour
             enemyTurnTakers = newTurnTakers;
         }
 
-        statesDictionary.Add(PartyControllerEnum.SelectPartyMember, selectPartyMemberObj);
-        statesDictionary.Add(PartyControllerEnum.SelectAction, selectActionObj);
-        statesDictionary.Add(PartyControllerEnum.SelectTarget, selectTargetObj);
-        statesDictionary.Add(PartyControllerEnum.WaitingForNextTurn, waitForNextTurnObj);
-        statesDictionary.Add(PartyControllerEnum.Calculate, calculateStateObj);
+        foreach (TurnTaker tt in turnTakers)
+        {
+            tt.StartTurn();
+        }
 
         StartTurn();
     }
@@ -153,5 +160,26 @@ public class PartyController : MonoBehaviour
     public void ChangeText(string input, TurnTakerID ID)
     {
         turnController.SetControllerText(input, ID);
+    }
+
+    public TurnTaker CalculateNextTurnTaker()
+    {
+        TurnTaker newTurnTaker = null;
+
+        foreach (TurnTaker tt in turnTakers)
+        {
+            if (!tt.TurnTaken())
+            {
+                newTurnTaker = tt;
+                break;
+            }
+        }
+
+        if (newTurnTaker != null)
+        {
+            return newTurnTaker;
+        }
+
+        return null;
     }
 }

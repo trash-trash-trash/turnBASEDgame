@@ -33,13 +33,12 @@ public class TurnControllerView : MonoBehaviour
 
     public void NewText(TurnTakerID ID, string newString)
     {
-        if (ID == TurnTakerID.PlayerOne || fading)
+        if (ID == TurnTakerID.PlayerOne)
         {
-            if (newString == p1prevText)
-                return;
 
+            playerOneText.text = newString;
             p1prevText = newString;
-
+            
             if (!fading)
             {
                 GameObject newPlayerOneTextObj =
@@ -52,13 +51,11 @@ public class TurnControllerView : MonoBehaviour
                 StartCoroutine(FadeText(newPlayerOneTextObj, newText, -moveAmount));
             }
 
-            playerOneText.text = newString;
         }
         else if (ID == TurnTakerID.PlayerTwo)
         {
-            if (newString == p2prevText || fading)
-                return;
 
+            playerTwoText.text = newString;
             p2prevText = newString;
 
             if (!fading)
@@ -75,7 +72,6 @@ public class TurnControllerView : MonoBehaviour
                 StartCoroutine(FadeText(newPlayerTwoTextObj, newText, moveAmount));
             }
 
-            playerTwoText.text = newString;
         }
 
     }
