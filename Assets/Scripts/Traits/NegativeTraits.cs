@@ -1,4 +1,5 @@
 public enum NegativeTraits
 {
-    Afraid
+    Afraid,
+    Bleed
 }

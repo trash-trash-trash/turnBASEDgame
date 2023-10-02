@@ -33,7 +33,7 @@ public class TurnTakerView : MonoBehaviour
         partyControllers.Add("Castrado", castradoController);
 
         turnTaker.DeclareHighlightedEvent += Highlight;
-        turnTaker.DeclareStartTurnEvent += StartTurn;
+        turnTaker.DeclareTurnTakenEvent += StartTurn;
 
         Highlight(false);
     }
@@ -51,7 +51,7 @@ public class TurnTakerView : MonoBehaviour
         }
     }
 
-    public void StartTurn()
+    public void StartTurn(TurnTaker taker, bool b)
     {
         //!!!HACK WARNING HACK!!!
         if (partyControllers.ContainsKey(turnTaker.transform.name))
@@ -66,14 +66,14 @@ public class TurnTakerView : MonoBehaviour
                 animator.Play("TurnBasedPortrait");
             }
             else if (turnTaker.transform.name == "Castrado")
-            {/*
+            {
                 int randomValue = Random.Range(0, 2);
                 
                 // Use a ternary operator to choose between two code blocks
-                string newString = (randomValue == 0) ? "TurnBasedPortait01" : "TurnBasedPortrait02";
+                string newString = (randomValue == 0) ? "TurnBasedPortrait01" : "TurnBasedPortrait02";
 
-                animator.Play(newString);*/
-                animator.Play("TurnBasedPortrait01");
+                animator.Play(newString);
+                //animator.Play("TurnBasedPortrait01");
             }
         }
     }
@@ -82,6 +82,6 @@ public class TurnTakerView : MonoBehaviour
     public void OnDisable()
     {
         turnTaker.DeclareHighlightedEvent -= Highlight;
-        turnTaker.DeclareStartTurnEvent -= StartTurn;
+        turnTaker.DeclareTurnTakenEvent -= StartTurn;
     }
 }

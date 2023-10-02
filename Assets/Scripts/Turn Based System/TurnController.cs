@@ -10,8 +10,6 @@ using UnityEngine.SceneManagement;
 
 public class TurnController : MonoBehaviour
 {
-    //player Two will have to be an AI
-    public PartyController playerOnePartyController;
     public List<PartyMemberScriptableObject> playerOneParty;
     public List<Transform> partyOneObjSpawnPoints;
 
@@ -27,7 +25,12 @@ public class TurnController : MonoBehaviour
     public Dictionary<TurnTaker, bool> playerOneTurnTakersDict = new Dictionary<TurnTaker, bool>();
     public Dictionary<TurnTaker, bool> playerTwoTurnTakersDict = new Dictionary<TurnTaker, bool>();
 
-    public event Action<string> AnnounceControllerString;
+    public event Action<string, TurnTakerID> AnnounceControllerString;
+
+    public event Action<List<PartyMemberScriptableObject>, List<PartyMemberScriptableObject>, List<TurnTaker>,
+        List<TurnTaker>> SetPartyEvent;
+
+    public event Action PlayerTurnStartedEvent;
 
     public BattleManagerSingleton battleManager;
 
@@ -41,7 +44,7 @@ public class TurnController : MonoBehaviour
 
         dealer = dealerObj.GetComponent<ITakeTurn>();
 
-        dealer.PlayerReadyEvent += DealerReady;
+        dealer.DeclareTurnTakenEvent += DealerReady;
 
         StartGame();
     }
@@ -57,13 +60,16 @@ public class TurnController : MonoBehaviour
 
             StatsBase stats = turnTakerPrefab.GetComponent<StatsBase>();
             stats.member = member;
+            member.stats = stats;
             stats.Initialize();
 
             turnTakerPrefab.name = member.name;
             turnTakerPrefab.transform.SetParent(playerOneObj.transform);
 
             TurnTaker taker = turnTakerPrefab.GetComponent<TurnTaker>();
-            taker.PlayerReadyEvent += PlayerReady;
+            taker.DeclareTurnTakenEvent += PlayerReady;
+
+            taker.StartTurn();
 
             playerOneTurnTakersDict.Add(taker, false);
         }
@@ -83,7 +89,9 @@ public class TurnController : MonoBehaviour
             turnTakerPrefab.transform.SetParent(playerTwoObj.transform);
 
             TurnTaker taker = turnTakerPrefab.GetComponent<TurnTaker>();
-            taker.PlayerReadyEvent += PlayerReady;
+            taker.DeclareTurnTakenEvent += PlayerReady;
+
+            taker.StartTurn();
 
             playerTwoTurnTakersDict.Add(taker, false);
         }
@@ -91,9 +99,9 @@ public class TurnController : MonoBehaviour
         PlayerTurn();
     }
 
-    public void SetControllerText(string input)
+    public void SetControllerText(string input, TurnTakerID ID)
     {
-        AnnounceControllerString?.Invoke(input);
+        AnnounceControllerString?.Invoke(input, ID);
     }
 
     public void PlayerReady(TurnTaker turnTaker, bool input)
@@ -130,26 +138,14 @@ public class TurnController : MonoBehaviour
         DealerTurn();
     }
 
-    public void SetShit(Dictionary<TurnTaker, bool> targetDict, bool turnLocked, bool itsMyTurn)
-    {
-        foreach (TurnTaker member in targetDict.Keys)
-        {
-            member.SetTurnLocked(turnLocked);
-            member.SetItsMyTurn(itsMyTurn);
-        }
-    }
-
     public void PlayerTurn()
     {
-        playerOnePartyController.SetParty(playerOneParty, playerTwoParty, new List<TurnTaker>(playerOneTurnTakersDict.Keys), new List<TurnTaker> (playerTwoTurnTakersDict.Keys));
+        SetPartyEvent?.Invoke(playerOneParty, playerTwoParty, new List<TurnTaker>(playerOneTurnTakersDict.Keys),
+            new List<TurnTaker>(playerTwoTurnTakersDict.Keys));
 
-        dealer.SetTurnLocked(true);
-        dealer.SetItsMyTurn(false);
+        SetControllerText("Player's turn", TurnTakerID.Dealer);
 
-        SetShit(playerOneTurnTakersDict, false, true);
-        SetShit(playerTwoTurnTakersDict, false, true);
-
-        SetControllerText("Player's turn");
+        PlayerTurnStartedEvent?.Invoke();
     }
 
     public void DealerReady(TurnTaker turnTakerId, bool input)
@@ -159,14 +155,8 @@ public class TurnController : MonoBehaviour
     }
 
     public void DealerTurn()
-    {        
-        dealer.SetItsMyTurn(true);
-        dealer.SetTurnLocked(false);
-        
-        SetShit(playerOneTurnTakersDict, true, false);
-        SetShit(playerTwoTurnTakersDict, true, false);
-
-        SetControllerText("Dealer's Turn");
+    {
+        SetControllerText("Dealer's Turn", TurnTakerID.Dealer);
     }
 
     public void EndFight()
@@ -177,16 +167,16 @@ public class TurnController : MonoBehaviour
 
     public void OnDisable()
     {
-        dealer.PlayerReadyEvent -= DealerReady;
+        dealer.DeclareTurnTakenEvent -= DealerReady;
 
         foreach (TurnTaker member in playerOneTurnTakersDict.Keys)
         {
-            member.PlayerReadyEvent -= PlayerReady;
+            member.DeclareTurnTakenEvent -= PlayerReady;
         }
 
         foreach (TurnTaker member in playerTwoTurnTakersDict.Keys)
         {
-            member.PlayerReadyEvent -= PlayerReady;
+            member.DeclareTurnTakenEvent -= PlayerReady;
         }
 
         playerOneTurnTakersDict.Clear();

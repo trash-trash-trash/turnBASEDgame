@@ -5,54 +5,26 @@ using UnityEngine;
 
 public class TurnTaker : MonoBehaviour, ITakeTurn
 {
-    public bool turnTaken;
-
+    public bool turnTaken;  
     public bool TurnTaken()
     {
         return turnTaken;
     }
 
-    public event Action DeclareStartTurnEvent;
+    public event Action<TurnTaker, bool> DeclareTurnTakenEvent;
+    
     public event Action <bool>DeclareHighlightedEvent;
-
-    public event Action<TurnTaker, bool> PlayerReadyEvent;
-
-    public bool itsMyTurn;
-
-    public bool ItsMyTurn()
-    {
-        return itsMyTurn;
-    }
-
-    public bool turnLocked;
-
-    public bool TurnLocked()
-    {
-        return turnLocked;
-    }
-
-    public void SetHighlighted(bool input)
-    {
-        DeclareHighlightedEvent?.Invoke(input);
-    }
-
-    public void SetItsMyTurn(bool input)
-    {
-        itsMyTurn = input;
-
-        if (input)
-            StartTurn();
-    }
-
-    public void SetTurnLocked(bool input)
-    {
-        turnLocked = input;
-    }
 
     public void StartTurn()
     {
         turnTaken = false;
-        DeclareStartTurnEvent?.Invoke();
+        AnnouncePlayerReady(this, false);
+    }
+
+
+    public void SetHighlighted(bool input)
+    {
+        DeclareHighlightedEvent?.Invoke(input);
     }
 
     public void EndTurn()
@@ -63,6 +35,6 @@ public class TurnTaker : MonoBehaviour, ITakeTurn
 
     public void AnnouncePlayerReady(TurnTaker turnInput, bool input)
     {
-        PlayerReadyEvent?.Invoke(turnInput, input);
+        DeclareTurnTakenEvent?.Invoke(turnInput, input);
     }
 }

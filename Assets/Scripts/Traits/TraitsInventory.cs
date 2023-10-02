@@ -21,8 +21,6 @@ public class TraitsInventory : MonoBehaviour
             targetStatus.SetOwner(stats);
             AddStatus(targetStatus);
         }
-
-        turnTaker.DeclareStartTurnEvent += InflictStatus;
     }
 
     public void InflictStatus()
@@ -47,6 +45,5 @@ public class TraitsInventory : MonoBehaviour
 
     public void OnDisable()
     {
-        turnTaker.DeclareStartTurnEvent -= InflictStatus;
     }
 }

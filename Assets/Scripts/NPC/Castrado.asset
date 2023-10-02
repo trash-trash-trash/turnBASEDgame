@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Castrado
   m_EditorClassIdentifier: 
   name: Castrado
+  stats: {fileID: 0}
+  selectedAction: {fileID: 0}
+  actions:
+  - {fileID: 11400000, guid: ef64158ecbe63d7449eb4b598ed6f51c, type: 2}
+  HiddenTurnDescription: Castrado lurches forwards...
   description: 
   equipped: 0
   HP: 100
@@ -24,3 +29,4 @@ MonoBehaviour:
   MagDamage: 100
   MagDefense: 100
   Luck: 100
+  combatSprite: {fileID: 0}

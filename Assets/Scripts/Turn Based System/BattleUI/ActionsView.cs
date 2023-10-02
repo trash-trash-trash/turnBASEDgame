@@ -19,7 +19,7 @@ public class ActionsView : MonoBehaviour
 
     public void OnEnable()
     {
-        controller.SelectIntEvent += ChangeActionHighlight;
+        controller.SelectActionIntEvent += ChangeActionHighlight;
         controller.ActionSelectEvent += ActionsOn;
     }
 
@@ -62,7 +62,7 @@ public class ActionsView : MonoBehaviour
 
     public void OnDisable()
     {
-        controller.SelectIntEvent -= ChangeActionHighlight;
+        controller.SelectActionIntEvent -= ChangeActionHighlight;
         controller.ActionSelectEvent -= ActionsOn;
     }
 }

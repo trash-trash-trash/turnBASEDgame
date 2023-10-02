@@ -114,3 +114,20 @@ TODO: allow player to customise party order
 
 -- hooked TurnController up to PlayerController to set player and enemy parties. 
 
+1.6
+
+-- made PartyController a base script, PlayerPartyController now inherits and uses player controls to control (will need more refinement later)
+
+-- added EnemyAIPartyController to allow enemy AI control
+
+-- added a second battle Text for enemy AI / player two
+
+1.7
+
+-- added ActionScriptableObjects.cs
+
+-- TurnTakerView.cs now highlights sprites when selected
+
+-- scrapped inheritances. Made PartyController.cs a state manager. Spent A LOT of time cleaning up PartyController and dividing it into states. Added SelectPartyMemberState, SelectActionState, SelectTargetState, CalculateState, WaitForNextTurnState, and logic for moving between them.
+
+-- cleaned up TurnController.cs and TurnTaker.cs

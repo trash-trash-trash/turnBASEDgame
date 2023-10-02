@@ -1,9 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewPartyMemberScriptableObject", menuName = "PartyScriptableObject")]
 public class PartyMemberScriptableObject : ScriptableObject
 {
     public string name;
+
+    public StatsBase stats;
+
+    public ActionScriptableObject selectedAction;
+
+    public List<ActionScriptableObject> actions;
+
+    public string HiddenTurnDescription;
 
     public string description;
 
@@ -22,4 +31,10 @@ public class PartyMemberScriptableObject : ScriptableObject
 
     public Sprite combatSprite;
     //class?
+
+    //change to set equipped Action
+    public void OnEnable()
+    {
+        selectedAction = actions[0];
+    }
 }

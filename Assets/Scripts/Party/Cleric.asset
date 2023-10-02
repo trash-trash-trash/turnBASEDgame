@@ -13,14 +13,21 @@ MonoBehaviour:
   m_Name: Cleric
   m_EditorClassIdentifier: 
   name: Cleric
+  stats: {fileID: 0}
+  selectedAction: {fileID: 0}
+  actions:
+  - {fileID: 11400000, guid: adb278fdc527dfe408ac180c4d45b9b4, type: 2}
+  - {fileID: 11400000, guid: f64ed332cefae3646a425d5f557a629d, type: 2}
+  HiddenTurnDescription: Cleric bows their head...
   description: 
   equipped: 0
   HP: 120
   Mind: 100
+  Speed: 10
+  Accuracy: 10
   PhysDamage: 80
   PhysDefense: 15
   MagDamage: 80
   MagDefense: 20
-  Speed: 10
   Luck: 2
-  Accuracy: 10
+  combatSprite: {fileID: 0}
