@@ -35,8 +35,9 @@ public class PartyMemberScriptableObject : ScriptableObject
     //class?
 
     //change to set equipped Action
+    /*
     public void OnEnable()
     {
         selectedAction = actions[0];
-    }
+    }*/
 }

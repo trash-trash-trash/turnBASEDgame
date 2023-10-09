@@ -139,3 +139,9 @@ TODO: allow player to customise party order
 -- hooked EnemyAI stuff up to states and turncontroller
 
 -- dummy AI can now take turns for the enemy party (TODO: behaviour for interesting picking of enemies)
+
+1.9
+
+-- housekeeping, updated MainMenu. Using vertical layout groups for buttons
+
+-- added Controller support

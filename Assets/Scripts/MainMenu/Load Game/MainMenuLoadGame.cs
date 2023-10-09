@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuPressStart : MainMenuBase
+public class MainMenuLoadGame : MainMenuBase
 {
-    protected override void Confirm()
+    protected override void Cancel()
     {
-        base.Confirm();
-        PressStart();
+        base.Cancel();
+        Back();
     }
 
-    public void PressStart()
+    public void Back()
     {
         brain.ChangeMenuState(MainMenuStateEnum.MainMenu);
     }

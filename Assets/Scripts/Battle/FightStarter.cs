@@ -15,21 +15,24 @@ public class FightStarter : MonoBehaviour, IStartFights
 
     public PartyInventory partyInventory;
 
+    public void OnEnable()
+    {
+        battleManager = BattleManagerSingleton.BattleManagerSingletonInstance;
+
+        party = partyInventory.party;
+
+        lookingToFight = true;
+    }
+
     public bool LookingToFight()
     {
         return lookingToFight;
     }
 
-    public void SetParty()
-    {
-        battleManager.SetParty(battleManager.playerTwoParty, party);
-    }
 
     public void StartFight()
     {
-        party = partyInventory.party;
-        battleManager = BattleManagerSingleton.BattleManagerSingletonInstance;
-        SetParty();
+        battleManager.SetParty(battleManager.playerTwoParty, party);
         battleManager.NPCStartFight(this);
         FightStartedEvent?.Invoke();
     }

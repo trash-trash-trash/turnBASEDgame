@@ -56,6 +56,8 @@ public class BattleManagerSingleton : MonoBehaviour
 
     public event Action FightEndedEvent;
 
+    public GameObject cameraObj;
+
     public void NPCStartFight(IStartFights newFighter)
     {
         NPCStartedFightEvent?.Invoke(newFighter);
@@ -63,6 +65,8 @@ public class BattleManagerSingleton : MonoBehaviour
 
     public void StartFight()
     {
+        cameraObj.SetActive(false);
+
         Scene subscene = SceneManager.GetSceneByName("DealerTest");
         if (subscene.isLoaded)
         {
@@ -104,6 +108,8 @@ public class BattleManagerSingleton : MonoBehaviour
         {
             SceneManager.UnloadScene(battleScene);
         }
+
+        cameraObj.SetActive(true);
 
         FightEndedEvent?.Invoke();
     }

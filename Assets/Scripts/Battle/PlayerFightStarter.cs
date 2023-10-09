@@ -15,12 +15,15 @@ public class PlayerFightStarter : MonoBehaviour, IStartFights
     public void OnEnable()
     {
         battleManager = BattleManagerSingleton.BattleManagerSingletonInstance;
+
+        battleManager.SetParty(battleManager.playerOneParty, partyInventory.party);
+
         battleManager.NPCStartedFightEvent += NPCStartedFight;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        IStartFights startFightsComponent = other.gameObject.GetComponent<IStartFights>();
+        startFightsComponent = other.gameObject.GetComponent<IStartFights>();
 
         if (startFightsComponent != null)
         {
@@ -30,10 +33,7 @@ public class PlayerFightStarter : MonoBehaviour, IStartFights
             StartFight();
         }
     }
-    public void SetParty()
-    {
-        battleManager.SetParty(battleManager.playerOneParty, partyInventory.party);
-    }
+
 
     public bool LookingToFight()
     {
@@ -50,10 +50,13 @@ public class PlayerFightStarter : MonoBehaviour, IStartFights
     {
         if (startFightsComponent != null)
         {
-            SetParty();
-            startFightsComponent.SetParty();
             battleManager.StartFight();
         }
+    }
+
+    private void OnDisable()
+    {
+        battleManager.NPCStartedFightEvent -= NPCStartedFight;
     }
 }
 

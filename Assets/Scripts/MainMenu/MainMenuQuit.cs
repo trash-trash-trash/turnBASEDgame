@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class MainMenuQuit : MainMenuBase
 {
+    protected override void Cancel()
+    {
+        base.Cancel();
+        Back();
+    }
+
+    public void Back()
+    {
+        brain.ChangeMenuState(MainMenuStateEnum.MainMenu);
+    }
 
     public void Quit()
     {
