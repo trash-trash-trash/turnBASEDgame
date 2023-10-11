@@ -22,7 +22,7 @@ public class StatsBase : MonoBehaviour
     public Dictionary<StatsEnum, int> statsDictionary = new Dictionary<StatsEnum, int>();
     public bool initialized = false;
 
-    public void Initialize()
+    public void Start()
     {
         SetDictionary();
     }

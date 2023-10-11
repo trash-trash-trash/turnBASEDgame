@@ -123,6 +123,8 @@ MonoBehaviour:
   spr: {fileID: 5073770518961759087}
   highlightedMat: {fileID: 2100000, guid: 0dd588a9afd0b7e458faeea77e2b7fe1, type: 2}
   defaultMat: {fileID: 2100000, guid: 5d7d804df94898640a583a18c99ad012, type: 2}
+  ttDict: {fileID: 0}
+  statBase: {fileID: 959472159782855839}
 --- !u!212 &5073770518961759087
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -223,8 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnTaken: 0
-  itsMyTurn: 0
-  turnLocked: 0
 --- !u!114 &959472159782855839
 MonoBehaviour:
   m_ObjectHideFlags: 0

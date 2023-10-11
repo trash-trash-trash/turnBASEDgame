@@ -12,6 +12,8 @@ public class SelectPartyMemberState : PartyControllerStateBase
         maxSelectInt = partyController.party.Count - 1;
         selectInt = 0;
 
+        ChangeSelectInt(0);
+
         StartCoroutine(Hack());
     }
 

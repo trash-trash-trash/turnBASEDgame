@@ -145,3 +145,7 @@ TODO: allow player to customise party order
 -- housekeeping, updated MainMenu. Using vertical layout groups for buttons
 
 -- added Controller support
+
+2.0
+
+-- added TurnTakersDictionary.cs singleton. cleaned up TurnTakerView.cs. 

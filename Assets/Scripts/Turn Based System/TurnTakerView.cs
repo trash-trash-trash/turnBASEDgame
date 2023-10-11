@@ -16,8 +16,8 @@ public class TurnTakerView : MonoBehaviour
 
     public AnimatorController castradoController;
 
-    public Dictionary<string, AnimatorController> partyControllers =
-        new Dictionary<string, AnimatorController>();
+    public Dictionary<PartyMemberScriptableObject, AnimatorController> partyControllers =
+        new Dictionary<PartyMemberScriptableObject, AnimatorController>();
 
     public TurnTaker turnTaker;
 
@@ -27,15 +27,23 @@ public class TurnTakerView : MonoBehaviour
 
     public Material defaultMat;
 
+    public TurnTakerDictionary ttDict;
+
+    public StatsBase statBase;
+
     public void OnEnable()
     {
-        partyControllers.Add("Cleric", clericController);
-        partyControllers.Add("Castrado", castradoController);
+        ttDict = TurnTakerDictionary.TurnTakerDictionaryInstance;
+
+        partyControllers.Add(ttDict.clericSO, clericController);
+
+        partyControllers.Add(ttDict.castradoSO, castradoController);
 
         turnTaker.DeclareHighlightedEvent += Highlight;
-        turnTaker.DeclareTurnTakenEvent += StartTurn;
 
         Highlight(false);
+
+        StartTurn();
     }
 
     public void Highlight(bool input)
@@ -51,20 +59,20 @@ public class TurnTakerView : MonoBehaviour
         }
     }
 
-    public void StartTurn(TurnTaker taker, bool b)
+    public void StartTurn()
     {
         //!!!HACK WARNING HACK!!!
-        if (partyControllers.ContainsKey(turnTaker.transform.name))
+        if (partyControllers.ContainsKey(statBase.member))
         {
-            currentController = partyControllers[turnTaker.transform.name];
+            currentController = partyControllers[statBase.member];
 
             animator.runtimeAnimatorController = currentController;
-            
 
             if (turnTaker.transform.name == "Cleric")
             {
                 animator.Play("TurnBasedPortrait");
             }
+
             else if (turnTaker.transform.name == "Castrado")
             {
                 int randomValue = Random.Range(0, 2);
@@ -73,7 +81,6 @@ public class TurnTakerView : MonoBehaviour
                 string newString = (randomValue == 0) ? "TurnBasedPortrait01" : "TurnBasedPortrait02";
 
                 animator.Play(newString);
-                //animator.Play("TurnBasedPortrait01");
             }
         }
     }
@@ -82,6 +89,5 @@ public class TurnTakerView : MonoBehaviour
     public void OnDisable()
     {
         turnTaker.DeclareHighlightedEvent -= Highlight;
-        turnTaker.DeclareTurnTakenEvent -= StartTurn;
     }
 }

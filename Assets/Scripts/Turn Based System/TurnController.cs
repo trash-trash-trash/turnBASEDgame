@@ -36,9 +36,11 @@ public class TurnController : MonoBehaviour
 
     public BattleManagerSingleton battleManager;
 
-    public GameObject turnTakerPrefab;
+    private GameObject newTurnTaker;
 
     public ActionsSingleton actionsSingleton;
+
+    public TurnTakerDictionary ttDict;
 
     public void Awake()
     {
@@ -51,6 +53,8 @@ public class TurnController : MonoBehaviour
         dealer.DeclareTurnTakenEvent += DealerReady;
 
         actionsSingleton = ActionsSingleton.Instance;
+
+        ttDict = TurnTakerDictionary.TurnTakerDictionaryInstance;
 
         StartCoroutine(WaitForActionsDictionary());
     }
@@ -65,22 +69,24 @@ public class TurnController : MonoBehaviour
 
     private void StartGame()
     {
+        // HACK DUPLICATION = RISKY
+
         for (int i = 0; i < playerOneParty.Count; i++)
         {
             PartyMemberScriptableObject member = playerOneParty[i];
             Transform spawnPoint = partyOneObjSpawnPoints[i]; // Get the corresponding spawn point
 
-            turnTakerPrefab = Instantiate(turnTakerPrefab, spawnPoint.position, Quaternion.identity);
+            newTurnTaker = ttDict.SpawnTurnTaker(member);
+            newTurnTaker.transform.position = spawnPoint.position;
 
-            StatsBase stats = turnTakerPrefab.GetComponent<StatsBase>();
+            StatsBase stats = newTurnTaker.GetComponent<StatsBase>();
             stats.member = member;
             member.stats = stats;
-            stats.Initialize();
 
-            turnTakerPrefab.name = member.name;
-            turnTakerPrefab.transform.SetParent(playerOneObj.transform);
+            newTurnTaker.name = member.name;
+            newTurnTaker.transform.SetParent(playerOneObj.transform);
 
-            TurnTaker taker = turnTakerPrefab.GetComponent<TurnTaker>();
+            TurnTaker taker = newTurnTaker.GetComponent<TurnTaker>();
             taker.DeclareTurnTakenEvent += PlayerReady;
 
             taker.StartTurn();
@@ -93,16 +99,17 @@ public class TurnController : MonoBehaviour
             PartyMemberScriptableObject member = playerTwoParty[i];
             Transform spawnPoint = partyTwoObjSpawnPoints[i];
 
-            turnTakerPrefab = Instantiate(turnTakerPrefab, spawnPoint.position, Quaternion.identity);
+            newTurnTaker = ttDict.SpawnTurnTaker(member);
+            newTurnTaker.transform.position = spawnPoint.position;
 
-            StatsBase stats = turnTakerPrefab.GetComponent<StatsBase>();
+            StatsBase stats = newTurnTaker.GetComponent<StatsBase>();
             stats.member = member;
-            stats.Initialize();
+            member.stats = stats;
 
-            turnTakerPrefab.name = member.name;
-            turnTakerPrefab.transform.SetParent(playerTwoObj.transform);
+            newTurnTaker.name = member.name;
+            newTurnTaker.transform.SetParent(playerOneObj.transform);
 
-            TurnTaker taker = turnTakerPrefab.GetComponent<TurnTaker>();
+            TurnTaker taker = newTurnTaker.GetComponent<TurnTaker>();
             taker.DeclareTurnTakenEvent += PlayerReady;
 
             taker.StartTurn();
