@@ -149,3 +149,9 @@ TODO: allow player to customise party order
 2.0
 
 -- added TurnTakersDictionary.cs singleton. cleaned up TurnTakerView.cs. 
+
+2.1
+
+-- started Tetris Inventory experimentation. made a grid that contains cubes that are in/accessible/equipped
+
+-- made PlayerControls for rotating objects by 90 degrees when selected, added test rotate transform

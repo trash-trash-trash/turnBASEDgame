@@ -611,6 +611,54 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""TetrisInventory"",
+            ""id"": ""70d9a556-c270-4424-a71e-679af8e35c9c"",
+            ""actions"": [
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Button"",
+                    ""id"": ""f5b84837-e6e3-486a-af90-f29d503dda21"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shift"",
+                    ""type"": ""Button"",
+                    ""id"": ""37a32a9c-47b6-4d4a-a683-45ad1e161014"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""5b70d621-b4e9-42e5-bb7e-ff4ae9d336d4"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""650fcf1a-cbac-48f0-a2b9-9277c4065fd8"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -635,6 +683,10 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_TurnBasedCombat_MoveInput = m_TurnBasedCombat.FindAction("MoveInput", throwIfNotFound: true);
         m_TurnBasedCombat_Confirm = m_TurnBasedCombat.FindAction("Confirm", throwIfNotFound: true);
         m_TurnBasedCombat_Cancel = m_TurnBasedCombat.FindAction("Cancel", throwIfNotFound: true);
+        // TetrisInventory
+        m_TetrisInventory = asset.FindActionMap("TetrisInventory", throwIfNotFound: true);
+        m_TetrisInventory_Rotate = m_TetrisInventory.FindAction("Rotate", throwIfNotFound: true);
+        m_TetrisInventory_Shift = m_TetrisInventory.FindAction("Shift", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -808,6 +860,60 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         }
     }
     public TurnBasedCombatActions @TurnBasedCombat => new TurnBasedCombatActions(this);
+
+    // TetrisInventory
+    private readonly InputActionMap m_TetrisInventory;
+    private List<ITetrisInventoryActions> m_TetrisInventoryActionsCallbackInterfaces = new List<ITetrisInventoryActions>();
+    private readonly InputAction m_TetrisInventory_Rotate;
+    private readonly InputAction m_TetrisInventory_Shift;
+    public struct TetrisInventoryActions
+    {
+        private @PlayerInputs m_Wrapper;
+        public TetrisInventoryActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Rotate => m_Wrapper.m_TetrisInventory_Rotate;
+        public InputAction @Shift => m_Wrapper.m_TetrisInventory_Shift;
+        public InputActionMap Get() { return m_Wrapper.m_TetrisInventory; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TetrisInventoryActions set) { return set.Get(); }
+        public void AddCallbacks(ITetrisInventoryActions instance)
+        {
+            if (instance == null || m_Wrapper.m_TetrisInventoryActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TetrisInventoryActionsCallbackInterfaces.Add(instance);
+            @Rotate.started += instance.OnRotate;
+            @Rotate.performed += instance.OnRotate;
+            @Rotate.canceled += instance.OnRotate;
+            @Shift.started += instance.OnShift;
+            @Shift.performed += instance.OnShift;
+            @Shift.canceled += instance.OnShift;
+        }
+
+        private void UnregisterCallbacks(ITetrisInventoryActions instance)
+        {
+            @Rotate.started -= instance.OnRotate;
+            @Rotate.performed -= instance.OnRotate;
+            @Rotate.canceled -= instance.OnRotate;
+            @Shift.started -= instance.OnShift;
+            @Shift.performed -= instance.OnShift;
+            @Shift.canceled -= instance.OnShift;
+        }
+
+        public void RemoveCallbacks(ITetrisInventoryActions instance)
+        {
+            if (m_Wrapper.m_TetrisInventoryActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ITetrisInventoryActions instance)
+        {
+            foreach (var item in m_Wrapper.m_TetrisInventoryActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_TetrisInventoryActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public TetrisInventoryActions @TetrisInventory => new TetrisInventoryActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -836,5 +942,10 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnMoveInput(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
+    }
+    public interface ITetrisInventoryActions
+    {
+        void OnRotate(InputAction.CallbackContext context);
+        void OnShift(InputAction.CallbackContext context);
     }
 }
