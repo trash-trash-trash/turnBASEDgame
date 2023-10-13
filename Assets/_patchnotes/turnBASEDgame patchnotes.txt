@@ -155,3 +155,11 @@ TODO: allow player to customise party order
 -- started Tetris Inventory experimentation. made a grid that contains cubes that are in/accessible/equipped
 
 -- made PlayerControls for rotating objects by 90 degrees when selected, added test rotate transform
+
+2.2
+
+-- refactored GridObject code. a parent gameobject now highlights / unhighlights and equips / unequips all child objs whenever a single one is highlight (ie, highlighting one with the mouse highlights all other child objects)
+
+-- parent object now sets/unsets itself to InventoryObjectController to allow multiple different objs to be controlled
+
+TO DO: logic for only having one equipped at a time, logic for snapping back to starting location + rotation if pick up is cancelled before put down, grid logic integration

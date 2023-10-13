@@ -58,6 +58,10 @@ public class InventoryGrid : MonoBehaviour
             {
                 Vector3 spawnPosition = new Vector3(x * spacing, y * spacing, 0);
                 GameObject newCube = Instantiate(gridCube, spawnPosition, Quaternion.identity);
+
+                newCube.transform.SetParent(transform);
+                newCube.transform.name = "Cube " + x + ", " + y;
+
                 MeshRenderer newMesh = newCube.GetComponent<MeshRenderer>();
 
                 GridCubeDate cubeData = new GridCubeDate
