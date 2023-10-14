@@ -10,11 +10,13 @@ public class InventoryGrid : MonoBehaviour
     public int gridSize;
     public GameObject gridCube;
 
-    [SerializeField] public GridCubeDate[,] gridData;
+    [SerializeField] public GridCubeData[,] gridData;
 
     public event Action<GameObject, bool> AnnounceCubeAccessibleEvent;
 
     public event Action<GameObject, bool> AnnounceCubeEquippedEvent;
+
+    public event Action<GridCubeData[,]> AnnounceGridEvent;
 
     public int targetX;
 
@@ -28,7 +30,7 @@ public class InventoryGrid : MonoBehaviour
 
     public InventoryCustomShapes shapes;
 
-    public struct GridCubeDate
+    public struct GridCubeData
     {
         public bool accessible;
         public int yPos;
@@ -50,7 +52,7 @@ public class InventoryGrid : MonoBehaviour
     {
         int gridDimension = (int)Mathf.Sqrt(gridSize);
 
-        gridData = new GridCubeDate[gridDimension, gridDimension];
+        gridData = new GridCubeData[gridDimension, gridDimension];
 
         for (int x = 0; x < gridDimension; x++)
         {
@@ -60,11 +62,11 @@ public class InventoryGrid : MonoBehaviour
                 GameObject newCube = Instantiate(gridCube, spawnPosition, Quaternion.identity);
 
                 newCube.transform.SetParent(transform);
-                newCube.transform.name = "Cube " + x + ", " + y;
+                newCube.transform.name = "Grid Cube " + x + ", " + y;
 
                 MeshRenderer newMesh = newCube.GetComponent<MeshRenderer>();
 
-                GridCubeDate cubeData = new GridCubeDate
+                GridCubeData cubeData = new GridCubeData
                 {
                     accessible = true,
                     xPos = x,
@@ -81,6 +83,8 @@ public class InventoryGrid : MonoBehaviour
                     TargetCubesFlipAccessible(x, y, false);
             }
         }
+
+        AnnounceGridEvent?.Invoke(gridData);
     }
 
     public void TestCustomShapeEquip()
@@ -125,23 +129,9 @@ public class InventoryGrid : MonoBehaviour
     {
         if (targetX >= 0 && targetX < gridData.GetLength(0) && targetY >= 0 && targetY < gridData.GetLength(1))
         {
-            gridData[targetX, targetY].accessible = input;
+            gridData[targetX, targetY].equipped = input;
+            gridData[targetX, targetY].accessible = !input;
             AnnounceCubeEquippedEvent?.Invoke(gridData[targetX, targetY].me, input);
         }
-    }
-
-    public void TestAccessibleTShape()
-    {
-        List<Vector2Int> TShape = new List<Vector2Int>
-        {
-            new Vector2Int(targetX, targetY),
-            new Vector2Int(targetX - 1, targetY),
-            new Vector2Int(targetX + 1, targetY),
-            new Vector2Int(targetX, targetY - 1)
-        };
-    }
-
-    public void TestEquipTShape()
-    {
     }
 }

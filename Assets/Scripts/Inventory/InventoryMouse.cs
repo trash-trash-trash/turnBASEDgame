@@ -11,6 +11,8 @@ public class InventoryMouse : MonoBehaviour
 
     public PlayerControls playerControls;
 
+    public bool equipped = false;
+
     public void OnEnable()
     {
         playerControls = PlayerControls.PlayerControlsInstance;
@@ -66,17 +68,19 @@ public class InventoryMouse : MonoBehaviour
 
     private void TryEquip()
     {
-        if (selectedGridObject != null)
+        if (selectedGridObject != null && !equipped)
         {
             selectedGridObject.EquippedByPlayer(true);
+            equipped = true;
         }
     }
 
     private void TryUnequip()
     {
-        if (selectedGridObject != null)
+        if (selectedGridObject != null && equipped)
         {
             selectedGridObject.EquippedByPlayer(false);
+            equipped = false;
         }
     }
 }

@@ -12,6 +12,8 @@ public class InventoryGridView : MonoBehaviour
 
     public Material equippedCube;
 
+    public Material shadowCube;
+
     public InventoryGrid inventoryGrid;
 
     public void OnEnable()

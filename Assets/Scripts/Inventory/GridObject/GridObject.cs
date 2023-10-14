@@ -23,6 +23,7 @@ public class GridObject : MonoBehaviour, IInventoryObject
 
     public Vector2 ReturnGridVector2()
     {
+        gridVector2 = transform.localPosition;
         return gridVector2;
     }
 
@@ -35,6 +36,7 @@ public class GridObject : MonoBehaviour, IInventoryObject
     public void EquippedByPlayer(bool input)
     {
         PlayerEquippedEvent?.Invoke(input);
+        equipped = input;
     }
 
 

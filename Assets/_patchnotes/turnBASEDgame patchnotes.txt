@@ -162,4 +162,8 @@ TODO: allow player to customise party order
 
 -- parent object now sets/unsets itself to InventoryObjectController to allow multiple different objs to be controlled
 
-TO DO: logic for only having one equipped at a time, logic for snapping back to starting location + rotation if pick up is cancelled before put down, grid logic integration
+TO DO: logic for only having one equipped at a time, logic for snapping back to starting location + rotation if pick up is cancelled before put down, grid logic integration, problem with rotating being tied to rotating angle (tie to transform.rotation?)
+
+2.3
+
+-- added GridInventoryItems.cs. sorts the current list of GridParentObject items and intelligently places them on the InventoryGrid grid. when placing, scans the grid for Open squares. once found, scans the open square for the list of gridPosition Vector2's in ParentObj. if any squares are blocked, finds a new open square. repeats until it finds an open square that can fit the current shape. 

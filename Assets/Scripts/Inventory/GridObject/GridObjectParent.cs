@@ -14,6 +14,16 @@ public class GridObjectParent : MonoBehaviour
 
     public bool equipped;
 
+    public Vector3 originalPosition;
+
+    public Quaternion originalRotation;
+
+    public Vector2 parentPosition;
+
+    public List<Vector2> gridPositions = new List<Vector2>();
+
+    public float gridPosOffset;
+
     void OnEnable()
     {
         inventoryVectors.Clear();
@@ -28,7 +38,12 @@ public class GridObjectParent : MonoBehaviour
 
             obj.AnnouncePlayerHighlightEvent += HighlightChildren;
             obj.PlayerEquippedEvent += EquipChildren;
+
+            gridPositions.Add(obj.ReturnGridVector2());
         }
+
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
     }
 
     void OnDisable()
@@ -57,6 +72,8 @@ public class GridObjectParent : MonoBehaviour
                 obj.HighLight(false);
             }
         }
+
+        highlighted = input;
     }
 
     private void EquipChildren(bool input)
@@ -80,5 +97,7 @@ public class GridObjectParent : MonoBehaviour
 
             controller.SetTargetTransform(null);
         }
+
+        equipped = input;
     }
 }
