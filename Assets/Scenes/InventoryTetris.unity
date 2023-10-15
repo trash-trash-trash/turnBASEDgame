@@ -158,8 +158,6 @@ MonoBehaviour:
   inventoryVectors: []
   highlighted: 0
   equipped: 0
-  originalPosition: {x: 0, y: 0, z: 0}
-  originalRotation: {x: 0, y: 0, z: 0, w: 0}
   parentPosition: {x: 0, y: 0}
   gridPositions: []
 --- !u!65 &158825234
@@ -789,13 +787,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
-  originalPositions: []
   isEquipped: 0
   rotationSpeed: 25
   shiftHeld: 0
   playerControls: {fileID: 0}
   moveDistance: {x: 0, y: 0}
   moveSpeed: 5
+  targetPosition: {x: 0, y: 0}
   moving: 0
   grid: {fileID: 995021189}
   gridItems: {fileID: 995021192}
@@ -2087,26 +2085,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732237419}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1771543110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2577061167970361725, guid: b5a681ecc9e5dae4c96b839386460554, type: 3}
-  m_PrefabInstance: {fileID: 1856980653}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1771543113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771543110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b292350624c71204db238bb720c31faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphereRadius: 0.2
-  playerControls: {fileID: 0}
-  equipped: 0
 --- !u!1 &1796889943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,8 +2350,6 @@ MonoBehaviour:
   inventoryVectors: []
   highlighted: 0
   equipped: 0
-  originalPosition: {x: 0, y: 0, z: 0}
-  originalRotation: {x: 0, y: 0, z: 0, w: 0}
   parentPosition: {x: 0, y: 0}
   gridPositions: []
 --- !u!1001 &1856980653
@@ -2431,10 +2407,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2577061167970361725, guid: b5a681ecc9e5dae4c96b839386460554, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1771543113}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a681ecc9e5dae4c96b839386460554, type: 3}
 --- !u!1 &1906877122
 GameObject:
@@ -2573,8 +2546,6 @@ MonoBehaviour:
   inventoryVectors: []
   highlighted: 0
   equipped: 0
-  originalPosition: {x: 0, y: 0, z: 0}
-  originalRotation: {x: 0, y: 0, z: 0, w: 0}
   parentPosition: {x: 0, y: 0}
   gridPositions: []
 --- !u!65 &2054036903

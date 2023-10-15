@@ -65,6 +65,7 @@ public class InventoryGridItems : MonoBehaviour
             {
                 // Mark the square as not accessible
                 grid.TargetCubesFlipEquipped(x, y, true);
+                grid.TargetCubesFlipAccessible(x, y, false);
             }
         }
     }

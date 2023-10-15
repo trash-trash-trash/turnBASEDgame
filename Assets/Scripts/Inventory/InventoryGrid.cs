@@ -10,7 +10,7 @@ public class InventoryGrid : MonoBehaviour
     public int gridSize;
     public GameObject gridCube;
 
-    [SerializeField] public GridCubeData[,] gridData;
+    public GridCubeData[,] gridData;
 
     public event Action<GameObject, bool> AnnounceCubeAccessibleEvent;
 
@@ -38,6 +38,7 @@ public class InventoryGrid : MonoBehaviour
         public int yPos;
         public int xPos;
         public bool equipped;
+        public bool shadow;
         public GameObject me;
     }
 
@@ -60,7 +61,7 @@ public class InventoryGrid : MonoBehaviour
         {
             for (int y = 0; y < gridDimension; y++)
             {
-                Vector3 spawnPosition = new Vector3(x * spacing, y * spacing, 0);
+                Vector3 spawnPosition = new Vector3(x * spacing, y * spacing, 1);
                 GameObject newCube = Instantiate(gridCube, spawnPosition, Quaternion.identity);
 
                 newCube.transform.SetParent(transform);
@@ -74,6 +75,7 @@ public class InventoryGrid : MonoBehaviour
                     xPos = x,
                     yPos = y,
                     equipped = false,
+                    shadow = false,
                     me = newCube
                 };
 
@@ -141,6 +143,7 @@ public class InventoryGrid : MonoBehaviour
     {
         if (targetX >= 0 && targetX < gridData.GetLength(0) && targetY >= 0 && targetY < gridData.GetLength(1))
         {
+            gridData[targetX, targetY].shadow = input;
             AnnounceCubeShadowEvent?.Invoke(gridData[targetX, targetY].me, input);
         }
     }

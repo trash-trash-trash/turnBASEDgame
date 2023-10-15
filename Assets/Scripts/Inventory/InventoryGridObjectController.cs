@@ -1,9 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class InventoryGridObjectController : MonoBehaviour
 {
@@ -13,8 +18,6 @@ public class InventoryGridObjectController : MonoBehaviour
     public Transform targetTransform;
     private GridObjectParent targetParentObj;
     private Transform prevTransform;
-
-    public List<Vector2> originalPositions= new List<Vector2>();
 
     public bool isEquipped = false;
 
@@ -41,6 +44,10 @@ public class InventoryGridObjectController : MonoBehaviour
 
     public float gridPosOffset;
 
+    private List<Vector2> originalVectors = new List<Vector2>();
+    private Vector2 originalParentVector;
+    private Vector2 parentPositionVector;
+
 
     public void Start()
     {
@@ -51,6 +58,7 @@ public class InventoryGridObjectController : MonoBehaviour
         playerControls.inputs.TetrisInventory.Shift.performed += Shift;
         playerControls.inputs.TetrisInventory.Shift.canceled += Shift;
     }
+
     private void FixedUpdate()
     {
         if (isRotating)
@@ -78,45 +86,68 @@ public class InventoryGridObjectController : MonoBehaviour
 
             if (fractionOfJourney >= 1.0f)
             {
-
-
                 moving = false;
             }
         }
     }
 
 
-    public void SetTargetTransform(Transform newTargetTransform)
+    public void SetTargetTransform(Transform newTargetTransform, bool newEquipped)
+    {
+        if (newEquipped)
+        {
+            Equip(newTargetTransform);
+        }
+        else
+        {
+            Unequip(newTargetTransform);
+        }
+    }
+
+    void Equip(Transform newTargetTransform)
+    {
+        targetTransform = newTargetTransform;
+        prevTransform = newTargetTransform;
+
+        targetTransform.position = new Vector3(targetTransform.position.x - gridPosOffset,
+            targetTransform.position.y - gridPosOffset,
+            targetTransform.position.z - 1);
+
+        targetParentObj = newTargetTransform.GetComponent<GridObjectParent>();
+
+        isEquipped = true;
+        initialPosition = newTargetTransform.position;
+
+        foreach (Vector2 vec in targetParentObj.gridPositions)
+        {
+            grid.TargetCubesFlipShadow((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), true);
+
+            originalVectors.Add(vec);
+        }
+    }
+
+    void Unequip(Transform newTargetTransform)
     {
         if (newTargetTransform == null)
         {
             if (prevTransform != null)
             {
-                prevTransform.position = new Vector3(prevTransform.position.x, prevTransform.position.y,
-                    prevTransform.position.z - 1);
+                prevTransform.position = new Vector3(prevTransform.position.x + gridPosOffset,
+                    prevTransform.position.y + gridPosOffset,
+                    prevTransform.position.z + 1);
             }
 
             isEquipped = false;
             targetTransform = null;
-        }
-        else
-        {
-            targetTransform = newTargetTransform;
-            prevTransform = newTargetTransform;
 
-            targetTransform.position = new Vector3(targetTransform.position.x, targetTransform.position.y,
-                targetTransform.position.z - 1);
+            targetParentObj.gridPositions.Clear();
 
-            targetParentObj = newTargetTransform.GetComponent<GridObjectParent>();
+            targetParentObj.gridPositions = originalVectors;
 
-            foreach (Vector2 vector in targetParentObj.gridPositions)
-            {
-                grid.TargetCubesFlipEquipped((int)targetParentObj.parentPosition.x + (int)vector.x, (int)targetParentObj.parentPosition.y + (int)vector.y, false);
-                grid.TargetCubesFlipShadow((int)targetParentObj.parentPosition.x + (int)vector.x, (int)targetParentObj.parentPosition.y + (int)vector.y, true);
-            }
+            targetParentObj.parentPosition = originalParentVector;
 
-            isEquipped = true;
-            initialPosition = newTargetTransform.position;
+            originalVectors.Clear();
         }
     }
 
@@ -133,9 +164,9 @@ public class InventoryGridObjectController : MonoBehaviour
             startTime = Time.time;
             journeyLength = moveDistance.magnitude;
 
-            moving = true;
+            UpdateGridPositions(input);
 
-            UpdateGridPositions();
+            moving = true;
         }
     }
 
@@ -160,28 +191,9 @@ public class InventoryGridObjectController : MonoBehaviour
             shiftHeld = false;
     }
 
-    private void UpdateGridPositions()
+    private void UpdateGridPositions(Vector2 input)
     {
-        if (targetParentObj != null)
-        {
-            // Clear the old grid positions
-            foreach (Vector2 vector in targetParentObj.gridPositions)
-            {
-                grid.TargetCubesFlipEquipped((int)initialPosition.x, (int)initialPosition.y, false);
-                grid.TargetCubesFlipShadow((int)initialPosition.x, (int)initialPosition.y, false);
-            }
-
-            // Update the grid positions for the new position
-            foreach (Vector2 vector in targetParentObj.gridPositions)
-            {
-                if (gridItems.IsAccessible((int)vector.x, (int)vector.y))
-                {
-                    int newX = (int)(vector.x + targetPosition.x);
-                    int newY = (int)(vector.y + targetPosition.y);
-                    grid.TargetCubesFlipShadow(newX, newY, true);
-                }
-            }
-        }
+        
     }
 
 

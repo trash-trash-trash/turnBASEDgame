@@ -173,3 +173,7 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- fixed a bug with unequipping items only worked if it was highlighted by player
 
 -- fixed movement vector2 to be normalized for grid snapping movement
+
+-- polished movement, equip/unequip logic
+
+-- TODO: modulate InventoryGridItems for intelligent obejct placement + update grid

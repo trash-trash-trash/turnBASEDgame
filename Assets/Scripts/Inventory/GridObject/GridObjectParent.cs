@@ -14,10 +14,6 @@ public class GridObjectParent : MonoBehaviour
 
     public bool equipped;
 
-    public Vector3 originalPosition;
-
-    public Quaternion originalRotation;
-
     public Vector2 parentPosition;
 
     public List<Vector2> gridPositions = new List<Vector2>();
@@ -39,9 +35,6 @@ public class GridObjectParent : MonoBehaviour
 
             gridPositions.Add(obj.ReturnGridVector2());
         }
-
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
     }
 
     void OnDisable()
@@ -83,7 +76,7 @@ public class GridObjectParent : MonoBehaviour
                 obj.PickUpPutDown(true);
             }
 
-            controller.SetTargetTransform(transform);
+            controller.SetTargetTransform(transform, true);
         }
 
         else
@@ -93,7 +86,7 @@ public class GridObjectParent : MonoBehaviour
                 obj.PickUpPutDown(false);
             }
 
-            controller.SetTargetTransform(null);
+            controller.SetTargetTransform(null, false);
         }
 
         equipped = input;
