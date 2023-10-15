@@ -22,8 +22,6 @@ public class GridObjectParent : MonoBehaviour
 
     public List<Vector2> gridPositions = new List<Vector2>();
 
-    public float gridPosOffset;
-
     void OnEnable()
     {
         inventoryVectors.Clear();

@@ -166,4 +166,10 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 
 2.3
 
--- added GridInventoryItems.cs. sorts the current list of GridParentObject items and intelligently places them on the InventoryGrid grid. when placing, scans the grid for Open squares. once found, scans the open square for the list of gridPosition Vector2's in ParentObj. if any squares are blocked, finds a new open square. repeats until it finds an open square that can fit the current shape. 
+-- added GridInventoryItems.cs. sorts the current list of GridParentObject items and intelligently places them on the InventoryGrid grid. when placing, scans the grid for Open squares. once found, scans the open square for the list of gridPosition Vector2's in ParentObj. if any squares are blocked, finds a new open square. repeats until it finds an open square that can fit the current shape.
+
+2.4
+
+-- fixed a bug with unequipping items only worked if it was highlighted by player
+
+-- fixed movement vector2 to be normalized for grid snapping movement

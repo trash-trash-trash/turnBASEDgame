@@ -73,7 +73,9 @@ public class PlayerControls : MonoBehaviour
 
     private void Movement(InputAction.CallbackContext context)
     {
-        movementInputs = context.ReadValue<Vector2>().normalized;
+      //  Debug.Log(context.ReadValue<Vector2>());
+
+        movementInputs = context.ReadValue<Vector2>();
 
         if (context.canceled)
             movementInputs = Vector2.zero;
@@ -89,9 +91,9 @@ public class PlayerControls : MonoBehaviour
 
     private void MenuMovement(InputAction.CallbackContext context)
     {
-        movementInputs = context.ReadValue<Vector2>().normalized;
+        /*movementInputs = context.ReadValue<Vector2>().normalized;
 
-        MenuMovementEvent?.Invoke(movementInputs);
+        MenuMovementEvent?.Invoke(movementInputs);*/
     }
 
     private void MenuConfirm(InputAction.CallbackContext context)

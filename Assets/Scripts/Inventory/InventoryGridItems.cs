@@ -44,7 +44,7 @@ public class InventoryGridItems : MonoBehaviour
                     // Remove the used square from the list
                     openSquares.Remove(openSquare);
 
-                    Debug.Log("Placed grid object at " + openSquare.xPos + ", " + openSquare.yPos);
+                    //Debug.Log("Placed grid object at " + openSquare.xPos + ", " + openSquare.yPos);
                     break;
                 }
             }

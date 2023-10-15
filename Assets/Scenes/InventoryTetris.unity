@@ -789,6 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
+  originalPositions: []
   isEquipped: 0
   rotationSpeed: 25
   shiftHeld: 0
@@ -796,6 +797,9 @@ MonoBehaviour:
   moveDistance: {x: 0, y: 0}
   moveSpeed: 5
   moving: 0
+  grid: {fileID: 995021189}
+  gridItems: {fileID: 995021192}
+  gridPosOffset: 0.25
 --- !u!114 &995021192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,7 +965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCube: {fileID: 2100000, guid: 4638e26f260a2ba4394af3bee874d8f5, type: 2}
   inaccessibleCube: {fileID: 2100000, guid: b1494515096d25e48a07c09cf54a4ef5, type: 2}
-  equippedCube: {fileID: 2100000, guid: d344ead095eb10e4283e9fcfd2789b0f, type: 2}
+  equippedCube: {fileID: 2100000, guid: d28ea689d1697a1409dbb7abf7d80102, type: 2}
   shadowCube: {fileID: 2100000, guid: d344ead095eb10e4283e9fcfd2789b0f, type: 2}
   inventoryGrid: {fileID: 995021189}
 --- !u!1 &1252959131

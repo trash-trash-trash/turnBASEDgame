@@ -11,7 +11,10 @@ public class InventoryGridObjectController : MonoBehaviour
     //will have to rotate a parent obj
 
     public Transform targetTransform;
+    private GridObjectParent targetParentObj;
     private Transform prevTransform;
+
+    public List<Vector2> originalPositions= new List<Vector2>();
 
     public bool isEquipped = false;
 
@@ -27,13 +30,16 @@ public class InventoryGridObjectController : MonoBehaviour
     public float moveSpeed;
 
     private Vector2 initialPosition;
-    private Vector2 targetPosition;
+    public Vector2 targetPosition;
     private float startTime;
     private float journeyLength;
 
     public bool moving = false;
 
-    public bool gridOffset;
+    public InventoryGrid grid;
+    public InventoryGridItems gridItems;
+
+    public float gridPosOffset;
 
 
     public void Start()
@@ -72,6 +78,8 @@ public class InventoryGridObjectController : MonoBehaviour
 
             if (fractionOfJourney >= 1.0f)
             {
+
+
                 moving = false;
             }
         }
@@ -99,6 +107,14 @@ public class InventoryGridObjectController : MonoBehaviour
             targetTransform.position = new Vector3(targetTransform.position.x, targetTransform.position.y,
                 targetTransform.position.z - 1);
 
+            targetParentObj = newTargetTransform.GetComponent<GridObjectParent>();
+
+            foreach (Vector2 vector in targetParentObj.gridPositions)
+            {
+                grid.TargetCubesFlipEquipped((int)targetParentObj.parentPosition.x + (int)vector.x, (int)targetParentObj.parentPosition.y + (int)vector.y, false);
+                grid.TargetCubesFlipShadow((int)targetParentObj.parentPosition.x + (int)vector.x, (int)targetParentObj.parentPosition.y + (int)vector.y, true);
+            }
+
             isEquipped = true;
             initialPosition = newTargetTransform.position;
         }
@@ -112,11 +128,14 @@ public class InventoryGridObjectController : MonoBehaviour
         if (!moving)
         {
             initialPosition = new Vector2(targetTransform.position.x, targetTransform.position.y);
+
             targetPosition = initialPosition + input;
             startTime = Time.time;
             journeyLength = moveDistance.magnitude;
 
             moving = true;
+
+            UpdateGridPositions();
         }
     }
 
@@ -141,7 +160,31 @@ public class InventoryGridObjectController : MonoBehaviour
             shiftHeld = false;
     }
 
-    
+    private void UpdateGridPositions()
+    {
+        if (targetParentObj != null)
+        {
+            // Clear the old grid positions
+            foreach (Vector2 vector in targetParentObj.gridPositions)
+            {
+                grid.TargetCubesFlipEquipped((int)initialPosition.x, (int)initialPosition.y, false);
+                grid.TargetCubesFlipShadow((int)initialPosition.x, (int)initialPosition.y, false);
+            }
+
+            // Update the grid positions for the new position
+            foreach (Vector2 vector in targetParentObj.gridPositions)
+            {
+                if (gridItems.IsAccessible((int)vector.x, (int)vector.y))
+                {
+                    int newX = (int)(vector.x + targetPosition.x);
+                    int newY = (int)(vector.y + targetPosition.y);
+                    grid.TargetCubesFlipShadow(newX, newY, true);
+                }
+            }
+        }
+    }
+
+
     private void OnDisable()
     {
         playerControls.MovementEvent -= Movement;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class InventoryGridView : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class InventoryGridView : MonoBehaviour
     {
         inventoryGrid.AnnounceCubeAccessibleEvent += FlipCubeAccessible;
         inventoryGrid.AnnounceCubeEquippedEvent += FlipCubeEquipped;
+        inventoryGrid.AnnounceCubeShadowEvent += FlipCubeShadow;
     }
 
     private void FlipCubeAccessible(GameObject newObj, bool input)
@@ -44,10 +46,24 @@ public class InventoryGridView : MonoBehaviour
             newMesh.material = openCube;
     }
 
+    private void FlipCubeShadow(GameObject newObj, bool input)
+    {
+        MeshRenderer newMesh = newObj.GetComponent<MeshRenderer>();
+
+        Material prevMaterial = newMesh.material;
+
+        if (input)
+            newMesh.material = shadowCube;
+
+        else
+            newMesh.material = prevMaterial;
+    }
+
 
     public void OnDisable()
     {
         inventoryGrid.AnnounceCubeAccessibleEvent -= FlipCubeAccessible;
         inventoryGrid.AnnounceCubeEquippedEvent -= FlipCubeEquipped;
+        inventoryGrid.AnnounceCubeShadowEvent -= FlipCubeShadow;
     }
 }

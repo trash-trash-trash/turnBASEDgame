@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryMouse : MonoBehaviour
 {
     public IInventoryObject selectedGridObject;
+    public IInventoryObject equippedObj;
     private IInventoryObject prevObj;
 
     public float sphereRadius;
@@ -41,22 +42,20 @@ public class InventoryMouse : MonoBehaviour
         {
             IInventoryObject newHighlightedObject = hit.transform.GetComponentInChildren<IInventoryObject>();
 
-            if (newHighlightedObject != prevObj)
+
+            if (prevObj != null)
             {
-                if (prevObj != null)
-                {
-                    prevObj.HighlightedByPlayer(false);
-                }
-
-                selectedGridObject = newHighlightedObject;
-
-                if (selectedGridObject != null)
-                {
-                    selectedGridObject.HighlightedByPlayer(true);
-                }
-
-                prevObj = newHighlightedObject;
+                prevObj.HighlightedByPlayer(false);
             }
+
+            selectedGridObject = newHighlightedObject;
+
+            if (selectedGridObject != null)
+            {
+                selectedGridObject.HighlightedByPlayer(true);
+            }
+
+            prevObj = newHighlightedObject;
         }
         else if (prevObj != null)
         {
@@ -71,15 +70,18 @@ public class InventoryMouse : MonoBehaviour
         if (selectedGridObject != null && !equipped)
         {
             selectedGridObject.EquippedByPlayer(true);
+            equippedObj = selectedGridObject;
             equipped = true;
         }
     }
 
     private void TryUnequip()
     {
-        if (selectedGridObject != null && equipped)
+        if (equippedObj != null && equipped)
         {
-            selectedGridObject.EquippedByPlayer(false);
+            equippedObj.EquippedByPlayer(false);
+            equippedObj = null;
+            selectedGridObject = null;
             equipped = false;
         }
     }

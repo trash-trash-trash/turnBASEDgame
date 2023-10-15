@@ -16,6 +16,8 @@ public class InventoryGrid : MonoBehaviour
 
     public event Action<GameObject, bool> AnnounceCubeEquippedEvent;
 
+    public event Action<GameObject, bool> AnnounceCubeShadowEvent;
+
     public event Action<GridCubeData[,]> AnnounceGridEvent;
 
     public int targetX;
@@ -132,6 +134,14 @@ public class InventoryGrid : MonoBehaviour
             gridData[targetX, targetY].equipped = input;
             gridData[targetX, targetY].accessible = !input;
             AnnounceCubeEquippedEvent?.Invoke(gridData[targetX, targetY].me, input);
+        }
+    }
+
+    public void TargetCubesFlipShadow(int targetX, int targetY, bool input)
+    {
+        if (targetX >= 0 && targetX < gridData.GetLength(0) && targetY >= 0 && targetY < gridData.GetLength(1))
+        {
+            AnnounceCubeShadowEvent?.Invoke(gridData[targetX, targetY].me, input);
         }
     }
 }
