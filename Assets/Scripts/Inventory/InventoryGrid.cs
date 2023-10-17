@@ -5,46 +5,42 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.Windows;
 
+[System.Serializable]
 public class InventoryGrid : MonoBehaviour
 {
+    //TODO: CONSOLIDATE & MODULATE
+
     public int gridSize;
     public GameObject gridCube;
 
     public GridCubeData[,] gridData;
 
-    public event Action<GameObject, bool> AnnounceCubeAccessibleEvent;
-
-    public event Action<GameObject, bool> AnnounceCubeEquippedEvent;
-
-    public event Action<GameObject, bool> AnnounceCubeShadowEvent;
+    public event Action<GameObject, GridCubeType> AnnounceChangedCubeEvent;
 
     public event Action<GridCubeData[,]> AnnounceGridEvent;
 
-    public int targetX;
-
-    public int targetY;
-
-    public bool flipAccessible;
-
-    public bool flipEquipped;
-
-    public InventoryCustomShapes.InventoryShapeEnum customTestShape;
-
-    public InventoryCustomShapes shapes;
-
+    [System.Serializable]
     public struct GridCubeData
     {
+        public GridCubeType currentType;
         public bool accessible;
         public int yPos;
         public int xPos;
-        public bool equipped;
-        public bool shadow;
         public GameObject me;
     }
 
     // Adjust this for the spacing between cubes
     // make this transform.size of prefab
     public float spacing = 1.0f;
+
+    public enum GridCubeType
+    {
+        Open,
+        Occupied,
+        ShadowOn,
+        ShadowOff,
+        Blocked
+    }
 
     public void Start()
     {
@@ -71,11 +67,10 @@ public class InventoryGrid : MonoBehaviour
 
                 GridCubeData cubeData = new GridCubeData
                 {
+                    currentType = GridCubeType.Open,
                     accessible = true,
                     xPos = x,
                     yPos = y,
-                    equipped = false,
-                    shadow = false,
                     me = newCube
                 };
 
@@ -84,67 +79,51 @@ public class InventoryGrid : MonoBehaviour
                 bool isOnBoundary = x == 0 || x == gridDimension - 1 || y == 0 || y == gridDimension - 1;
 
                 if (isOnBoundary)
-                    TargetCubesFlipAccessible(x, y, false);
+                {
+                    ChangeTargetCubeType(x, y, GridCubeType.Occupied);
+                }
             }
         }
 
         AnnounceGridEvent?.Invoke(gridData);
     }
 
-    public void TestCustomShapeEquip()
+
+    public void ChangeTargetCubeType(int targetX, int targetY, GridCubeType newType)
     {
-        List<Vector2Int> customShapePoints = shapes.shapesDictionary[customTestShape];
-
-        foreach (Vector2Int point in customShapePoints)
+        if (targetX >= 0 && targetX < gridData.GetLength(0) && targetY >= 0 && targetY < gridData.GetLength(1))
         {
-            int newtargetX = point.x;
-            int newtargetY = point.y;
+            gridData[targetX, targetY].currentType = newType;
 
-            if (newtargetX >= 0 && newtargetX < gridData.GetLength(0) && newtargetY >= 0 && newtargetY < gridData.GetLength(1))
+            GridCubeType type = newType;
+
+            if (newType == GridCubeType.Occupied)
             {
-                if (!gridData[newtargetX, newtargetY].accessible)
-                    return;
-
-                TargetCubesFlipEquipped(newtargetX, newtargetY, true);
+                gridData[targetX, targetY].accessible = false;
+                type = GridCubeType.Occupied;
             }
-        }
-    }
 
-    public void TestTargetCubesFlipAccessible()
-    {
-        TargetCubesFlipAccessible(targetX, targetY, flipAccessible);
-    }
+            else if (newType == GridCubeType.Open)
+            {
+                gridData[targetX, targetY].accessible = true;
+                type = GridCubeType.Open;
+            }
 
-    public void TargetCubesFlipAccessible(int targetX, int targetY, bool input)
-    {
-        if (targetX >= 0 && targetX < gridData.GetLength(0) && targetY >= 0 && targetY < gridData.GetLength(1))
-        {
-            gridData[targetX, targetY].accessible = input;
-            AnnounceCubeAccessibleEvent?.Invoke(gridData[targetX, targetY].me, input);
-        }
-    }
+            else if (newType == GridCubeType.ShadowOn)
+            {
+                if (!gridData[targetX, targetY].accessible)
+                    type = GridCubeType.Blocked;
+            }
 
-    public void TestTargetCubesFlipEquipped()
-    {
-        TargetCubesFlipEquipped(targetX, targetY, flipEquipped);
-    }
+            else if (newType == GridCubeType.ShadowOff)
+            {
+                if (gridData[targetX, targetY].accessible)
+                    type = GridCubeType.Open;
+                else
+                    type = GridCubeType.Occupied;
+            }
 
-    public void TargetCubesFlipEquipped(int targetX, int targetY, bool input)
-    {
-        if (targetX >= 0 && targetX < gridData.GetLength(0) && targetY >= 0 && targetY < gridData.GetLength(1))
-        {
-            gridData[targetX, targetY].equipped = input;
-            gridData[targetX, targetY].accessible = !input;
-            AnnounceCubeEquippedEvent?.Invoke(gridData[targetX, targetY].me, input);
-        }
-    }
-
-    public void TargetCubesFlipShadow(int targetX, int targetY, bool input)
-    {
-        if (targetX >= 0 && targetX < gridData.GetLength(0) && targetY >= 0 && targetY < gridData.GetLength(1))
-        {
-            gridData[targetX, targetY].shadow = input;
-            AnnounceCubeShadowEvent?.Invoke(gridData[targetX, targetY].me, input);
+            AnnounceChangedCubeEvent?.Invoke(gridData[targetX, targetY].me, type);
         }
     }
 }

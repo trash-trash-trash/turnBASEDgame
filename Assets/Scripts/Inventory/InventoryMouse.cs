@@ -42,7 +42,7 @@ public class InventoryMouse : MonoBehaviour
         {
             IInventoryObject newHighlightedObject = hit.transform.GetComponentInChildren<IInventoryObject>();
 
-            if (prevObj != null)
+            if (prevObj != null && prevObj != newHighlightedObject)
             {
                 prevObj.HighlightedByPlayer(false);
             }
@@ -55,11 +55,6 @@ public class InventoryMouse : MonoBehaviour
             }
 
             prevObj = newHighlightedObject;
-        }
-        else if (prevObj != null && selectedGridObject!=prevObj)
-        {
-            prevObj.HighlightedByPlayer(false);
-            prevObj = null;
         }
     }
 

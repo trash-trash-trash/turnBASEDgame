@@ -34,22 +34,22 @@ public class GridObject : MonoBehaviour, IInventoryObject
     public event Action<bool> AnnouncePickUpPutDownEvent;
 
     public void EquippedByPlayer(bool input)
-    {
-        PlayerEquippedEvent?.Invoke(input);
+    {      
         equipped = input;
+        PlayerEquippedEvent?.Invoke(input);
     }
 
 
     public void HighlightedByPlayer(bool input)
-    {
-        AnnouncePlayerHighlightEvent?.Invoke(input, this);
+    {        
         playerHighlighted = input;
+        AnnouncePlayerHighlightEvent?.Invoke(input, this);
     }
 
     public void PickUpPutDown(bool input)
-    {
-        AnnouncePickUpPutDownEvent?.Invoke(input);
+    {      
         equipped = input;
+        AnnouncePickUpPutDownEvent?.Invoke(input);
     }
 
     public bool ReturnPlayerHighlight()
@@ -61,11 +61,11 @@ public class GridObject : MonoBehaviour, IInventoryObject
     {
         return equipped;
     }
-
+        
     public void HighLight(bool input)
-    {
-        AnnounceHighlightEvent?.Invoke(input);
+    { 
         highlighted = input;
+        AnnounceHighlightEvent?.Invoke(input);
     }
 
     public bool ReturnHighlighted()

@@ -36,7 +36,7 @@ public class InventoryGridItems : MonoBehaviour
                     obj.parentPosition = new Vector2(openSquare.xPos, openSquare.yPos);
 
                     // Mark the square as not 
-                    grid.TargetCubesFlipEquipped(openSquare.xPos, openSquare.yPos, true);
+                    grid.ChangeTargetCubeType(openSquare.xPos, openSquare.yPos, InventoryGrid.GridCubeType.Occupied);
 
                     // Mark the surrounding squares as not accessible
                     MarkSurroundingSquaresEquipped(openSquare, obj);
@@ -64,8 +64,7 @@ public class InventoryGridItems : MonoBehaviour
             if (IsAccessible(x, y))
             {
                 // Mark the square as not accessible
-                grid.TargetCubesFlipEquipped(x, y, true);
-                grid.TargetCubesFlipAccessible(x, y, false);
+                grid.ChangeTargetCubeType(x, y, InventoryGrid.GridCubeType.Occupied);
             }
         }
     }

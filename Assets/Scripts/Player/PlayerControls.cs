@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -47,6 +48,10 @@ public class PlayerControls : MonoBehaviour
 
     public event Action MenuCancelEvent;
 
+    public event Action RotateEvent;
+
+    public event Action<bool> ShiftHeldEvent;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -69,11 +74,31 @@ public class PlayerControls : MonoBehaviour
         inputs.TurnBasedCombat.MoveInput.started += MenuMovement;
         inputs.TurnBasedCombat.Confirm.performed += MenuConfirm;
         inputs.TurnBasedCombat.Cancel.performed += MenuCancel;
+
+        inputs.TetrisInventory.Rotate.performed += Rotate;
+
+        inputs.TetrisInventory.Shift.performed += ShiftHeld;
+
+        inputs.TetrisInventory.Shift.canceled += ShiftHeld;
+    }
+
+    private void ShiftHeld(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            ShiftHeldEvent?.Invoke(true);
+
+        else
+            ShiftHeldEvent?.Invoke(false);
+    }
+
+    private void Rotate(InputAction.CallbackContext context)
+    {
+        RotateEvent?.Invoke();
     }
 
     private void Movement(InputAction.CallbackContext context)
     {
-      //  Debug.Log(context.ReadValue<Vector2>());
+        //  Debug.Log(context.ReadValue<Vector2>());
 
         movementInputs = context.ReadValue<Vector2>();
 
@@ -115,5 +140,10 @@ public class PlayerControls : MonoBehaviour
         inputs.TurnBasedCombat.MoveInput.started -= MenuMovement;
         inputs.OverworldMovement.Interact.performed -= MenuConfirm;
         inputs.TurnBasedCombat.Cancel.performed -= MenuCancel;
+
+
+        inputs.TetrisInventory.Rotate.performed -= Rotate;
+        inputs.TetrisInventory.Rotate.performed -= ShiftHeld;
+        inputs.TetrisInventory.Rotate.canceled -= ShiftHeld;
     }
 }

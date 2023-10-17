@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class GridObjectParent : MonoBehaviour
 {
-    public InventoryGridObjectController controller;
+   // public InventoryGridObjectController controller;
+   public InventoryGridCubeMover mover;
 
     public List<IInventoryObject> inventoryObjects = new List<IInventoryObject>();
     public List<Vector2> inventoryVectors = new List<Vector2>();
@@ -67,7 +68,7 @@ public class GridObjectParent : MonoBehaviour
         highlighted = input;
     }
 
-    private void EquipChildren(bool input)
+    public void EquipChildren(bool input)
     {
         if (input)
         {
@@ -76,7 +77,8 @@ public class GridObjectParent : MonoBehaviour
                 obj.PickUpPutDown(true);
             }
 
-            controller.SetTargetTransform(transform, true);
+            mover.SetParentCube(this, true);
+       //     controller.SetTargetTransform(transform, true);
         }
 
         else
@@ -86,7 +88,8 @@ public class GridObjectParent : MonoBehaviour
                 obj.PickUpPutDown(false);
             }
 
-            controller.SetTargetTransform(null, false);
+            mover.SetParentCube(this,false);
+            //   controller.SetTargetTransform(null, false);
         }
 
         equipped = input;

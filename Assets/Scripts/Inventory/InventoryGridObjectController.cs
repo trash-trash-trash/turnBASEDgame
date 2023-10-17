@@ -46,8 +46,8 @@ public class InventoryGridObjectController : MonoBehaviour
 
     private List<Vector2> originalVectors = new List<Vector2>();
     private Vector2 originalParentVector;
-    private Vector2 parentPositionVector;
 
+    public List<Vector2> rotatedVectors;
 
     public void Start()
     {
@@ -100,55 +100,110 @@ public class InventoryGridObjectController : MonoBehaviour
         }
         else
         {
-            Unequip(newTargetTransform);
+            Unequip(prevTransform);
         }
     }
 
     void Equip(Transform newTargetTransform)
     {
-        targetTransform = newTargetTransform;
-        prevTransform = newTargetTransform;
+        Transform previousTransform = targetTransform;
 
+        // Update targetTransform to the new item
+        targetTransform = newTargetTransform;
+
+        // Update prevTransform with the previous item
+        prevTransform = previousTransform;
+
+        // Other logic...
+
+        isEquipped = true;
+        
         targetTransform.position = new Vector3(targetTransform.position.x - gridPosOffset,
             targetTransform.position.y - gridPosOffset,
-            targetTransform.position.z - 1);
+            targetTransform.position.z - 2);
 
         targetParentObj = newTargetTransform.GetComponent<GridObjectParent>();
 
-        isEquipped = true;
+        originalVectors = targetParentObj.gridPositions;
+        originalParentVector = targetParentObj.parentPosition;
+        
         initialPosition = newTargetTransform.position;
 
         foreach (Vector2 vec in targetParentObj.gridPositions)
         {
-            grid.TargetCubesFlipShadow((int)(targetParentObj.parentPosition.x + vec.x),
-                (int)(targetParentObj.parentPosition.y + vec.y), true);
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.Open);
 
-            originalVectors.Add(vec);
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.ShadowOn);
         }
     }
 
     void Unequip(Transform newTargetTransform)
     {
         if (newTargetTransform == null)
+            return;
+
+        bool canPlace = true;
+
+        foreach (Vector2 vec in targetParentObj.gridPositions)
         {
-            if (prevTransform != null)
+            if (!gridItems.IsAccessible((int)(targetParentObj.parentPosition.x + vec.x),
+                    (int)(targetParentObj.parentPosition.y + vec.y)))
             {
-                prevTransform.position = new Vector3(prevTransform.position.x + gridPosOffset,
-                    prevTransform.position.y + gridPosOffset,
-                    prevTransform.position.z + 1);
+                canPlace = false;
+                break;
             }
-
-            isEquipped = false;
-            targetTransform = null;
-
-            targetParentObj.gridPositions.Clear();
-
-            targetParentObj.gridPositions = originalVectors;
-
-            targetParentObj.parentPosition = originalParentVector;
-
-            originalVectors.Clear();
         }
+
+        if (canPlace)
+            PlaceItem();
+        else
+            ReturnItem();
+    }
+
+    private void PlaceItem()
+    {
+        foreach (Vector2 vec in targetParentObj.gridPositions)
+        {
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.Occupied);
+
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.ShadowOff);
+        }
+
+        isEquipped = false;
+        targetTransform = null;
+        originalVectors.Clear();
+
+        prevTransform.position = new Vector3(targetTransform.position.x + gridPosOffset,
+            targetTransform.position.y + gridPosOffset,
+            targetTransform.position.z + 2);
+    }
+
+    private void ReturnItem()
+    {
+        targetParentObj.transform.position = new Vector3(originalParentVector.x + gridPosOffset,
+            originalParentVector.y + gridPosOffset, targetTransform.position.z+2);
+
+        targetParentObj.gridPositions = originalVectors;
+
+        targetParentObj.parentPosition = originalParentVector;
+
+        foreach (Vector2 vec in targetParentObj.gridPositions)
+        {
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.Occupied);
+
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.ShadowOff);
+        }
+
+        originalVectors.Clear();
+
+        isEquipped = false;
+        targetTransform = null;
     }
 
     public void Movement(Vector2 input)
@@ -178,9 +233,56 @@ public class InventoryGridObjectController : MonoBehaviour
         float x;
         float rotationAmount = shiftHeld ? x = 90.0f : x = -90.0f;
 
-        targetRotation = targetTransform.rotation * Quaternion.Euler(0, 0, rotationAmount);
 
+        rotatedVectors = new List<Vector2>();
+
+        foreach (Vector2 ve in rotatedVectors)
+        {
+            UpdateRotatedGridPositions(ve, true);
+        }
+
+        rotatedVectors = RotateVectors(rotatedVectors, rotationAmount);
+
+        foreach (Vector2 ve in rotatedVectors)
+        {
+            UpdateRotatedGridPositions(ve, false);
+        }
+
+
+        // Update the grid positions with the rotated vectors
+        targetParentObj.gridPositions.Clear();
+        targetParentObj.gridPositions = rotatedVectors;
+        rotatedVectors.Clear();
+        targetRotation = targetTransform.rotation * Quaternion.Euler(0, 0, rotationAmount);
         isRotating = true;
+    }
+
+    private List<Vector2> RotateVectors(List<Vector2> vectors, float rotationAmount)
+    {
+        List<Vector2> newRotatedVectors = new List<Vector2>();
+        newRotatedVectors.Clear();
+
+        foreach (Vector2 vector in vectors)
+        {
+            float newX, newY;
+
+            if (rotationAmount > 0)
+            {
+                // Rotate clockwise
+                newX = -vector.y;
+                newY = vector.x;
+            }
+            else
+            {
+                // Rotate counterclockwise
+                newX = vector.y;
+                newY = -vector.x;
+            }
+
+            newRotatedVectors.Add(new Vector2(newX, newY));
+        }
+
+        return newRotatedVectors;
     }
 
     private void Shift(InputAction.CallbackContext context)
@@ -191,9 +293,32 @@ public class InventoryGridObjectController : MonoBehaviour
             shiftHeld = false;
     }
 
+    private void UpdateRotatedGridPositions(Vector2 input, bool firstStage)
+    {
+        if (firstStage)
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + input.x),
+                (int)(targetParentObj.parentPosition.y + input.y), InventoryGrid.GridCubeType.ShadowOff);
+
+        else
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + input.x),
+                (int)(targetParentObj.parentPosition.y + input.y), InventoryGrid.GridCubeType.ShadowOn);
+    }
+
     private void UpdateGridPositions(Vector2 input)
     {
-        
+        foreach (Vector2 vec in targetParentObj.gridPositions)
+        {
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.ShadowOff);
+        }
+
+        targetParentObj.parentPosition += input;
+
+        foreach (Vector2 vec in targetParentObj.gridPositions)
+        {
+            grid.ChangeTargetCubeType((int)(targetParentObj.parentPosition.x + vec.x),
+                (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.ShadowOn);
+        }
     }
 
 
