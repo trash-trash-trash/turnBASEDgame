@@ -995,7 +995,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   originalVectors: []
   gridPosOffset: 0.75
-  gridPosZOffset: -2
+  gridPosZOffset: 2
   moveSpeed: 5
   moveDistance: {x: 0, y: 0}
 --- !u!114 &995021194

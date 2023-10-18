@@ -67,7 +67,7 @@ public class InventoryGridCubeMover : MonoBehaviour
 
             targetTransform.position = new Vector3(targetTransform.position.x - gridPosOffset,
                 targetTransform.position.y - gridPosOffset,
-                targetTransform.position.z);
+                targetTransform.position.z - gridPosZOffset);
 
             originalVectors = targetParentObj.gridPositions;
 
@@ -131,7 +131,7 @@ public class InventoryGridCubeMover : MonoBehaviour
         {
             targetTransform.position = new Vector3(targetTransform.position.x + gridPosOffset,
                 targetTransform.position.y + gridPosOffset,
-                targetTransform.position.z);
+                targetTransform.position.z + gridPosZOffset);
 
             foreach (Vector2 vec in targetParentObj.gridPositions)
             {
@@ -139,8 +139,6 @@ public class InventoryGridCubeMover : MonoBehaviour
                     (int)(targetParentObj.parentPosition.y + vec.y), InventoryGrid.GridCubeType.Occupied);
             }
         }
-
-        //targetParentObj.EquipChildren(false);
 
         movingCubes = false;
 
@@ -162,6 +160,7 @@ public class InventoryGridCubeMover : MonoBehaviour
 
             Vector2 inputDirection = new Vector2(Mathf.Round(inputVector.x), Mathf.Round(inputVector.y));
             targetPosition = initialPosition + inputDirection;
+
             startTime = Time.time;
             journeyLength = Vector2.Distance(initialPosition, targetPosition);
 
@@ -225,13 +224,14 @@ public class InventoryGridCubeMover : MonoBehaviour
 
             if (fractionOfJourney >= 1.0f)
             {
-                targetTransform.position = targetPosition;
+                Vector3 finalPosition = new Vector3(targetPosition.x, targetPosition.y, originalPos.z - gridPosZOffset);
+                targetTransform.position = finalPosition;
                 moving = false;
             }
             else
             {
                 Vector2 newPosition = Vector2.Lerp(initialPosition, targetPosition, fractionOfJourney);
-                targetTransform.position = new Vector3(newPosition.x, newPosition.y, targetTransform.position.z);
+                targetTransform.position = new Vector3(newPosition.x, newPosition.y, originalPos.z - gridPosZOffset);
             }
         }
     }
