@@ -1,90 +1,95 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Windows;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.Windows;
 
-public class DialogueSingleton : MonoBehaviour
-{
-    //IncrementallyDisplayText allows the typewriter effect, displays text one char at a time
-    //waits until waitForNextLine is False if there are lines remaining
-    //NextLine() detects if there are more lines to display or closes dialogue
-
-    #region Singleton
-
-    private static DialogueSingleton instance;
-
-    public static DialogueSingleton DiaglogueSingletonInstance
+    public class DialogueSingleton : MonoBehaviour
     {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindObjectOfType<DialogueSingleton>();
+        //IncrementallyDisplayText allows the typewriter effect, displays text one char at a time
+        //waits until waitForNextLine is False if there are lines remaining
+        //NextLine() detects if there are more lines to display or closes dialogue
 
+        #region Singleton
+
+        private static DialogueSingleton instance;
+
+        public static DialogueSingleton DiaglogueSingletonInstance
+        {
+            get
+            {
                 if (instance == null)
                 {
-                    GameObject singletonObject = new GameObject("singleton");
-                    instance = singletonObject.AddComponent<DialogueSingleton>();
+                    instance = FindObjectOfType<DialogueSingleton>();
+
+                    if (instance == null)
+                    {
+                        GameObject singletonObject = new GameObject("singleton");
+                        instance = singletonObject.AddComponent<DialogueSingleton>();
+                    }
                 }
+
+                return instance;
             }
-
-            return instance;
         }
-    }
 
 
-    private void Awake()
-    {
-        if (instance != null && instance != this)
+        private void Awake()
         {
-            Destroy(this.gameObject);
+            if (instance != null && instance != this)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                instance = this;
+                DontDestroyOnLoad(this.gameObject);
+            }
         }
-        else
+
+        #endregion
+
+        public event Action<bool> OpenCloseDialogueEvent;
+
+        public event Action<string> NewDialogueEvent;
+
+        public ITalk talker;
+
+        public List<string> lines;
+        public float currentDelay;
+        public float delayBetweenCharacters;
+        public float minDelayBetweenCharacters;
+        private float originalDelay;
+
+        public int currentLineIndex = 0;
+        private int characterIndex = 0;
+        private bool waitForNextLine = false;
+
+        public event Action NextLineEvent;
+
+        private IEnumerator displayText;
+
+        private IEnumerator nextLine;
+
+        public bool nextLinePressed = false;
+        public bool talking = false;
+
+        void Start()
         {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            originalDelay = delayBetweenCharacters;
+            currentDelay = delayBetweenCharacters;
         }
-    }
 
-    #endregion
+        public void OnNewDialogue(List<string> newLines)
+        {
 
-    public event Action<bool> OpenCloseDialogueEvent;
+            lines = newLines;
+            currentLineIndex = 0;
+            characterIndex = 0;
 
-    public event Action<string> NewDialogueEvent;
-
-    public ITalk talker;
-
-    public List<string> lines;
-    public float delayBetweenCharacters;
-    public float minDelayBetweenCharacters;
-    private float originalDelay;
-
-    public int currentLineIndex = 0;
-    private int characterIndex = 0;
-    private bool displayComplete = false;
-    private bool waitForNextLine = false;
-
-    public event Action NextLineEvent;
-
-    private IEnumerator displayText;
-
-    private IEnumerator nextLine;
-
-    public bool nextLinePressed = false;
-    public bool talking = false;
-
-    public void OnNewDialogue(List<string> newLines)
-    {
-        originalDelay = delayBetweenCharacters;
-
-        lines = newLines;
-        currentLineIndex = 0;
-        characterIndex = 0;
-
-        displayText = IncrementallyDisplayText();
-        StartCoroutine(displayText);
-    }
+            displayText = IncrementallyDisplayText();
+            StartCoroutine(displayText);
+        }
 
     private IEnumerator IncrementallyDisplayText()
     {
@@ -93,11 +98,11 @@ public class DialogueSingleton : MonoBehaviour
             talking = true;
             if (nextLinePressed)
             {
-                delayBetweenCharacters = minDelayBetweenCharacters;
+                currentDelay = minDelayBetweenCharacters;
             }
             else
             {
-                delayBetweenCharacters = originalDelay;
+                currentDelay = originalDelay;
             }
             if (characterIndex < lines[currentLineIndex].Length)
             {
@@ -106,48 +111,47 @@ public class DialogueSingleton : MonoBehaviour
             }
             else
             {
-                delayBetweenCharacters = originalDelay;
+                currentDelay = originalDelay;
                 talking = false;
+                nextLinePressed = false;
                 waitForNextLine = true;
                 yield return new WaitUntil(() => waitForNextLine == false);
             }
 
-            yield return new WaitForSeconds(delayBetweenCharacters);
+            yield return new WaitForSeconds(currentDelay);
         }
     }
 
     public void NextLine()
-    {
-        nextLinePressed = true;
-
-        if (!waitForNextLine || talking)
-            return;
-
-        characterIndex = 0;
-        currentLineIndex++;
-
-        if (currentLineIndex < lines.Count)
         {
-            NextLineEvent?.Invoke();
-            displayComplete = false;
-            waitForNextLine = false;
-            nextLinePressed = false;
+            nextLinePressed = true;
+
+            if (!waitForNextLine || talking)
+                return;
+
+            characterIndex = 0;
+            currentLineIndex++;
+
+            if (currentLineIndex < lines.Count)
+            {
+                waitForNextLine = false;
+                NextLineEvent?.Invoke();
+                nextLinePressed = false;
+            }
+            else
+            {
+                nextLinePressed = false;
+                OnOpenCloseDialogue(false);
+            }
         }
-        else
+
+        public void OnOpenCloseDialogue(bool input)
         {
-            nextLinePressed = false;
-            displayComplete = true;
-            OnOpenCloseDialogue(false);
+            OpenCloseDialogueEvent?.Invoke(input);
+
+            if (!input && talker != null)
+            {
+                talker.CloseDialogue();
+            }
         }
     }
-
-    public void OnOpenCloseDialogue(bool input)
-    {
-        OpenCloseDialogueEvent?.Invoke(input);
-
-        if (!input && talker != null)
-        {
-            talker.CloseDialogue();
-        }
-    }
-}

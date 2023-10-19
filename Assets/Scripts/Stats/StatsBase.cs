@@ -22,11 +22,6 @@ public class StatsBase : MonoBehaviour
     public Dictionary<StatsEnum, int> statsDictionary = new Dictionary<StatsEnum, int>();
     public bool initialized = false;
 
-    public void Start()
-    {
-        SetDictionary();
-    }
-
     public void SetDictionary()
     {
         name = member.name;

@@ -187,3 +187,7 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- GridCubeMover successfully equips and unequips Items. Items and their transforms are moved along the grid with PlayerControls. Uses InventoryGridItems to scan for open squares. If all squares are open, a shadow is cast. If any squares are blocked, the cast shadow is blocked. CubeMover moves the Item transform along the x/y axis with a gridoffset. if the Item is unequipped while over a blocked shadow, returns it to its original position and rotation, physically and on the grid.
 
 -- GridCubeRotater rotates the current item 90 or -90 degrees depending on if shift is held. rotates the Item physically and along the x/y axis (all positive y values become positive x values, positive x values become negative y values, negative y values become negative x vaules, or the reverse). 
+
+2.6
+
+-- started greyboxing an overworld level based on Bandit's map. added an Investigatable item prefab. updated dialogue singleton.cs and NPC prefab

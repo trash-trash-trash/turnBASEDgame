@@ -53,7 +53,8 @@ public class NPCBrain : MonoBehaviour
 
     private void OnEnable()
     {
-        party = partyInventory.party;
+        if(myType==NPCTypeEnum.Enemy)
+         party = partyInventory.party;
 
         stateDictionary.Add(NPCStates.Attack, AttackObj);
         stateDictionary.Add(NPCStates.Fight, FightObj);
