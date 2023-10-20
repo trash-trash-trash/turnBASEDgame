@@ -149,7 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines: []
-  delayBetweenCharacters: 0.075
+  currentDelay: 0
+  delayBetweenCharacters: 0.05
   minDelayBetweenCharacters: 0.01
   currentLineIndex: 0
   nextLinePressed: 0

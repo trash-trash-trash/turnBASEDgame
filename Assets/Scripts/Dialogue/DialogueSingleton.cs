@@ -115,11 +115,12 @@
                 talking = false;
                 nextLinePressed = false;
                 waitForNextLine = true;
-                yield return new WaitUntil(() => waitForNextLine == false);
             }
 
             yield return new WaitForSeconds(currentDelay);
         }
+
+        yield return new WaitUntil(() => waitForNextLine == false);
     }
 
     public void NextLine()

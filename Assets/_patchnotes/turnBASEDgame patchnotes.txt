@@ -190,4 +190,16 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 
 2.6
 
+-- changed skybox and camera backgrounds to black in the overworld scene. requires point lights to see anything ( / torch)
+
+-- added a quick CameraFollow.cs so camera can follow main player
+
 -- started greyboxing an overworld level based on Bandit's map. added an Investigatable item prefab. updated dialogue singleton.cs and NPC prefab
+
+-- added TeleportPoint.cs and OverworldTeleporter prefab. allows the Player to teleport between transforms in the overworld. added DecisionMaker.cs. TODO: allow the Player to decide yes/no to teleport. add transition visuals for transitions
+
+-- increased Gravity to y -100
+
+-- updated WalkerBase to allow walking up / down ramps. Fires a raycast down and sets the transform.parent.position a custom distance away on the y from the Ground layer
+
+-- encountered a strange bug where talking to inanimate objects (and not NPCs) would drop the Player through the world. added rigidbody constraints as a hack to prevent the Player from moving while talking

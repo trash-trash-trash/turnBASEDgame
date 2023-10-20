@@ -27,6 +27,8 @@ public class PlayerInteract : MonoBehaviour
 
     public bool talking = false;
 
+    public Rigidbody rb;
+
     private void OnEnable()
     {
         singleton = DialogueSingleton.DiaglogueSingletonInstance;
@@ -46,6 +48,19 @@ public class PlayerInteract : MonoBehaviour
         controls.MovementEvent -= AimVector;
         controls.InteractEvent -= Interact;
     }
+
+    private void Update()
+    {
+        if (talking && !rb.constraints.HasFlag(RigidbodyConstraints.FreezePositionY))
+        {
+            rb.constraints |= RigidbodyConstraints.FreezePositionY;
+        }
+        else if (!talking && rb.constraints.HasFlag(RigidbodyConstraints.FreezePositionY))
+        {
+            rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+        }
+    }
+
 
     private void AimVector(Vector2 vector2)
     {
@@ -94,6 +109,12 @@ public class PlayerInteract : MonoBehaviour
                     movement.Brake();
                     talking = true;
                     break; // Exit the loop after the first hit.
+                }
+
+                IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();
+                if(interactable != null)
+                {
+                    interactable.Interact();
                 }
             }
         }

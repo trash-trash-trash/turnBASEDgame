@@ -17,7 +17,11 @@ public class WalkerBase : MonoBehaviour
     
     public float brakeForce;
 
-    public event Action<Vector3> MovementVector3Event; 
+    public event Action<Vector3> MovementVector3Event;
+
+    public float distanceFromGround;
+
+    public Transform walkerTransform;
 
     public void FixedUpdate()
     {
@@ -39,6 +43,15 @@ public class WalkerBase : MonoBehaviour
             }
 
             MovementVector3Event?.Invoke(movementDirection);
+        }
+    }
+
+    void Update()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
+        {
+            Vector3 newPosition = hit.point + Vector3.up * distanceFromGround;
+            walkerTransform.position = newPosition;
         }
     }
 
