@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1022854047477766421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560457818827070259}
+  - component: {fileID: 2259650048138012795}
+  m_Layer: 0
+  m_Name: View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1560457818827070259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022854047477766421}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1347514256095416089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2259650048138012795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022854047477766421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f5724f2177af846b80ffb9cbc9f900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCube: {fileID: 2100000, guid: 4638e26f260a2ba4394af3bee874d8f5, type: 2}
+  occupiedCube: {fileID: 2100000, guid: b1494515096d25e48a07c09cf54a4ef5, type: 2}
+  shadowCube: {fileID: 2100000, guid: d344ead095eb10e4283e9fcfd2789b0f, type: 2}
+  blockedCube: {fileID: 2100000, guid: 3669458d6303cc34ea9634f17a7d8652, type: 2}
+  inventoryGrid: {fileID: 7848707217733415453}
+--- !u!1 &2003330821050674545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347514256095416089}
+  - component: {fileID: 7848707217733415453}
+  - component: {fileID: 9039148409314022557}
+  - component: {fileID: 7888528243521082997}
+  - component: {fileID: 1826198040602347111}
+  m_Layer: 0
+  m_Name: InventoryGrid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1347514256095416089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003330821050674545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1560457818827070259}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7848707217733415453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003330821050674545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18973ac1d481be449d160a3714e08f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 196
+  gridCube: {fileID: 2833548601826255240, guid: 0559cd71ed31d6b40aa638101b1744a9, type: 3}
+  spacing: 1
+--- !u!114 &9039148409314022557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003330821050674545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21513121066026b4d810eaa9d1a43cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridObjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  grid: {fileID: 7848707217733415453}
+--- !u!114 &7888528243521082997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003330821050674545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241022a17ab8fc54d9ba6788e284b9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeRotater: {fileID: 1826198040602347111}
+  grid: {fileID: 7848707217733415453}
+  items: {fileID: 9039148409314022557}
+  rotating: 0
+  moving: 0
+  movingCubes: 0
+  targetParentObj: {fileID: 0}
+  targetTransform: {fileID: 0}
+  initialPosition: {x: 0, y: 0}
+  originalParentVector: {x: 0, y: 0}
+  targetPosition: {x: 0, y: 0}
+  originalPos: {x: 0, y: 0, z: 0}
+  originalVectors: []
+  gridPosOffset: 0.75
+  gridPosZOffset: 2
+  moveSpeed: 5
+  moveDistance: {x: 0, y: 0}
+--- !u!114 &1826198040602347111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003330821050674545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e31b4c42da206541a1932cfb6ab05fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: {fileID: 9039148409314022557}
+  cubeMover: {fileID: 7888528243521082997}
+  targetParentObj: {fileID: 0}
+  grid: {fileID: 7848707217733415453}
+  targetTransform: {fileID: 0}
+  rotating: 0
+  shiftHeld: 0
+  moving: 0
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  originalVectors: []
+  rotationSpeed: 15

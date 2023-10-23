@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts;
@@ -37,6 +38,8 @@ public class NPCBrain : MonoBehaviour
     public FightStarter fighter;
 
     public bool isAlive=true;
+
+    public event Action<NPCStates> AnnounceStateEvent;
 
     public enum NPCStates
     {
@@ -153,6 +156,8 @@ public class NPCBrain : MonoBehaviour
         if (stateDictionary.TryGetValue(inputState, out GameObject stateObject))
         {
             stateManager.ChangeState(stateObject);
+            AnnounceStateEvent?.Invoke(inputState);
+
         }
         else
         {
@@ -160,4 +165,5 @@ public class NPCBrain : MonoBehaviour
             Debug.LogError("State not found: " + inputState);
         }
     }
+    
 }

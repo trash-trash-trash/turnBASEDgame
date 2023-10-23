@@ -8,6 +8,8 @@ public class GridObjectParent : MonoBehaviour
    // public InventoryGridObjectController controller;
    public InventoryGridCubeMover mover;
 
+   public InventoryGrid currentGrid;
+
     public List<IInventoryObject> inventoryObjects = new List<IInventoryObject>();
     public List<Vector2> inventoryVectors = new List<Vector2>();
 
@@ -77,7 +79,7 @@ public class GridObjectParent : MonoBehaviour
                 obj.PickUpPutDown(true);
             }
 
-            mover.SetParentCube(this, true);
+            mover.SetParentCube(this, true, currentGrid);
        //     controller.SetTargetTransform(transform, true);
         }
 
@@ -88,7 +90,7 @@ public class GridObjectParent : MonoBehaviour
                 obj.PickUpPutDown(false);
             }
 
-            mover.SetParentCube(this,false);
+            mover.SetParentCube(this,false, null);
             //   controller.SetTargetTransform(null, false);
         }
 

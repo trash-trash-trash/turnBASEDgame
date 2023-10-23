@@ -13,6 +13,13 @@ public class Talker : MonoBehaviour, ITalk
 
     public bool canTalk=true;
 
+    public DialogueSingleton dialogueSingleton;
+
+    void OnEnable()
+    {
+        dialogueSingleton = DialogueSingleton.DiaglogueSingletonInstance;
+    }
+
     public bool CanTalk()
     {
         return canTalk;
@@ -26,9 +33,9 @@ public class Talker : MonoBehaviour, ITalk
 
     public void OpenDialogue()
     {
-        DialogueSingleton.DiaglogueSingletonInstance.talker = this;
-        DialogueSingleton.DiaglogueSingletonInstance.OnOpenCloseDialogue(true);
-        DialogueSingleton.DiaglogueSingletonInstance.OnNewDialogue(dialogue);  
+        dialogueSingleton.talker = this;
+        dialogueSingleton.OnOpenCloseDialogue(true);
+        dialogueSingleton.OnNewDialogue(dialogue);  
         OpenDialogueEvent?.Invoke();
     }
 

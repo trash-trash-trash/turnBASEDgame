@@ -24,12 +24,13 @@ public class InventoryGridItems : MonoBehaviour
         {
             obj = gridObjs[i];
 
+            obj.currentGrid = grid;
+
             foreach (InventoryGrid.GridCubeData openSquare in openSquares)
             {
                 if (AreSurroundingSquaresAccessible(openSquare, obj))
                 {
-                    // Update the grid object's position
-                    Vector3 newPosition = new Vector3(openSquare.xPos, openSquare.yPos, 0);
+                    Vector3 newPosition = new Vector3(openSquare.xPos + grid.startXPosition, openSquare.yPos, 0); // Adjust X position
                     obj.transform.position = newPosition;
 
                     // Update the parent position

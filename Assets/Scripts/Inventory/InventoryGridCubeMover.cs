@@ -51,10 +51,12 @@ public class InventoryGridCubeMover : MonoBehaviour
         rotating = cubeRotater.rotating;
     }
 
-    public void SetParentCube(GridObjectParent newTargetParent, bool input)
+    public void SetParentCube(GridObjectParent newTargetParent, bool input, InventoryGrid targetGrid)
     {
         if (input)
         {
+            grid = targetGrid;
+
             targetParentObj = newTargetParent;
 
             initialPosition = targetParentObj.parentPosition;

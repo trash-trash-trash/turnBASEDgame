@@ -10,7 +10,11 @@ public class InventoryGrid : MonoBehaviour
 {
     //TODO: CONSOLIDATE & MODULATE
 
-    public int gridSize;
+    public bool selected;
+
+    public int gridWidth;
+    public int gridHeight;
+
     public GameObject gridCube;
 
     public GridCubeData[,] gridData;
@@ -18,6 +22,8 @@ public class InventoryGrid : MonoBehaviour
     public event Action<GameObject, GridCubeType> AnnounceChangedCubeEvent;
 
     public event Action<GridCubeData[,]> AnnounceGridEvent;
+
+    public float startXPosition = 0.0f;
 
     [System.Serializable]
     public struct GridCubeData
@@ -31,7 +37,8 @@ public class InventoryGrid : MonoBehaviour
 
     // Adjust this for the spacing between cubes
     // make this transform.size of prefab
-    public float spacing = 1.0f;
+    public float spacingX = 1.0f;
+    public float spacingY = 1.0f;
 
     public enum GridCubeType
     {
@@ -49,15 +56,13 @@ public class InventoryGrid : MonoBehaviour
 
     public void CreateGrid()
     {
-        int gridDimension = (int)Mathf.Sqrt(gridSize);
+        gridData = new GridCubeData[gridWidth, gridHeight];
 
-        gridData = new GridCubeData[gridDimension, gridDimension];
-
-        for (int x = 0; x < gridDimension; x++)
+        for (int x = 0; x < gridWidth; x++)
         {
-            for (int y = 0; y < gridDimension; y++)
+            for (int y = 0; y < gridHeight; y++)
             {
-                Vector3 spawnPosition = new Vector3(x * spacing, y * spacing, 1);
+                Vector3 spawnPosition = new Vector3((x + startXPosition) * spacingX, y * spacingY, 1);
                 GameObject newCube = Instantiate(gridCube, spawnPosition, Quaternion.identity);
 
                 newCube.transform.SetParent(transform);
@@ -76,7 +81,7 @@ public class InventoryGrid : MonoBehaviour
 
                 gridData[x, y] = cubeData;
 
-                bool isOnBoundary = x == 0 || x == gridDimension - 1 || y == 0 || y == gridDimension - 1;
+                bool isOnBoundary = x == 0 || x == gridWidth - 1 || y == 0 || y == gridHeight - 1;
 
                 if (isOnBoundary)
                 {

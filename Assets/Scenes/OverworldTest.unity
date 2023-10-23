@@ -1983,6 +1983,7 @@ MonoBehaviour:
   dialogue:
   - The river below is brown with sludge and grime.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &443509509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2296,6 +2297,7 @@ MonoBehaviour:
   dialogue:
   - Rats feasting on a corpse. You choose not to disturb them.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &506492290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3612,7 +3614,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2192421746815104686, guid: 9175b7dc532db2f4fa126a70cdb734cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1267444189}
   m_SourcePrefab: {fileID: 100100000, guid: 9175b7dc532db2f4fa126a70cdb734cb, type: 3}
 --- !u!1 &859718438
 GameObject:
@@ -3664,6 +3669,7 @@ MonoBehaviour:
   dialogue:
   - The river below is brown with sludge and grime.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &859718441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4237,6 +4243,7 @@ MonoBehaviour:
   dialogue:
   - A humble fruit stand.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &926319596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4639,6 +4646,7 @@ MonoBehaviour:
   dialogue:
   - Knock?
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &1006708650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4760,6 +4768,7 @@ MonoBehaviour:
   dialogue:
   - The river below is brown with sludge and grime.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &1016018719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5322,6 +5331,7 @@ MonoBehaviour:
   dialogue:
   - The river below is brown with sludge and grime.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &1079317154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5922,6 +5932,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252700109}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1267444180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2192421746815104686, guid: 9175b7dc532db2f4fa126a70cdb734cb, type: 3}
+  m_PrefabInstance: {fileID: 859686871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1267444189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267444180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486f18035d2ad2f44bba1b0910327730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talker: {fileID: 1267444191}
+  givenApple: 0
+  string01:
+  - Real niggas representing don't die
+  - Real niggas representing don't die
+  string02:
+  - never dead like I said all we do is fuckin multiply
+  - never dead like I said all we do is fuckin multiply
+  string03:
+  - I puff a mad bag of buddha.
+  - Niggas be like "YO WHO DA SHORTY?"
+  - I busting niggas with my six shoota
+--- !u!114 &1267444191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5522536908658649869, guid: 9175b7dc532db2f4fa126a70cdb734cb, type: 3}
+  m_PrefabInstance: {fileID: 859686871}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267444180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3582cd757b22984438dba77ed59bef66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1271529081
 GameObject:
   m_ObjectHideFlags: 0
@@ -6612,6 +6662,7 @@ MonoBehaviour:
   dialogue:
   - A decrepit water fountain.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &1370204805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7147,6 +7198,7 @@ MonoBehaviour:
   - You can barely make out the remnants of a human form in the pile of sludge.
   - How long has it been here?
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &1446195523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7745,6 +7797,7 @@ MonoBehaviour:
   dialogue:
   - The river below is brown with sludge and grime.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &1532648924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9253,6 +9306,7 @@ MonoBehaviour:
   dialogue:
   - The river below is brown with sludge and grime.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!65 &2023273545
 BoxCollider:
   m_ObjectHideFlags: 0
