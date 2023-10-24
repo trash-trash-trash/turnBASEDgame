@@ -25,6 +25,10 @@ public class InventoryGrid : MonoBehaviour
 
     public float startXPosition = 0.0f;
 
+    public int testX;
+    public int testY;
+    public GridCubeType testType;
+
     [System.Serializable]
     public struct GridCubeData
     {
@@ -93,6 +97,10 @@ public class InventoryGrid : MonoBehaviour
         AnnounceGridEvent?.Invoke(gridData);
     }
 
+    public void TestChangeTargetCube()
+    {
+        ChangeTargetCubeType(testX, testY, testType);
+    }
 
     public void ChangeTargetCubeType(int targetX, int targetY, GridCubeType newType)
     {

@@ -15,6 +15,11 @@ public class InventoryGridEditor : Editor
         DrawDefaultInspector();
 
         showGridData = EditorGUILayout.Foldout(showGridData, "CubeData Struct Array");
+        
+        if (GUILayout.Button("Test Change Cube"))
+        {
+            IG.TestChangeTargetCube();
+        }
 
         if (showGridData)
         {

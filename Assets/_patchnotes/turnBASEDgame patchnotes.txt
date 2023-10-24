@@ -202,7 +202,7 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 
 -- updated WalkerBase to allow walking up / down ramps. Fires a raycast down and sets the transform.parent.position a custom distance away on the y from the Ground layer
 
--- encountered a strange bug where talking to inanimate objects (and not NPCs) would drop the Player through the world. added rigidbody constraints as a hack to prevent the Player from moving while talking
+-- encountered a strange b!ug where talking to inanimate objects (and not NPCs) would drop the Player through the world. added rigidbody constraints as a hack to prevent the Player from moving while talking
 
 2.7
 
@@ -211,3 +211,7 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- added InventoryManager.cs for opening/closing multiple inventories
 
 -- added OldWomanBrain.cs as an example NPC. experiment to find what needs modularity. OldWoman can give an apple, and afterwards has multiple lines of dialogue she chooses from randomly
+
+2.8
+
+-- updated InventoryCubeMover.cs Items can now detect when they are moving out of bounds and snap to the opposite x/y coords when doing so. also correctly updates square Vectors when doing so. TODO: allow movign between InventoryGrids
