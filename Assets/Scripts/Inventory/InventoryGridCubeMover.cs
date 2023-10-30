@@ -295,7 +295,7 @@ public class InventoryGridCubeMover : MonoBehaviour
 
         foreach (Vector2 vec in targetParentObj.gridPositions)
         {
-            if (!items.IsAccessible((int)(targetParentObj.parentPosition.x + vec.x),
+            if (!items.IsAccessible((int)(targetParentObj.parentPosition.x + vec.x),     
                     (int)(targetParentObj.parentPosition.y + vec.y)))
             {
                 blocked = true;

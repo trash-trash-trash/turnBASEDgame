@@ -50,6 +50,8 @@ MonoBehaviour:
   maxSpeed: 1
   walkSpeed: 1
   brakeForce: 50
+  distanceFromGround: 0
+  walkerTransform: {fileID: 0}
   targetTransform: {fileID: 0}
   distanceFromPlayer: 2.5
   lookTowards: {fileID: 7478674136104950576}
@@ -106,6 +108,8 @@ MonoBehaviour:
   maxSpeed: 1
   walkSpeed: 1
   brakeForce: 50
+  distanceFromGround: 0
+  walkerTransform: {fileID: 9041807309841505442}
   talker: {fileID: 5522536908658649869}
   movementVectors:
   - {x: 0, y: -1}
@@ -139,7 +143,7 @@ MonoBehaviour:
   patrol: {fileID: 30158466708260914}
   look: {fileID: 7478674136104950576}
   prevVector: {x: 0, y: 0, z: 0}
-  walker: {fileID: 0}
+  walker: {fileID: 30158466708260914}
 --- !u!1 &1590726937646787263
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +336,7 @@ MonoBehaviour:
   - Rare to see a cleric this deep in the city!
   - Here, for yer troubles.
   canTalk: 1
+  dialogueSingleton: {fileID: 0}
 --- !u!114 &5972542170074378634
 MonoBehaviour:
   m_ObjectHideFlags: 0

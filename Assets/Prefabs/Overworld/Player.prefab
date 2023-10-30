@@ -429,6 +429,8 @@ MonoBehaviour:
   maxSpeed: 5
   walkSpeed: 1
   brakeForce: 10
+  distanceFromGround: 0
+  walkerTransform: {fileID: 7813931133316208024}
   controls: {fileID: 0}
   look: {fileID: 265908373956370985}
 --- !u!114 &3707818053035311066
@@ -449,6 +451,7 @@ MonoBehaviour:
   lineLength: 1
   interactSphereRadius: 1
   talking: 0
+  rb: {fileID: 3775042857327697074}
 --- !u!1 &7978520367212390800
 GameObject:
   m_ObjectHideFlags: 0

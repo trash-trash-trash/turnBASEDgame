@@ -215,3 +215,11 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 2.8
 
 -- updated InventoryCubeMover.cs Items can now detect when they are moving out of bounds and snap to the opposite x/y coords when doing so. also correctly updates square Vectors when doing so. TODO: allow movign between InventoryGrids
+
+2.9
+
+-- TODO: the NPC Talk State needs to find the Player Transform intelligently
+
+-- fixed Player and NPC overworld prefabs
+
+-- added Asylum scene. began placing NPCs, ground, walls, objects
