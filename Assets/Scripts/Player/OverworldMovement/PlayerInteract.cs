@@ -98,25 +98,39 @@ public class PlayerInteract : MonoBehaviour
 
         RaycastHit[] hits = Physics.SphereCastAll(origin, interactSphereRadius, direction, lineLength);
 
-        if (hits.Length > 0)
-        {
-            foreach (var hit in hits)
-            {
-                ITalk talker = hit.collider.gameObject.GetComponent<ITalk>();
-                if (talker != null && talker.CanTalk())
-                {
-                    talker.OpenDialogue();
-                    movement.Brake();
-                    talking = true;
-                    break; // Exit the loop after the first hit.
-                }
+        ITalk nearestTalker = null;
+        IInteractable nearestInteractable = null;
+        float nearestTalkerDistance = float.MaxValue;
+        float nearestInteractableDistance = float.MaxValue;
 
-                IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();
-                if(interactable != null)
-                {
-                    interactable.Interact();
-                }
+        foreach (var hit in hits)
+        {
+            ITalk talker = hit.collider.gameObject.GetComponent<ITalk>();
+            IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();
+            float distance = Vector3.Distance(origin, hit.point);
+
+            if (talker != null && talker.CanTalk() && distance < nearestTalkerDistance)
+            {
+                nearestTalkerDistance = distance;
+                nearestTalker = talker;
             }
+
+            if (interactable != null && distance < nearestInteractableDistance)
+            {
+                nearestInteractableDistance = distance;
+                nearestInteractable = interactable;
+            }
+        }
+
+        if (nearestTalker != null && (nearestInteractable == null || nearestTalkerDistance <= nearestInteractableDistance))
+        {
+            nearestTalker.OpenDialogue();
+            movement.Brake();
+            talking = true;
+        }
+        else if (nearestInteractable != null)
+        {
+            nearestInteractable.Interact();
         }
         else
         {

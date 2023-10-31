@@ -223,3 +223,9 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- fixed Player and NPC overworld prefabs
 
 -- added Asylum scene. began placing NPCs, ground, walls, objects
+
+3.0
+
+-- updated Interact spherecast to detect multiple IInteractables / ITalk and return the nearest one if so
+
+-- added DoorBrain.cs, Door Open/Close/Moving/Locked States, DoorStateBase, DoorStatesEnum, DoorInteractBox.cs. Made a reusable door prefab with custom opening angles and speeds.  Door has two box colliders on either side, which determines which way to swing when opening. When closing, always returns to original rotation.

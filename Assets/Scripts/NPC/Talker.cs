@@ -1,4 +1,4 @@
-using System;
+    using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +11,7 @@ public class Talker : MonoBehaviour, ITalk
     public event Action OpenDialogueEvent;
     public event Action CloseDialogueEvent;
 
-    public bool canTalk=true;
+    public bool canTalk;
 
     public DialogueSingleton dialogueSingleton;
 
@@ -33,6 +33,9 @@ public class Talker : MonoBehaviour, ITalk
 
     public void OpenDialogue()
     {
+        if (!canTalk)
+            return;
+        
         dialogueSingleton.talker = this;
         dialogueSingleton.OnOpenCloseDialogue(true);
         dialogueSingleton.OnNewDialogue(dialogue);  

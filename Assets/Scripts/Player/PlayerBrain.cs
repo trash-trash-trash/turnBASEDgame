@@ -6,6 +6,27 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerBrain : MonoBehaviour
 {
+    #region SingletonStuff
+
+    private static PlayerBrain _instance;
+
+    public static PlayerBrain Instance
+    {
+        get { return _instance; }
+    }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    #endregion
     public GameObjectStateManager stateManager;
 
     public BattleManagerSingleton battleManager;
