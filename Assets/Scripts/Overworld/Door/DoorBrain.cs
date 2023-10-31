@@ -26,8 +26,6 @@ public class DoorBrain : MonoBehaviour
     public GameObject movingState;
     public GameObject lockedState;
 
-    public Transform playerTransform;
-
     public Quaternion doorClosedRotation;
     
     public Dictionary<DoorStates, GameObject> statesDict;
@@ -47,8 +45,6 @@ public class DoorBrain : MonoBehaviour
 
     void Start()
     {
-        playerTransform = PlayerBrain.Instance.transform;
-
         side1.DeclareDoorInteractEvent += OpenClose;
         side2.DeclareDoorInteractEvent += OpenClose;
         
