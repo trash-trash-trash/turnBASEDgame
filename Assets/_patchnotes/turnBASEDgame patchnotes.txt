@@ -233,3 +233,11 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 3.1
 
 -- Changed to Unity version 2022.3.7f1
+
+3.2
+
+-- added Audio, SFX and Music folders. added Paddy's ""Warrens_Battle_1.4"" and "Lloyds_Sting". Added "Water Drop 01" and "Water Drop 02" by MATRIXXX_ from freesound.org
+
+-- added SFXSingleton. SFX singleton can be played with a clipname and an audiosource input
+
+-- added WaterDrip.cs. Water puddles now drip on loop with a random time between drips and a random drip clip each time. changed audio source to 3D spatial
