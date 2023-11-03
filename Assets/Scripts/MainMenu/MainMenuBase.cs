@@ -48,6 +48,7 @@ public class MainMenuBase : MonoBehaviour
         {
             ChangeSelectInt(1);
         }
+        Debug.Log(vector2);
     }
 
     protected virtual void ChangeSelectInt(int amount)
@@ -65,5 +66,7 @@ public class MainMenuBase : MonoBehaviour
         }
 
         selectInt = newInt;
+
+        Debug.Log(selectInt);
     }
 }

@@ -241,3 +241,5 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- added SFXSingleton. SFX singleton can be played with a clipname and an audiosource input
 
 -- added WaterDrip.cs. Water puddles now drip on loop with a random time between drips and a random drip clip each time. changed audio source to 3D spatial
+
+-- added SplashScreen state to Main Menu and Mini Maestro logo by Thomas. Inverted colours in MSPaint. Changed the Main Menu skybox to black. added a fadein/fade out to SplashScreen. SplashScreen also  plays Lloyds_Sting.

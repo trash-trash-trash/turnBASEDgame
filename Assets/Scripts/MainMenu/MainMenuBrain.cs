@@ -8,6 +8,10 @@ public class MainMenuBrain : MonoBehaviour
 {
     public GameObjectStateManager stateManager;
 
+    public MainMenuStateEnum loadState;
+
+    public GameObject splashScreen;
+
     public GameObject pressStart;
 
     public GameObject newGame;
@@ -25,19 +29,15 @@ public class MainMenuBrain : MonoBehaviour
 
     private void Start()
     {
+        menuStatesDictionary.Add(MainMenuStateEnum.SplashScreen, splashScreen);
         menuStatesDictionary.Add(MainMenuStateEnum.PressStart, pressStart);
-
         menuStatesDictionary.Add(MainMenuStateEnum.MainMenu, mainMenu);
-
         menuStatesDictionary.Add(MainMenuStateEnum.NewGame, newGame);
-
         menuStatesDictionary.Add(MainMenuStateEnum.LoadGame, loadGame);
-
         menuStatesDictionary.Add(MainMenuStateEnum.Options, options);
-
         menuStatesDictionary.Add(MainMenuStateEnum.Quit, quit);
 
-        ChangeMenuState(MainMenuStateEnum.PressStart);
+        ChangeMenuState(loadState);
     }
 
     public void ChangeMenuState(MainMenuStateEnum state)

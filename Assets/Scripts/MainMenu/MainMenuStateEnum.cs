@@ -1,5 +1,6 @@
 public enum MainMenuStateEnum
 {
+    SplashScreen,
     PressStart,
     NewGame,
     LoadGame,
