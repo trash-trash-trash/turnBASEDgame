@@ -70,8 +70,7 @@ public class PlayerControls : MonoBehaviour
         inputs.OverworldMovement.MoveInput.performed += Movement;
         inputs.OverworldMovement.MoveInput.canceled += Movement;
         inputs.OverworldMovement.Interact.performed += Interact;
-
-        inputs.TurnBasedCombat.MoveInput.started += MenuMovement;
+        
         inputs.TurnBasedCombat.Confirm.performed += MenuConfirm;
         inputs.TurnBasedCombat.Cancel.performed += MenuCancel;
 
@@ -114,13 +113,6 @@ public class PlayerControls : MonoBehaviour
         InteractEvent?.Invoke();
     }
 
-    private void MenuMovement(InputAction.CallbackContext context)
-    {
-        /*movementInputs = context.ReadValue<Vector2>().normalized;
-
-        MenuMovementEvent?.Invoke(movementInputs);*/
-    }
-
     private void MenuConfirm(InputAction.CallbackContext context)
     {
         MenuConfirmEvent?.Invoke();
@@ -136,8 +128,7 @@ public class PlayerControls : MonoBehaviour
         inputs.OverworldMovement.MoveInput.performed -= Movement;
         inputs.OverworldMovement.MoveInput.canceled -= Movement;
         inputs.OverworldMovement.Interact.performed -= Interact;
-
-        inputs.TurnBasedCombat.MoveInput.started -= MenuMovement;
+        
         inputs.OverworldMovement.Interact.performed -= MenuConfirm;
         inputs.TurnBasedCombat.Cancel.performed -= MenuCancel;
 

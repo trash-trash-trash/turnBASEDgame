@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuBase : MonoBehaviour
 {
+    public List<Button> buttonsList;
+
     public MainMenuBrain brain;
 
     public PlayerControls playerControls;
@@ -17,7 +20,7 @@ public class MainMenuBase : MonoBehaviour
     {
         playerControls = PlayerControls.PlayerControlsInstance;
 
-        playerControls.MenuMovementEvent += MenuMovement;
+        playerControls.MovementEvent += MenuMovement;
         playerControls.MenuConfirmEvent += Confirm;
         playerControls.MenuCancelEvent += Cancel;
     }
@@ -25,11 +28,11 @@ public class MainMenuBase : MonoBehaviour
 
     protected virtual void OnDisable()
     {
-        playerControls.MenuMovementEvent -= MenuMovement;
+        playerControls.MovementEvent -= MenuMovement;
         playerControls.MenuConfirmEvent -= Confirm;
         playerControls.MenuCancelEvent -= Cancel;
     }
-    
+
     protected virtual void Confirm()
     {
     }
@@ -40,15 +43,32 @@ public class MainMenuBase : MonoBehaviour
 
     private void MenuMovement(Vector2 vector2)
     {
-        if (vector2.x > 0 || vector2.y > 0)
+        if (vector2 == Vector2.zero)
+            return;
+
+        int amount = 0;
+
+        // Horizontal movement (left/right)
+        if (vector2.x > 0)
         {
-            ChangeSelectInt(-1);
+            amount = 1;
         }
-        else if (vector2.x < 0 || vector2.y < 0)
+        else if (vector2.x < 0)
         {
-            ChangeSelectInt(1);
+            amount = -1;
         }
-        Debug.Log(vector2);
+
+        // Vertical movement (up/down)
+        else if (vector2.y < 0)
+        {
+            amount = -1;
+        }
+        else if (vector2.y > 0)
+        {
+            amount = 1;
+        }
+
+        ChangeSelectInt(amount);
     }
 
     protected virtual void ChangeSelectInt(int amount)
@@ -59,14 +79,32 @@ public class MainMenuBase : MonoBehaviour
         {
             newInt = maxSelectInt;
         }
-
         else if (newInt > maxSelectInt)
         {
             newInt = 0;
         }
 
-        selectInt = newInt;
+        if (buttonsList.Count > 0)
+        {
+            // Deselect the currently selected button
+            if (selectInt >= 0 && selectInt < buttonsList.Count)
+            {
+                Selectable currentlySelectedButton = buttonsList[selectInt].GetComponent<Selectable>();
+                if (currentlySelectedButton != null)
+                {
+                    currentlySelectedButton.OnDeselect(null);
+                }
+            }
 
-        Debug.Log(selectInt);
+            selectInt = newInt;
+
+            // Select the new button
+            if (selectInt >= 0 && selectInt < buttonsList.Count)
+            {
+                buttonsList[selectInt].Select();
+            }
+
+            Debug.Log(selectInt);
+        }
     }
 }

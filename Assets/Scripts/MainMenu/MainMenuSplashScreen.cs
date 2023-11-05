@@ -60,4 +60,10 @@ public class MainMenuSplashScreen : MainMenuBase
 
         brain.ChangeMenuState(MainMenuStateEnum.PressStart);
     }
+
+    protected override void Confirm()
+    {
+        base.Confirm();
+        brain.ChangeMenuState(MainMenuStateEnum.PressStart);
+    }
 }

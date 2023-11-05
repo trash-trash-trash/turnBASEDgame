@@ -1,17 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuNewGame : MainMenuBase
 {
-    protected override void Cancel()
+    public SceneAsset targetScene;
+
+    // Add a method to load the target scene
+    public void LoadTargetScene()
     {
-        base.Cancel();
-        Back();
+        if (targetScene != null)
+        {
+            string sceneName = targetScene.name;
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            Debug.LogError("Target scene is not assigned.");
+        }
     }
 
-    public void Back()
+    protected override void OnEnable()
     {
-        brain.ChangeMenuState(MainMenuStateEnum.MainMenu);
+        base.OnEnable();
+        LoadTargetScene();
     }
 }

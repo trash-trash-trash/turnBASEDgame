@@ -243,3 +243,11 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- added WaterDrip.cs. Water puddles now drip on loop with a random time between drips and a random drip clip each time. changed audio source to 3D spatial
 
 -- added SplashScreen state to Main Menu and Mini Maestro logo by Thomas. Inverted colours in MSPaint. Changed the Main Menu skybox to black. added a fadein/fade out to SplashScreen. SplashScreen also  plays Lloyds_Sting.
+
+3.3 
+
+-- fixed MenuMainMenu buttons. allows selecting with the mouse or the controller. Changed MainMenuBase to correctly read inputs + update SelectInt
+
+-- added Asylum scene to the build settings. allowed NewGame to a load scene
+
+-- TODO: THERE'S A BIZARRE BUG IN THE MainMenuBase where select int highlights buttons correctly when pressing left/right but fails to update properly when pressing up/down. ARGH

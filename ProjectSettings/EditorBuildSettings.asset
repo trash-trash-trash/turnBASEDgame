@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Asylum/Asylum.unity
+    guid: 554b035061fec1b42ae55c5396879644
   m_configObjects: {}
