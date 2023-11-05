@@ -1,17 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class LookTowards : MonoBehaviour
 {
     public Vector3 targetPosition;
     public float rotationSpeed;
 
+    public event Action<Vector3> AnnounceVisionTargetEvent;
+
     public void SetTarget(Vector3 newTargetPosition)
     {
         targetPosition = newTargetPosition;
+        AnnounceVisionTargetEvent?.Invoke(newTargetPosition);
     }
 
     private void Update()

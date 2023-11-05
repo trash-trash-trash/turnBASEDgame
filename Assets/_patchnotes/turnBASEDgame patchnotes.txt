@@ -253,3 +253,7 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- TODO: THERE'S A BIZARRE BUG IN THE MainMenuBase where select int highlights buttons correctly when pressing left/right but fails to update properly when pressing up/down. ARGH
 
 -- FIXED ^^ YOU HAVE TO SET "NAVIGATION" to NONE from AUTOMATIC ON THE UNITY BUTTON
+
+3.4
+
+-- added placeholder overworld sprites, animator controller, clips. updated LookTowards and NPCPatrolState to correctly use the sprites when walking and talking to the Player

@@ -9,19 +9,14 @@ public class OverworldPatrol : WalkerBase
     private ITalk iTalk;
 
     public List<Vector2> movementVectors = new List<Vector2>();
-
     public List<float> movementTime = new List<float>();
-
-    private float currentTime;
-
     public List<float> idleTimes = new List<float>();
 
-    public int selectInt;
-
-    public bool patrol;
+    private int selectInt;
+    private bool patrol;
+    private float timeRemaining; // Time remaining on current movement
 
     private IEnumerator patrolCoroutine;
-
     private IEnumerator waitCoroutine;
 
     private void OnEnable()
@@ -37,7 +32,16 @@ public class OverworldPatrol : WalkerBase
     {
         patrol = true;
         Accelerate();
-        StartCoroutine(Patrol());
+
+        // Check if there's time remaining from a previous patrol segment
+        if (timeRemaining > 0)
+        {
+            StartCoroutine(ResumePatrol());
+        }
+        else
+        {
+            StartCoroutine(Patrol());
+        }
     }
 
     private void StopPatrol()
@@ -45,6 +49,17 @@ public class OverworldPatrol : WalkerBase
         patrol = false;
         StopAllCoroutines();
         Brake();
+
+        // Store the time remaining when patrol is interrupted
+        timeRemaining = GetCurrentMovementTime();
+    }
+
+    private float GetCurrentMovementTime()
+    {
+        if (selectInt < movementTime.Count)
+            return movementTime[selectInt];
+        else
+            return 0;
     }
 
     private IEnumerator Patrol()
@@ -52,9 +67,9 @@ public class OverworldPatrol : WalkerBase
         while (patrol)
         {
             movementVector2 = movementVectors[selectInt];
-            float currentTime = movementTime[selectInt];
+            timeRemaining = GetCurrentMovementTime();
 
-            yield return new WaitForSeconds(currentTime);
+            yield return new WaitForSeconds(timeRemaining);
 
             Brake();
 
@@ -67,6 +82,25 @@ public class OverworldPatrol : WalkerBase
             if (selectInt >= movementVectors.Count)
                 selectInt = 0;
         }
+    }
+
+    private IEnumerator ResumePatrol()
+    {
+        // Resume patrol with the time remaining from the interrupted patrol segment
+        yield return new WaitForSeconds(timeRemaining);
+        Brake();
+
+        float waitTime = idleTimes[selectInt];
+        yield return new WaitForSeconds(waitTime);
+
+        Accelerate();
+
+        selectInt++;
+        if (selectInt >= movementVectors.Count)
+            selectInt = 0;
+
+        timeRemaining = 0; // Reset the time remaining after resuming
+        StartCoroutine(Patrol()); // Continue regular patrol
     }
 
     private void OnDisable()

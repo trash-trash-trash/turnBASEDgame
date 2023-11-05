@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ec24a440-8393-4a58-913a-0589e0ca26ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/PlayerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PlayerInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controls/PlayerInputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls/PlayerInputs.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turn Based System/PartyController/States/PartyControllerStateBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turn Based System/PartyController/States/PartyControllerStateBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Overworld/NPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Overworld/NPC.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Asylum/Asylum.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Asylum/Asylum.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCTalkState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCTalkState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/OverworldPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/OverworldPatrol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vision/LookTowards.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vision/LookTowards.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Overworld/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Overworld/Door/DoorInteractBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Overworld/Door/DoorStateBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Overworld/NPC/OverworldNPCView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -108,7 +111,7 @@
       <workItem from="1698721750261" duration="78000" />
       <workItem from="1698722005522" duration="6502000" />
       <workItem from="1698730108822" duration="1670000" />
-      <workItem from="1699166763165" duration="302000" />
+      <workItem from="1699166763165" duration="6308000" />
     </task>
     <servers />
   </component>

@@ -6,23 +6,34 @@ public class NPCTalkState : MonoBehaviour
 {
     //HACK TODO: FIX HACK
     //how to find this? player single ton? IPlayer?
+    // Reference to the player's transform
     public Transform playerTransform;
 
+    // Reference to the LookTowards component
     public LookTowards lookTowards;
 
-    public Vector3 prevVector;
+    // Store the initial rotation when the component is enabled
+    private Vector3 initialRotation;
 
-    public NPCBrain brain;
+    // Smoothing factor for rotation
+    public float rotationSpeed = 2.0f;
 
     public void OnEnable()
     {
-        prevVector = lookTowards.targetPosition;
-        lookTowards.SetTarget(playerTransform.position.normalized);
+        // Store the initial rotation of the NPC
+        initialRotation = lookTowards.targetPosition;
     }
 
+    private void Update()
+    {
+        // Calculate the direction from the NPC to the player
+        Vector3 directionToPlayer = playerTransform.position - lookTowards.transform.position;
+
+        lookTowards.SetTarget(directionToPlayer);
+    }
 
     public void OnDisable()
     {
-        lookTowards.SetTarget(prevVector);
+        lookTowards.SetTarget(initialRotation);
     }
 }
