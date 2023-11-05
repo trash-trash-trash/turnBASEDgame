@@ -61,11 +61,11 @@ public class MainMenuBase : MonoBehaviour
         // Vertical movement (up/down)
         else if (vector2.y < 0)
         {
-            amount = -1;
+            amount = 1;
         }
         else if (vector2.y > 0)
         {
-            amount = 1;
+            amount = -1;
         }
 
         ChangeSelectInt(amount);

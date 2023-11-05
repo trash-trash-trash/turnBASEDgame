@@ -251,3 +251,5 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- added Asylum scene to the build settings. allowed NewGame to a load scene
 
 -- TODO: THERE'S A BIZARRE BUG IN THE MainMenuBase where select int highlights buttons correctly when pressing left/right but fails to update properly when pressing up/down. ARGH
+
+-- FIXED ^^ YOU HAVE TO SET "NAVIGATION" to NONE from AUTOMATIC ON THE UNITY BUTTON

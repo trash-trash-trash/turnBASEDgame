@@ -39,7 +39,7 @@ public class PartyControllerStateBase : MonoBehaviour
             playerControls = PlayerControls.PlayerControlsInstance;
             playerControls.MenuConfirmEvent += Confirm;
             playerControls.MenuCancelEvent += Cancel;
-            playerControls.MenuMovementEvent += MenuMovement;
+            playerControls.MovementEvent += MenuMovement;
         }
     }
 
@@ -87,7 +87,7 @@ public class PartyControllerStateBase : MonoBehaviour
         {
             playerControls.MenuConfirmEvent -= Confirm;
             playerControls.MenuCancelEvent -= Cancel;
-            playerControls.MenuMovementEvent -= MenuMovement;
+            playerControls.MovementEvent -= MenuMovement;
         }
     }
 }

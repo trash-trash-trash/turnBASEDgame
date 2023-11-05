@@ -42,8 +42,6 @@ public class PlayerControls : MonoBehaviour
 
     public event Action InteractEvent;
 
-    public event Action<Vector2> MenuMovementEvent;
-
     public event Action MenuConfirmEvent;
 
     public event Action MenuCancelEvent;
@@ -70,14 +68,10 @@ public class PlayerControls : MonoBehaviour
         inputs.OverworldMovement.MoveInput.performed += Movement;
         inputs.OverworldMovement.MoveInput.canceled += Movement;
         inputs.OverworldMovement.Interact.performed += Interact;
-        
         inputs.TurnBasedCombat.Confirm.performed += MenuConfirm;
         inputs.TurnBasedCombat.Cancel.performed += MenuCancel;
-
         inputs.TetrisInventory.Rotate.performed += Rotate;
-
         inputs.TetrisInventory.Shift.performed += ShiftHeld;
-
         inputs.TetrisInventory.Shift.canceled += ShiftHeld;
     }
 
@@ -103,7 +97,7 @@ public class PlayerControls : MonoBehaviour
 
         if (context.canceled)
             movementInputs = Vector2.zero;
-
+        
         MovementEvent?.Invoke(movementInputs);
     }
 
@@ -128,11 +122,8 @@ public class PlayerControls : MonoBehaviour
         inputs.OverworldMovement.MoveInput.performed -= Movement;
         inputs.OverworldMovement.MoveInput.canceled -= Movement;
         inputs.OverworldMovement.Interact.performed -= Interact;
-        
         inputs.OverworldMovement.Interact.performed -= MenuConfirm;
         inputs.TurnBasedCombat.Cancel.performed -= MenuCancel;
-
-
         inputs.TetrisInventory.Rotate.performed -= Rotate;
         inputs.TetrisInventory.Rotate.performed -= ShiftHeld;
         inputs.TetrisInventory.Rotate.canceled -= ShiftHeld;
