@@ -64,5 +64,6 @@ public class WalkerBase : MonoBehaviour
     {
         canMove = false;
         rb.velocity = Vector3.zero;
+        MovementVector3Event?.Invoke(Vector3.zero);
     }
 }

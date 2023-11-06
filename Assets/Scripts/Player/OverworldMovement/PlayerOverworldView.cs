@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OverworldNPCView : MonoBehaviour
+public class PlayerOverworldView : MonoBehaviour
 {
-    public WalkerBase walker;
-
     public SpriteRenderer spr;
+
+    public WalkerBase walker;
 
     public Animator animator;
 
@@ -22,18 +22,15 @@ public class OverworldNPCView : MonoBehaviour
 
     public AnimationClip idleSide;
 
-    public Vector3 prevVector=Vector3.zero;
+    public Vector3 prevVector = Vector3.zero;
 
     private bool isMoving;
 
-    public LookTowards lookTowards;
-
-    public void OnEnable()
+    void OnEnable()
     {
         walker.MovementVector3Event += Movement;
-        lookTowards.AnnounceVisionTargetEvent += Movement;
     }
-
+    
     private void Movement(Vector3 vec)
     {
         if (vec == Vector3.zero)
@@ -86,10 +83,9 @@ public class OverworldNPCView : MonoBehaviour
             }
         }
     }
-    
+
     void OnDisable()
     {
         walker.MovementVector3Event -= Movement;
-        lookTowards.AnnounceVisionTargetEvent -= Movement;
     }
 }

@@ -257,3 +257,11 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 3.4
 
 -- added placeholder overworld sprites, animator controller, clips. updated LookTowards and NPCPatrolState to correctly use the sprites when walking and talking to the Player
+
+3.5 
+
+-- added BillboardSprite.cs to allow sprites to face the camera
+
+-- added OverworldPlayerView.cs
+
+-- added placeholder sprites to player, added view logic. WARNING HACK: COPYPASTE OF OverworldNPCSprite.cs. added idle animations and logic

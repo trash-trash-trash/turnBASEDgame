@@ -126,8 +126,6 @@ MonoBehaviour:
   - 3
   - 3
   - 3
-  selectInt: 0
-  patrol: 0
 --- !u!114 &9046656310255148845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,6 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+  offset: 0
 --- !u!114 &2491713201746824823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,12 +760,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49895dcd35be7046ae3cd0541dceea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookTowards: {fileID: 7478674136104950576}
+  walker: {fileID: 30158466708260914}
   spr: {fileID: 5118357303144220629}
   animator: {fileID: 1957878493694654987}
   walkUp: {fileID: 7400000, guid: b56fc1e9d7dd95d4f87e1a26fc91b4e7, type: 2}
   walkDown: {fileID: 7400000, guid: 88241eb8343f32849a33302c7808b4e1, type: 2}
   walkSide: {fileID: 7400000, guid: f939ccaaea58c4243af8ac30d4eb9b3e, type: 2}
+  idleUp: {fileID: 7400000, guid: 9ad6b7e6a66839b47958f5534efd0472, type: 2}
+  idleDown: {fileID: 7400000, guid: d991a34454abedb429fe34422342cab7, type: 2}
+  idleSide: {fileID: 7400000, guid: 890e39a21c7fdfd4a96d80f2b887e164, type: 2}
+  prevVector: {x: 0, y: 0, z: 0}
+  lookTowards: {fileID: 7478674136104950576}
 --- !u!1 &8671100710073991547
 GameObject:
   m_ObjectHideFlags: 0

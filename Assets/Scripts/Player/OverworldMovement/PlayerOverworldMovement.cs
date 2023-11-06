@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.AnimatedValues;
@@ -19,7 +20,8 @@ public class PlayerOverworldMovement : WalkerBase, IPlayer
     private void AimVector(Vector2 vector2)
     {
         movementVector2 = vector2;
-        look.SetTarget(new Vector3(vector2.x, 0, vector2.y));
+        Vector3 newVector = new Vector3(vector2.x, 0, vector2.y);
+        look.SetTarget(newVector);
     }
 
     private void OnDisable()
