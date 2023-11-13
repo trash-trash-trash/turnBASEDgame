@@ -4,7 +4,7 @@ using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-public class PlayerBrain : MonoBehaviour
+public class PlayerBrain : MonoBehaviour, IPlayer
 {
     #region SingletonStuff
 

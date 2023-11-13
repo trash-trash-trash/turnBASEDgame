@@ -265,3 +265,7 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- added OverworldPlayerView.cs
 
 -- added placeholder sprites to player, added view logic. WARNING HACK: COPYPASTE OF OverworldNPCSprite.cs. added idle animations and logic
+
+3.6 
+
+-- added InteractTrigger.cs. allows player to trigger interactables with proximity instead of pressing interact. not very elegant, could be improved

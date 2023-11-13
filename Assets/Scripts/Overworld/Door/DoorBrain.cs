@@ -30,13 +30,9 @@ public class DoorBrain : MonoBehaviour
     
     public Dictionary<DoorStates, GameObject> statesDict;
 
-    public bool isOnPositiveSide;
-
     public float swingAmount;
 
     public float swingTime;
-
-    public bool opening;
 
     public bool openedPositively;
 
@@ -82,12 +78,10 @@ public class DoorBrain : MonoBehaviour
         switch (currentState)
         {
             case DoorStates.Closed:
-                opening = true;
                 newState = movingState;
                 break;
 
             case DoorStates.Open:
-                opening = false;
                 newState = movingState;
                 break;
 
