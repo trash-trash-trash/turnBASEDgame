@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ec24a440-8393-4a58-913a-0589e0ca26ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Asylum/Asylum.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Asylum/Asylum.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Door/DoorBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Door/DoorBrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryGridCubeMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryGridCubeMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +19,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Asylum/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Overworld/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Overworld/Door/DoorInteractBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Overworld/Door/DoorStateBase.cs" root0="FORCE_HIGHLIGHTING" />

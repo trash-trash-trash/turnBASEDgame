@@ -269,3 +269,9 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 3.6 
 
 -- added InteractTrigger.cs. allows player to trigger interactables with proximity instead of pressing interact. not very elegant, could be improved
+
+3.7
+
+-- small Inventory fix
+
+-- added HDRP package

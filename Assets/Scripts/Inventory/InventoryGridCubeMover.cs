@@ -201,6 +201,11 @@ public class InventoryGridCubeMover : MonoBehaviour
         {
             if (inputVector == Vector2.zero)
                 return;
+                
+            if (inputVector.x != 0 && inputVector.y != 0)
+            {
+                return;
+            }
 
             initialPosition = new Vector2(targetTransform.position.x, targetTransform.position.y);
 
