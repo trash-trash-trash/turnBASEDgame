@@ -275,3 +275,7 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 -- small Inventory fix
 
 -- added HDRP package
+
+3.8
+
+-- added FMOD for Unity and TileWorldCreator 3

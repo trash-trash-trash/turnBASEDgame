@@ -5,13 +5,1189 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec24a440-8393-4a58-913a-0589e0ca26ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/FMODUnity.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/FMODUnity.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/LICENSE.TXT.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/README.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FMODUnityResonanceEditor.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FMODUnityResonanceEditor.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FmodResonanceAudioRoomEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FmodResonanceAudioRoomEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FMODUnityResonance.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FMODUnityResonance.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudioRoom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudioRoom.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/AddIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/AddIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ArrowIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ArrowIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BankIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BankIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Border.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Border.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BrowserIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BrowserIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ContinuousParameterIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ContinuousParameterIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CopyIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CopyIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CrossYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CrossYellow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Delete.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/DiscreteParameterIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/DiscreteParameterIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/EventIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/EventIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoBlack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoWhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoWhite.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconClosed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconClosed.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconOpen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconOpen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LabeledParameterIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LabeledParameterIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeter.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeterOff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeterOff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/NotFound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/NotFound.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Preview.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/PreviewEmitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/PreviewEmitter.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SearchIconBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SearchIconBlack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SelectedAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SelectedAlt.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SnapshotIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SnapshotIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/StudioIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/StudioIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TickGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TickGreen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportOpen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportOpen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOn.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOn.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Wrench.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Wrench.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platform_ios.mm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platform_ios.mm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmod.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmod.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudioL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudioL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libresonanceaudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libresonanceaudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmod.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmod.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudioL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudioL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libresonanceaudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libresonanceaudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/fmod.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/fmod.jar.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmod.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmod.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudioL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudioL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libresonanceaudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libresonanceaudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmod.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmod.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudioL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudioL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libresonanceaudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libresonanceaudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/src/PlatformAndroid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/src/PlatformAndroid.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudio.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudio.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudioL.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudioL.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounityplugin.bc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounityplugin.bc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounitypluginL.bc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounitypluginL.bc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/src/PlatformWebGL.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/src/PlatformWebGL.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounityplugin.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounityplugin.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginL.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginL.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulator.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulator.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulatorL.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulatorL.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudio.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudio.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudiosimulator.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudiosimulator.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/src/PlatformIOS.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/src/PlatformIOS.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudioL.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudioL.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libresonanceaudio.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libresonanceaudio.so.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/src/PlatformLinux.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/src/PlatformLinux.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/MacOS.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/MacOS/fmodstudio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/MacOS/fmodstudio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/_CodeSignature.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/_CodeSignature/CodeResources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/_CodeSignature/CodeResources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/MacOS.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/MacOS/fmodstudioL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/MacOS/fmodstudioL.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/_CodeSignature.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/_CodeSignature/CodeResources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/_CodeSignature/CodeResources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/MacOS.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/MacOS/resonanceaudio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/MacOS/resonanceaudio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/_CodeSignature.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/_CodeSignature/CodeResources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/_CodeSignature/CodeResources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/src/PlatformMac.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/src/PlatformMac.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounityplugin.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounityplugin.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginL.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginL.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulator.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulator.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulatorL.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulatorL.a.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/src/PlatformAppleTV.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/src/PlatformAppleTV.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmod.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudio.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudioL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmod.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudio.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudioL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmod.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudio.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudioL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudio.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudioL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/resonanceaudio.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudio.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/resonanceaudio.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/src/PlatformWindows.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/src/PlatformWindows.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/AutomatableSlots.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/AutomatableSlots.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/BankRefAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/BankRefAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefreshWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefreshWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefresher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefresher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BoltIntegration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BoltIntegration.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CodeGeneration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CodeGeneration.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CreateEventPopup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CreateEventPopup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorBankRef.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorBankRef.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorEventRef.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorEventRef.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorParamRef.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorParamRef.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorSettings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventBrowser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventBrowser.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventCache.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventCache.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventRefDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventRefDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventReferenceUpdater.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventReferenceUpdater.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventPlayableEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventPlayableEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventTrackEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventTrackEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODUnityEditor.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODUnityEditor.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FileReorganizer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FileReorganizer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FindAndReplace.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FindAndReplace.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ListView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ListView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ParamRefDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ParamRefDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SettingsEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SettingsEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SetupWizard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SetupWizard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioBankLoaderEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioBankLoaderEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterGizmoDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterGizmoDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioGlobalParameterTriggerEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioGlobalParameterTriggerEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioListenerEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioListenerEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioParameterTriggerEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioParameterTriggerEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventRefAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventRefAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventReference.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventPlayable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventPlayable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventTrack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventTrack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODRuntimeManagerOnGUIHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODRuntimeManagerOnGUIHelper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRef.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRef.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRefAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRefAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Platform.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Platform.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformDefault.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformDefault.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformGroup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformGroup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileHigh.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileHigh.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileLow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileLow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformPlayInEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformPlayInEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Settings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Settings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioBankLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioBankLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioEventEmitter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioEventEmitter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioGlobalParameterTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioGlobalParameterTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioParameterTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioParameterTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_dsp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_dsp.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_errors.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_errors.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_studio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_studio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/BSPDungeon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/BSPDungeon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/CellularAutomata.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/CellularAutomata.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Checkerboard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Checkerboard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Circle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Circle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/DotGrid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/DotGrid.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/LSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/LSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Maze.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Maze.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Paint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Paint.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Pathfinding.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Pathfinding.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/RandomNoise.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/RandomNoise.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Texture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Generators/Texture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Instantiation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Instantiation/Instantiate6Tiles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Instantiation/Instantiate6Tiles.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Instantiation/InstantiateObjects.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Instantiation/InstantiateObjects.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Instantiation/InstantiateTiles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Instantiation/InstantiateTiles.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Add.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Add.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Expand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Expand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Invert.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Invert.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Offset.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Offset.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Overlap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Overlap.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/OverlapWith.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/OverlapWith.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/PlayerPosition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/PlayerPosition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/RemoveNeighbours.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/RemoveNeighbours.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Select.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Select.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/SelectByRule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/SelectByRule.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Shrink.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Shrink.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Smooth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Smooth.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Subtract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/Subtract.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/SubtractFrom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/SubtractFrom.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/_MyCustomAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Actions/Modifiers/_MyCustomAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Base/TWCBlueprintAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Base/TWCBlueprintAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Base/TWCBuildLayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Base/TWCBuildLayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Data/TileWorldCreatorSaveableData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Data/TileWorldCreatorSaveableData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Data/TileWorldCreatorWorldData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Data/TileWorldCreatorWorldData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/ClusterIdentifierEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/ClusterIdentifierEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/LayerIdentifierEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/LayerIdentifierEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TWCReadmeEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TWCReadmeEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreator.Editor.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreator.Editor.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreator4TilesPresetEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreator4TilesPresetEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreator6TilesPresetEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreator6TilesPresetEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreatorAssetEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreatorAssetEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreatorEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Editor/TileWorldCreatorEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Interfaces/ITWCAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/Interfaces/ITWCAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TWCReadme.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TWCReadme.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Config.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Config/AssemblyBuildInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Config/AssemblyBuildInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Config/GlobalSerializationConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Config/GlobalSerializationConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/BaseDataReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/BaseDataReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/BaseDataReaderWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/BaseDataReaderWriter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/BaseDataWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/BaseDataWriter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Binary.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Binary/BinaryDataReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Binary/BinaryDataReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Binary/BinaryDataWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Binary/BinaryDataWriter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Binary/BinaryEntryType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Binary/BinaryEntryType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/IDataReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/IDataReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/IDataWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/IDataWriter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonDataReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonDataReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonDataWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonDataWriter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonTextReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/Json/JsonTextReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNodeDataReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNodeDataReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNodeDataReaderWriterConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNodeDataReaderWriterConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNodeDataWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/DataReaderWriters/SerializationNodes/SerializationNodeDataWriter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/ArrayFormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/ArrayFormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/DelegateFormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/DelegateFormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/FormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/FormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/GenericCollectionFormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/GenericCollectionFormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/IFormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/IFormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/ISerializableFormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/ISerializableFormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/SelfFormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/SelfFormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/TypeFormatterLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/FormatterLocators/TypeFormatterLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ArrayFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ArrayFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ArrayListFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ArrayListFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/BaseFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/BaseFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DateTimeFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DateTimeFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DateTimeOffsetFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DateTimeOffsetFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DelegateFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DelegateFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DerivedDictionaryFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DerivedDictionaryFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DictionaryFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DictionaryFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DoubleLookupDictionaryFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/DoubleLookupDictionaryFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/EasyBaseFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/EasyBaseFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/EmittedFormatterAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/EmittedFormatterAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/EmptyTypeFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/EmptyTypeFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/FormatterEmitter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/FormatterEmitter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/GenericCollectionFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/GenericCollectionFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/HashSetFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/HashSetFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/IFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/IFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/KeyValuePairFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/KeyValuePairFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ListFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ListFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/MethodInfoFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/MethodInfoFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/MinimalBaseFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/MinimalBaseFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/MultiDimensionalArrayFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/MultiDimensionalArrayFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/NullableFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/NullableFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/PrimitiveArrayFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/PrimitiveArrayFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/QueueFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/QueueFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ReflectionFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ReflectionFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ReflectionOrEmittedBaseFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/ReflectionOrEmittedBaseFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/SelfFormatterFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/SelfFormatterFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/SerializableFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/SerializableFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/StackFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/StackFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/TimeSpanFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/TimeSpanFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/TypeFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/TypeFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/VersionFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Formatters/VersionFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/AllowDeserializeInvalidDataAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/AllowDeserializeInvalidDataAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/AlwaysFormatsSelfAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/AlwaysFormatsSelfAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ArchitectureInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ArchitectureInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/Buffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/Buffer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CachedMemoryStream.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CachedMemoryStream.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomFormatterAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomFormatterAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomGenericFormatterAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomGenericFormatterAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomLogger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomLogger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomSerializationPolicy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/CustomSerializationPolicy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DataFormat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DataFormat.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DefaultLoggers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DefaultLoggers.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DefaultSerializationBinder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DefaultSerializationBinder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DeserializationContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/DeserializationContext.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/EmittedAssemblyAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/EmittedAssemblyAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/EntryType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/EntryType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ErrorHandlingPolicy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ErrorHandlingPolicy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ExcludeDataFromInspectorAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ExcludeDataFromInspectorAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/FormatterLocationStep.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/FormatterLocationStep.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/FormatterUtilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/FormatterUtilities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IAskIfCanFormatTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IAskIfCanFormatTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IExternalGuidReferenceResolver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IExternalGuidReferenceResolver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IExternalIndexReferenceResolver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IExternalIndexReferenceResolver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IExternalStringReferenceResolver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/IExternalStringReferenceResolver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ILogger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ILogger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ISelfFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ISelfFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ISerializationPolicy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ISerializationPolicy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/LoggingPolicy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/LoggingPolicy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/NodeInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/NodeInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/OdinSerializeAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/OdinSerializeAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/PrefabModification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/PrefabModification.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/PrefabModificationType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/PrefabModificationType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/PreviouslySerializedAsAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/PreviouslySerializedAsAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ProperBitConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/ProperBitConverter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/RegisterFormatterAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/RegisterFormatterAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/RegisterFormatterLocatorAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/RegisterFormatterLocatorAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationAbortException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationAbortException.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationContext.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationPolicies.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationPolicies.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationUtility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/SerializationUtility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/TwoWaySerializationBinder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Misc/TwoWaySerializationBinder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/BooleanSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/BooleanSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/ByteSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/ByteSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/CharSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/CharSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/ComplexTypeSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/ComplexTypeSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/DecimalSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/DecimalSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/DoubleSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/DoubleSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/EnumSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/EnumSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/GuidSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/GuidSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Int16Serializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Int16Serializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Int32Serializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Int32Serializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Int64Serializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Int64Serializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/IntPtrSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/IntPtrSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/SByteSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/SByteSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Serializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/Serializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/SingleSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/SingleSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/StringSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/StringSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UInt16Serializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UInt16Serializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UInt32Serializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UInt32Serializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UInt64Serializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UInt64Serializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UIntPtrSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Core/Serializers/UIntPtrSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/LICENSE.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/OdinBuildAutomation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/OdinBuildAutomation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/TileWorldCreator.OdinSerializer.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/TileWorldCreator.OdinSerializer.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/AOTSupportScanner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/AOTSupportScanner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/AOTSupportUtilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/AOTSupportUtilities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/BaseDictionaryKeyPathProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/BaseDictionaryKeyPathProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/DictionaryKeyUtility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/DictionaryKeyUtility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/IDictionaryKeyPathProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/IDictionaryKeyPathProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/RegisterDictionaryKeyPathProviderAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/RegisterDictionaryKeyPathProviderAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/Vector2DictionaryKeyPathProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/Vector2DictionaryKeyPathProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/Vector3DictionaryKeyPathProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/Vector3DictionaryKeyPathProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/Vector4DictionaryKeyPathProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/DictionaryKeySupport/Vector4DictionaryKeyPathProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/AnimationCurveFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/AnimationCurveFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/BoundsFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/BoundsFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/Color32Formatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/Color32Formatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/ColorBlockFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/ColorBlockFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/ColorFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/ColorFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/CoroutineFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/CoroutineFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/GradientAlphaKeyFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Code/TileWorldCreator.OdinSerializer/Unity Integration/Formatters/GradientAlphaKeyFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_CliffIsland_cornerTile.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_CliffIsland_invertedCornerTile.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_CliffIsland_stones.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_CliffIsland_stones.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_edge.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_edge.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_exteriorCorner.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_exteriorCorner.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_fill.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_fill.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_interiorCorner.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_materials/mat_Sand_interiorCorner.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/cactus.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/cactus.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_B.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_B.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_C.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_C.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_C_set2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_C_set2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_Ci.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_Ci.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_F.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_F.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_I.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_I.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_I_set2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer0/preset_01_tile_I_set2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer1/preset_02_tile_C.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/CliffIsland/_mesh/layer1/preset_02_tile_C.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/01_dungeon_edgeTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/01_dungeon_edgeTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/02_dungeon_cornerTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/02_dungeon_cornerTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/03_dungeon_invertedCornerTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/03_dungeon_invertedCornerTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/04_dungeon_blockTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/04_dungeon_blockTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/05_dungeon_carpet_edge.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/05_dungeon_carpet_edge.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/05_dungeon_carpet_exteriorCorner.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/05_dungeon_carpet_exteriorCorner.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/05_dungeon_carpet_fill.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/05_dungeon_carpet_fill.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_prefabs/05_dungeon_carpet_interiorCorner.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/darkMetal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/darkWood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/darkWood.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/dirt_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/dirt_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/edgetile_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/edgetile_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/floor01_bright_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/floor01_bright_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/floor01_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/floor01_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/floor02_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/floor02_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/invertedcorner_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/invertedcorner_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/singleFloorTile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/singleFloorTile.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/torchlight_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/torchlight_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/wall_diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Dungeon/_textures/wall_diff.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/PrototypeTiles.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/PrototypeTiles.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_B.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_B.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_C.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_C.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_Ci.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_Ci.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_F.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_F.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_I.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_I.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_stones.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_materials/mat_preset00_stones.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_stones.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_stones.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_B.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_B.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_C.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_C.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_Ci.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_Ci.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_F.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_mesh/preset_00_tile_F.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_B_tex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_B_tex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_C_tex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_C_tex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_Ci_tex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_Ci_tex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_F_tex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_F_tex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_I_tex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/Prototype/_textures/preset01_I_tex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/ScifiBasePreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/ScifiBasePreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/ScifiWallsPreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/ScifiWallsPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileF/matTileF.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileF/matTileF.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileI_base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileI_base/matTileIBase.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileI_base/matTileIBase.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileI_wall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileI_wall/matTileIWall.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_materials/tileI_wall/matTileIWall.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/barrel.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/barrel/barrel.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileC_base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileC_base/tile_C_base.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileC_wall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileC_wall/tile_C_wall.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileCi_base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileCi_base/tile_Ci_base.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileCi_wall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileCi_wall/tile_Ci_wall.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileF.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileF/tile_F_base.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileF/tile_F_wall.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileI_base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileI_base/tile_I_base.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileI_wall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_meshes/tileI_wall/tile_I_wall.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_prefabs/barrel.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_prefabs/barrel.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_prefabs/layer0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_prefabs/layer0/01_tile_A_base.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_prefabs/layer0/01_tile_A_base.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_diffuseGlossiness_legacy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_diffuseGlossiness_legacy.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_metallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_metallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/barrel/barrel_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileC_base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileC_base/tile_C_base_albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileC_base/tile_C_base_albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileC_base/tile_C_base_diffuseGlossiness_legacy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileC_base/tile_C_base_diffuseGlossiness_legacy.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileC_base/tile_C_base_metallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileC_base/tile_C_base_metallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_base/tile_Ci_base_metallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_base/tile_Ci_base_metallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_base/tile_Ci_base_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_base/tile_Ci_base_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_diffuseGlossiness_legacy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_diffuseGlossiness_legacy.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_metallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_metallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileCi_wall/tile_Ci_wall_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_diffuseGlossiness_legacy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_diffuseGlossiness_legacy.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_metallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_metallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileF/tile_F_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_diffuseGlossiness_legacy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_diffuseGlossiness_legacy.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_metallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_metallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_base/tile_I_base_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 2 Tiles/SciFi/_textures/tileI_wall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/BlockRampPreset2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Materials/matBlockRampTilesPreset.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Materials/matBlockRampTilesPreset.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Materials/matBlockTilesPreset.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Materials/matBlockTilesPreset.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/blockRamp_edge_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/blockRamp_edge_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/blockRamp_exteriorCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/blockRamp_exteriorCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/blockRamp_interiorCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/blockRamp_interiorCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/block_edgeRamp_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/block_edgeRamp_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Mesh/block_edge_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_edge_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_edge_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_exteriorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_exteriorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_fill_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_fill_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_interiorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Block/Prefabs/block_interiorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matBlack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matBlack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matBrown.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matBrown.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matDoor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matDoor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matGreen.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matGreen.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matGrey.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matGrey.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matRed.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matRed.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matWhite.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/City/Materials/matWhite.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/HousePresetLvl1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/HousePresetLvl1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/HousePresetLvl2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/HousePresetLvl2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/HouseRoofPreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/HouseRoofPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Mesh/house_fill_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Mesh/house_interiorCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Mesh/house_interiorCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_edge_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_edge_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_exteriorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_exteriorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_fill_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_fill_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_interiorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/Roof/roof_interiorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/house_edge2_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/house_edge2_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/House/Prefabs/house_edge_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/ParkPreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/ParkPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/Tree.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/Tree.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_edge_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_edge_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_exteriorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_exteriorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_fill_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_fill_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_interiorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Park/Prefabs/park_interiorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/bottomTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/bottomTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/fillTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/fillTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/topTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/topTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/woodTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Mesh/woodTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/PlatformerPresetBase.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/PlatformerPresetBase.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/PlatformerPresetBottom.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/PlatformerPresetBottom.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/PlatformerPresetTop.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/PlatformerPresetTop.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Prefabs/bottomTile_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Platformer/Prefabs/bottomTile_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Mesh/road_extCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Mesh/road_fill_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Mesh/road_fill_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Mesh/road_intCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Mesh/road_intCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Mesh/streetLight_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Mesh/streetLight_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_edge_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_edge_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_extCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_extCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_fill_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_fill_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_intCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Road/Prefabs/road_intCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Materials/matOuterWallTiles 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Materials/matOuterWallTiles 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Materials/matOuterWallTiles.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Materials/matOuterWallTiles.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Materials/matWindow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Materials/matWindow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/innerWall_edge_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/innerWall_edge_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/innerWall_exteriorCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/innerWall_exteriorCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/innerWall_interiorCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/innerWall_interiorCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_edge_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_edge_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_exteriorCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_exteriorCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_fill_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_fill_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_interiorCorner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/wall_interiorCorner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/window_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Mesh/window_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/OuterWallsPreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/OuterWallsPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Prefabs/innerWall_edge_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Prefabs/innerWall_edge_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Prefabs/innerWall_exteriorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Prefabs/innerWall_exteriorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Prefabs/innerWall_interiorCorner_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/4-Tiles/Walls/Prefabs/innerWall_interiorCorner_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/cornerPipe_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/deadEndPipe_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/deadEndPipe_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/fourWayPipe_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/fourWayPipe_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/singlePipe_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/singlePipe_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/straightPipe_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/straightPipe_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/threeWayPipe_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Mesh/threeWayPipe_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Pipe6TilesPreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/Pipe6TilesPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/cornerPipe_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/cornerPipe_mesh.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Pipe/deadEndPipe_mesh.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/matRoadAsphalt.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/matRoadConcrete.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/matRoadConcrete.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_cornerTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_cornerTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_deadEndTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_deadEndTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_fourWayTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_fourWayTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_singleTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_singleTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_straightTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_straightTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_threeWayTile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Asphalt/roadAsphalt_threeWayTile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/cornerTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/cornerTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/deadEndTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/deadEndTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/fourWayTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/fourWayTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/singleTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/singleTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/straightTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/straightTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/threeWayTile_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Mesh/threeWayTile_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Tiles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Tiles/RoadTiles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Tiles/RoadTiles.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/Tiles/matRoadConcrete.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/roadAsphalt6TilesPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/roadTiles6TilesPreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/Roads/roadTiles6TilesPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_corner_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_corner_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_deadEndExtended_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_deadEndExtended_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_deadEnd_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_deadEnd_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_fourWay_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_fourWay_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_single_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_single_mesh.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/Mesh/woodenBridge_straight_mesh.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/woodenBridge_single.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/woodenBridge_straight.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/woodenBridge_straight.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/woodenBridge_threeWay.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TileWorldCreator/Tiles/Version 3 Tiles/6-Tiles/WoodenBridge/woodenBridge_threeWay.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryGridCubeMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryGridCubeMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +1247,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.5f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\User\Documents\turnBASEDgame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\User\Documents\turnBASEDgame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -116,6 +1292,7 @@
       <workItem from="1699166763165" duration="6720000" />
       <workItem from="1699231268086" duration="3867000" />
       <workItem from="1699850338054" duration="943000" />
+      <workItem from="1700808956541" duration="74000" />
     </task>
     <servers />
   </component>
