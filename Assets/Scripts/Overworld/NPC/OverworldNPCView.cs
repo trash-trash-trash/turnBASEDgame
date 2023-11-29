@@ -30,6 +30,8 @@ public class OverworldNPCView : MonoBehaviour
 
     public void OnEnable()
     {
+        animator.SetLayerWeight(0, 1f);
+
         walker.MovementVector3Event += Movement;
         lookTowards.AnnounceVisionTargetEvent += Movement;
     }

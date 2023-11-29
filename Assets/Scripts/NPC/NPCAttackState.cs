@@ -16,7 +16,7 @@ public class NPCAttackState : MonoBehaviour
 
     private void Fight()
     {
-        brain.ChangeState(NPCBrain.NPCStates.Fight);
+        brain.ChangeState(OverworldNPCStates.Fight);
         brain.fighter.lookingToFight = false;
     }
 

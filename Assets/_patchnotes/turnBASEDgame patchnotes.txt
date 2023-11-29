@@ -279,3 +279,15 @@ TO DO: logic for only having one equipped at a time, logic for snapping back to 
 3.8
 
 -- added FMOD for Unity and TileWorldCreator 3
+
+3.9
+
+-- started work on a "ChaseState" for NPCs who spot the Player, and a subsequent "ReturnHomeState" to return to their original post
+
+-- added Campbell's cat sprites to make a NPC Variant Cat
+
+-- updated Overworld NPC to detect the Overworld Player singleton 
+
+-- updated FMOD stuff (still needs work)
+
+TODO: BillboardSprite.cs needs to intelligently find the current camera in order to billboard towards it

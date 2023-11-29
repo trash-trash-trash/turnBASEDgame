@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{61fd4fb2-e023-4522-bef5-4f76dc1ef6b9}">
+		<property name="assetPath">
+			<value>Freeze 5-LABS [2023-11-21 190136].wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>23.733333333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f54c59ba-5a79-4599-acc2-b3297ac864f0}</destination>
+		</relationship>
+	</object>
+</objects>

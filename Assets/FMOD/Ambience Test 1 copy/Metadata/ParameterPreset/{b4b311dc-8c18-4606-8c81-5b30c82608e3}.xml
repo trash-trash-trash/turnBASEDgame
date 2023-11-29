@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b4b311dc-8c18-4606-8c81-5b30c82608e3}">
+		<property name="name">
+			<value>Distance From Enemy</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5aca48c1-24fe-49da-8138-3a96d73209bc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a447dfbf-9a48-4375-8cc4-f73bc7db6178}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a447dfbf-9a48-4375-8cc4-f73bc7db6178}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{76849c58-eb00-4525-9578-0527467b870e}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{76849c58-eb00-4525-9578-0527467b870e}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

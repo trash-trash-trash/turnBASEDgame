@@ -15,21 +15,25 @@ public class NPCBrain : MonoBehaviour
 
     public PartyInventory partyInventory;
 
-    public GameObject AttackObj;
+    public GameObject attackObj;
 
-    public GameObject FightObj;
+    public GameObject chaseObj;
 
-    public GameObject FollowObj;
+    public GameObject returnHomeObj;
 
-    public GameObject IdleObj;
+    public GameObject fightObj;
 
-    public GameObject PatrolObj;
+    public GameObject followObj;
 
-    public GameObject TalkObj;
+    public GameObject idleObj;
 
-    public GameObject DeathObj;
+    public GameObject patrolObj;
 
-    public Dictionary<NPCStates, GameObject> stateDictionary = new Dictionary<NPCStates, GameObject>();
+    public GameObject talkObj;
+
+    public GameObject deathObj;
+
+    public Dictionary<OverworldNPCStates, GameObject> stateDictionary = new Dictionary<OverworldNPCStates, GameObject>();
 
     public Talker talker;
 
@@ -39,33 +43,26 @@ public class NPCBrain : MonoBehaviour
 
     public bool isAlive=true;
 
-    public event Action<NPCStates> AnnounceStateEvent;
+    public event Action<OverworldNPCStates> AnnounceStateEvent;
 
-    public enum NPCStates
-    {
-        Attack,
-        Fight,
-        Follow,
-        Idle,
-        Patrol,
-        Talk,
-        Death
-    }
-
-    public NPCStates currentState;
+    public OverworldNPCStates currentState;
 
     private void OnEnable()
     {
         if(myType==NPCTypeEnum.Enemy)
          party = partyInventory.party;
 
-        stateDictionary.Add(NPCStates.Attack, AttackObj);
-        stateDictionary.Add(NPCStates.Fight, FightObj);
-        stateDictionary.Add(NPCStates.Follow, FollowObj);
-        stateDictionary.Add(NPCStates.Idle, IdleObj);
-        stateDictionary.Add(NPCStates.Patrol, PatrolObj);
-        stateDictionary.Add(NPCStates.Talk, TalkObj);
-        stateDictionary.Add(NPCStates.Death, DeathObj);
+        stateDictionary.Add(OverworldNPCStates.Attack, attackObj);
+        stateDictionary.Add(OverworldNPCStates.Chase, chaseObj);
+        stateDictionary.Add(OverworldNPCStates.ReturnHome, returnHomeObj);
+        stateDictionary.Add(OverworldNPCStates.Fight, fightObj);
+        stateDictionary.Add(OverworldNPCStates.Follow, followObj);
+        stateDictionary.Add(OverworldNPCStates.Idle, idleObj);
+        stateDictionary.Add(OverworldNPCStates.Patrol, patrolObj);
+        stateDictionary.Add(OverworldNPCStates.Talk, talkObj);
+        stateDictionary.Add(OverworldNPCStates.Death, deathObj);
+
+        vision.SeePlayerBoolEvent += ChaseState;
 
         talker.OpenDialogueEvent += TalkState;
 
@@ -79,10 +76,16 @@ public class NPCBrain : MonoBehaviour
         }
 
         if (myType == NPCTypeEnum.Stationary)
-            ChangeState(NPCStates.Idle);
+            ChangeState(OverworldNPCStates.Idle);
 
         else
-            ChangeState(NPCStates.Patrol);
+            ChangeState(OverworldNPCStates.Patrol);
+    }
+
+    private void ChaseState(bool input)
+    {
+        if(input)
+            ChangeState(OverworldNPCStates.Chase);
     }
 
     private void OnDisable()
@@ -105,19 +108,19 @@ public class NPCBrain : MonoBehaviour
 
     private void AttackState(bool input)
     {
-        if(currentState==NPCStates.Patrol)
+        if(currentState==OverworldNPCStates.Patrol)
         if(input)
-            ChangeState(NPCStates.Attack);
+            ChangeState(OverworldNPCStates.Attack);
     }
 
     private void TalkState()
     {
-        ChangeState(NPCStates.Talk);
+        ChangeState(OverworldNPCStates.Talk);
     }
 
     private void FightState()
     {
-        ChangeState(NPCStates.Fight);
+        ChangeState(OverworldNPCStates.Fight);
     }
 
     private void PatrolState()
@@ -126,18 +129,18 @@ public class NPCBrain : MonoBehaviour
         {
             if (myType == NPCTypeEnum.Enemy)
             {
-                ChangeState(NPCStates.Fight);
+                ChangeState(OverworldNPCStates.Fight);
             }
 
             else if (myType == NPCTypeEnum.Stationary)
-                ChangeState(NPCStates.Idle);
+                ChangeState(OverworldNPCStates.Idle);
 
             else
-                ChangeState(NPCStates.Patrol);
+                ChangeState(OverworldNPCStates.Patrol);
         }
         else
         {
-            ChangeState(NPCStates.Death);
+            ChangeState(OverworldNPCStates.Death);
         }
     }
 
@@ -147,11 +150,11 @@ public class NPCBrain : MonoBehaviour
             return;
         if (i <= 0)
         {
-            ChangeState(NPCStates.Death);
+            ChangeState(OverworldNPCStates.Death);
         }
     }
 
-    public void ChangeState(NPCBrain.NPCStates inputState)
+    public void ChangeState(OverworldNPCStates inputState)
     {
         if (stateDictionary.TryGetValue(inputState, out GameObject stateObject))
         {

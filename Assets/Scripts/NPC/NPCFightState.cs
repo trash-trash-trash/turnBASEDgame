@@ -19,7 +19,7 @@ public class NPCFightState : MonoBehaviour
 
     public void Death()
     {
-        brain.ChangeState(NPCBrain.NPCStates.Death);
+        brain.ChangeState(OverworldNPCStates.Death);
     }
 
     public void OnDisable()

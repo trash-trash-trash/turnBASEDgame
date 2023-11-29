@@ -13,6 +13,8 @@ public class VisionBase : MonoBehaviour
 
     public event Action<bool> SeePlayerBoolEvent;
 
+    public Transform playerTransform;
+
     public bool seePlayer = false;
     private bool prevSeePlayer = false;
 
@@ -57,11 +59,15 @@ public class VisionBase : MonoBehaviour
                 {
                     IPlayer player;
                     if (hit.transform.GetComponent<IPlayer>() != null)
+                    {
                         seePlayer = true;
+                        playerTransform = hit.transform;
+                    }
                 }
                 else
                 {
                     seePlayer = false;
+                    playerTransform = null;
                 }
             }
 

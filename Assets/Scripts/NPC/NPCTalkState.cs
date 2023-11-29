@@ -9,6 +9,8 @@ public class NPCTalkState : MonoBehaviour
     // Reference to the player's transform
     public Transform playerTransform;
 
+    public PlayerBrain player;
+
     // Reference to the LookTowards component
     public LookTowards lookTowards;
 
@@ -22,6 +24,10 @@ public class NPCTalkState : MonoBehaviour
     {
         // Store the initial rotation of the NPC
         initialRotation = lookTowards.targetPosition;
+        
+        //find Overworld Player Transform thru Singleton
+        player = PlayerBrain.Instance;
+        playerTransform = player.transform;
     }
 
     private void Update()
