@@ -49,31 +49,29 @@ public class NPCBrain : MonoBehaviour
 
     private void OnEnable()
     {
-        if(myType==NPCTypeEnum.Enemy)
-         party = partyInventory.party;
-
-        stateDictionary.Add(OverworldNPCStates.Attack, attackObj);
-        stateDictionary.Add(OverworldNPCStates.Chase, chaseObj);
-        stateDictionary.Add(OverworldNPCStates.ReturnHome, returnHomeObj);
-        stateDictionary.Add(OverworldNPCStates.Fight, fightObj);
-        stateDictionary.Add(OverworldNPCStates.Follow, followObj);
-        stateDictionary.Add(OverworldNPCStates.Idle, idleObj);
-        stateDictionary.Add(OverworldNPCStates.Patrol, patrolObj);
-        stateDictionary.Add(OverworldNPCStates.Talk, talkObj);
-        stateDictionary.Add(OverworldNPCStates.Death, deathObj);
-
-        vision.SeePlayerBoolEvent += ChaseState;
-
-        talker.OpenDialogueEvent += TalkState;
-
-        talker.CloseDialogueEvent += PatrolState;
-
         if (myType == NPCTypeEnum.Enemy)
         {
+            party = partyInventory.party;
+            stateDictionary.Add(OverworldNPCStates.Attack, attackObj);
+            stateDictionary.Add(OverworldNPCStates.Chase, chaseObj);
+            stateDictionary.Add(OverworldNPCStates.ReturnHome, returnHomeObj);
+            stateDictionary.Add(OverworldNPCStates.Fight, fightObj);
+            stateDictionary.Add(OverworldNPCStates.Death, deathObj);  
+            vision.SeePlayerBoolEvent += ChaseState;
             fighter.lookingToFight = true;
             fighter.FightStartedEvent += FightState;
             vision.SeePlayerBoolEvent += AttackState;
         }
+        
+        stateDictionary.Add(OverworldNPCStates.Follow, followObj);
+        stateDictionary.Add(OverworldNPCStates.Idle, idleObj);
+        stateDictionary.Add(OverworldNPCStates.Patrol, patrolObj);
+        stateDictionary.Add(OverworldNPCStates.Talk, talkObj);
+
+
+        talker.OpenDialogueEvent += TalkState;
+
+        talker.CloseDialogueEvent += PatrolState;
 
         if (myType == NPCTypeEnum.Stationary)
             ChangeState(OverworldNPCStates.Idle);
@@ -86,7 +84,7 @@ public class NPCBrain : MonoBehaviour
     {
         if(input)
             ChangeState(OverworldNPCStates.Chase);
-    }
+    }   
 
     private void OnDisable()
     {
