@@ -297,3 +297,9 @@ TODO: BillboardSprite.cs needs to intelligently find the current camera in order
 -- updated NPCBrain to differentiate between Enemy NPC and regular NPC in the overworld
 
 TODO: NPCs need to detect the "main camera" intelligently
+
+4.1
+
+-- added Camera prefab. added CameraBrain.cs, CameraIdleState, CameraReturnToIdleState, CameraRotateToTrackPlayerState and CameraTrackPlayerState. Camera is an overworld object that rotates back and forth. When the player enters the Camera's "sight", it tracks player movement along the y axis. If the player leaves its sight, it resumes idle rotation.
+
+TODO: Disable camera when out of view for performance?
