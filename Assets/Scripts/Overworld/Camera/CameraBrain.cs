@@ -19,7 +19,8 @@ public class CameraBrain : MonoBehaviour
 
     public bool trackingPlayer = false;
 
-    public float camMoveSpeed;
+    public float camMoveIdleSpeed;
+    
     public float camWaitTime;
     public float maxAngle;
     

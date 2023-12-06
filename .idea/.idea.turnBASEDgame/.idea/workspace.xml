@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ec24a440-8393-4a58-913a-0589e0ca26ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovementTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MovementTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/BillboardSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/BillboardSprite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraBrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraMoveToTrackPlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraMoveToTrackPlayerState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraReturnToIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Camera/CameraReturnToIdleState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

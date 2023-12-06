@@ -10,11 +10,10 @@ public class CameraReturnToIdleState : MonoBehaviour
 
     private IEnumerator returnToIdleRot;
 
-    private float camSpinSpeed;
+    public float camSpinSpeed;
 
     private void OnEnable()
     {
-        camSpinSpeed = camBrain.camMoveSpeed;
         returnToIdleRot = ReturnToIdleRot();
         StartCoroutine(returnToIdleRot);
     }
@@ -31,8 +30,6 @@ public class CameraReturnToIdleState : MonoBehaviour
             camTransform.rotation = Quaternion.Slerp(currentRotation, originalRotation, t);
             yield return null;
         }
-
-        yield return new WaitForSeconds(camBrain.camWaitTime);
 
         camTransform.rotation = originalRotation;
         camBrain.ChangeState(camBrain.camIdleState);

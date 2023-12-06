@@ -6,24 +6,20 @@ using UnityEngine;
 public class CameraIdleState : MonoBehaviour
 {
     public Transform cameraTransform;
-
     public CameraBrain camBrain;
 
-    float camSpinSpeed;
-    float camAngle;
-    float camWaitTime;
+    private float camSpinSpeed;
+    private float camWaitTime;
 
     private Quaternion originalRotation;
-    
     private IEnumerator spinCamera;
 
     void OnEnable()
     {
-        originalRotation = camBrain.originalRotation;
+        originalRotation = Quaternion.Euler(0, 180, 0);
         cameraTransform.rotation = originalRotation;
-        camAngle = camBrain.maxAngle;
         camWaitTime = camBrain.camWaitTime;
-        camSpinSpeed = camBrain.camMoveSpeed;
+        camSpinSpeed = camBrain.camMoveIdleSpeed;
         spinCamera = SpinCamera();
         StartCoroutine(spinCamera);
     }
@@ -32,29 +28,32 @@ public class CameraIdleState : MonoBehaviour
     {
         while (true)
         {
-            Quaternion targetRotation = originalRotation * Quaternion.Euler(0, camAngle, 0);
+            // Rotate to (0, camBrain.maxAngle, 0)
+            Quaternion targetRotation = originalRotation * Quaternion.Euler(0, camBrain.maxAngle, 0);
+            yield return RotateCameraSmoothly(targetRotation);
 
-            // Rotate the camera smoothly towards the target rotation
-            float t = 0;
-            while (t < 1f)
-            {
-                t += Time.deltaTime * camSpinSpeed;
-                cameraTransform.rotation = Quaternion.Slerp(originalRotation, targetRotation, t);
-                yield return null;
-            }
-
+            // Wait for camWaitTime seconds
             yield return new WaitForSeconds(camWaitTime);
-            
-            // Return to the original rotation smoothly
-            t = 0;
-            while (t < 1f)
-            {
-                t += Time.deltaTime * camSpinSpeed;
-                cameraTransform.rotation = Quaternion.Slerp(targetRotation, originalRotation, t);
-                yield return null;
-            }
 
-            yield return new WaitForSeconds(camWaitTime); // Add a small delay before starting the next iteration
+            // Rotate to (0, -camBrain.maxAngle, 0)
+            targetRotation = originalRotation * Quaternion.Euler(0, -camBrain.maxAngle, 0);
+            yield return RotateCameraSmoothly(targetRotation);
+
+            // Wait for camWaitTime seconds
+            yield return new WaitForSeconds(camWaitTime);
+        }
+    }
+
+    IEnumerator RotateCameraSmoothly(Quaternion targetRotation)
+    {
+        float t = 0;
+        Quaternion startRotation = cameraTransform.rotation;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime * camSpinSpeed;
+            cameraTransform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
+            yield return null;
         }
     }
 

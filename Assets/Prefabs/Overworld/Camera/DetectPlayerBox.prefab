@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camBrain: {fileID: 1613235807831306764}
   camTransform: {fileID: 3801326380561386156}
+  speedMultiplier: 50
 --- !u!1 &1773368696618672538
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773368696618672538}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -83,7 +84,7 @@ Transform:
   - {fileID: 1967868314091522906}
   - {fileID: 3856926999523698265}
   m_Father: {fileID: 3206290822826686129}
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1613235807831306764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,9 +104,9 @@ MonoBehaviour:
   camMoveToTrackRotationState: {fileID: 1520413330896392926}
   camTrackPlayerState: {fileID: 3782518088483989079}
   trackingPlayer: 0
-  camMoveSpeed: 1
+  camMoveIdleSpeed: 0.5
   camWaitTime: 1
-  maxAngle: 90
+  maxAngle: 45
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &4356613297245817406
 MonoBehaviour:
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camBrain: {fileID: 1613235807831306764}
   camTransform: {fileID: 3801326380561386156}
+  camSpinSpeed: 0.5
 --- !u!1 &3030926478703652110
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 3030926478703652110}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -397,7 +399,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: -5, z: 3}
+  m_Center: {x: 0, y: -5, z: 5}
 --- !u!114 &6282030343119482234
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,14 +5,14 @@ public class CameraMoveToTrackPlayerState : MonoBehaviour
     public CameraBrain camBrain;
     public Transform camTransform;
 
-    private float camMaxAngle;
     private float camSpeed;
     private Transform playerTransform;
 
+    //increase speed to compensate for player movement
+    public float speedMultiplier;
+    
     private void OnEnable()
     {
-        camMaxAngle = camBrain.maxAngle;
-        camSpeed = camBrain.camMoveSpeed;
         playerTransform = PlayerBrain.Instance.transform;
     }
 
@@ -28,24 +28,11 @@ public class CameraMoveToTrackPlayerState : MonoBehaviour
         // Calculate the limited rotation
         Quaternion limitedRotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
 
-        // Limit the rotation if the angle exceeds the camMaxAngle
-        float angleToPlayer = Vector3.Angle(camTransform.forward, directionToPlayer);
-        if (angleToPlayer > camMaxAngle)
-        {
-            // Stay at the limited rotation, only rotating along the y-axis
-            Vector3 limitedEulerAngles = limitedRotation.eulerAngles;
-            limitedEulerAngles.x = 0f;
-            limitedEulerAngles.z = 0f;
-            limitedRotation = Quaternion.Euler(limitedEulerAngles);
+        // Set the maximum angle between the current and limited rotation
+        float maxRotationAngle = speedMultiplier * Time.deltaTime;
 
-            camTransform.rotation = Quaternion.RotateTowards(camTransform.rotation, limitedRotation,
-                Time.deltaTime * camSpeed * 5);
-        }
-        else
-        {
-            // Smoothly rotate towards the limited rotation with a fixed speed
-            camTransform.rotation = Quaternion.Lerp(camTransform.rotation, limitedRotation, Time.deltaTime * camSpeed *5);
-        }
+        // Smoothly rotate towards the limited rotation with a fixed speed
+        camTransform.rotation = Quaternion.RotateTowards(camTransform.rotation, limitedRotation, maxRotationAngle);
 
         // Check if the rotation closely matches the limited rotation
         if (Quaternion.Angle(camTransform.rotation, limitedRotation) < 0.1f)
