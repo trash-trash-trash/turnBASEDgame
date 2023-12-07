@@ -303,3 +303,15 @@ TODO: NPCs need to detect the "main camera" intelligently
 -- added Camera prefab. added CameraBrain.cs, CameraIdleState, CameraReturnToIdleState, CameraRotateToTrackPlayerState and CameraTrackPlayerState. Camera is an overworld object that rotates back and forth. When the player enters the Camera's "sight", it tracks player movement along the y axis. If the player leaves its sight, it resumes idle rotation.
 
 TODO: Disable camera when out of view for performance?
+
+4.2
+
+-- updated camera states for smoother behaviour
+
+4.3
+
+-- added three Eye sprites
+
+-- added EyeBrain.cs, EyePupilView.cs and three states; ReturnToIdle, Idle, DetectPlayer
+
+-- imported FastScriptReload
