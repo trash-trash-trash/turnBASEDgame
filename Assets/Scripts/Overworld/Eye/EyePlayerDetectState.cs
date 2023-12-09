@@ -19,9 +19,11 @@ public class EyePlayerDetectState : MonoBehaviour
     
     void OnEnable()
     {
+        circleCentre=transform.position;
         playerTransform = PlayerBrain.Instance.transform;
         coRoFollowPlayer = FollowPlayer();
         StartCoroutine(coRoFollowPlayer);
+        
     }
 
     //pupilTransform may not move beyond circle radius from circleCentre
@@ -32,10 +34,11 @@ public class EyePlayerDetectState : MonoBehaviour
         while (true)
         {
             yield return new WaitForFixedUpdate();
-            
-            Vector3 directionToPlayer = (playerTransform.position - pupilTransform.position).normalized;
 
-            Vector3 targetPosition = circleCentre + Vector3.ClampMagnitude(directionToPlayer * circleRadius, circleRadius);
+            Vector3 directionToPlayer = (new Vector3(playerTransform.position.x, playerTransform.position.y, 0) - new Vector3(pupilTransform.position.x, pupilTransform.position.y, 0)).normalized;
+
+            // Project the target position onto the x-y plane to avoid movement along the z-axis
+            Vector3 targetPosition = circleCentre + Vector3.ClampMagnitude(new Vector3(directionToPlayer.x, directionToPlayer.y, 0) * circleRadius, circleRadius);
 
             pupilTransform.position = Vector3.Lerp(
                 pupilTransform.position,

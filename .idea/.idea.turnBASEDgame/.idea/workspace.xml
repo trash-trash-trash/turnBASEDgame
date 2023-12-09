@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ec24a440-8393-4a58-913a-0589e0ca26ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.turnBASEDgame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Overworld/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Overworld/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovementTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MovementTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_patchnotes/turnBASEDgame patchnotes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyeBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyeBrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyeIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyeIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyePlayerDetectState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyePlayerDetectState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyeReturnIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Overworld/Eye/EyeReturnIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turn Based System/PartyController/States/SelectActionState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turn Based System/PartyController/States/SelectActionState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +127,7 @@
       <workItem from="1701399393506" duration="427000" />
       <workItem from="1701578550178" duration="7151000" />
       <workItem from="1701950320039" duration="5382000" />
+      <workItem from="1702103342103" duration="2525000" />
     </task>
     <servers />
   </component>

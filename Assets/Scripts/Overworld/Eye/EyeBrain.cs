@@ -17,6 +17,10 @@ public class EyeBrain : MonoBehaviour
 
     public GameObject playerDetectedState;
 
+    public EyeView pupil;
+
+    public Vector3 originalPupilPosition;
+
     public bool playerDetected;
 
     //add states driven events for multiple anims
@@ -25,6 +29,9 @@ public class EyeBrain : MonoBehaviour
 
     void OnEnable()
     {
+        //set for returnToIdleState
+        originalPupilPosition = pupil.transform.position;
+        
         detectBox.DeclarePlayerDetectedEvent += ChangePlayerDetected;
         
         ChangePlayerDetected(false);
