@@ -5,9 +5,8 @@ public interface IInventoryObject
 {
     public Vector2 ReturnGridVector2();
 
-    public event Action<bool, IInventoryObject> AnnouncePlayerHighlightEvent;
+    public event Action<bool, IInventoryObject, GridObjectParent> AnnouncePlayerHighlightEvent;
     public event Action<bool> AnnounceHighlightEvent;
-
     public event Action<bool> PlayerEquippedEvent;
     public event Action<bool> AnnouncePickUpPutDownEvent;
 

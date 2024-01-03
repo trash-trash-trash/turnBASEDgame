@@ -15,6 +15,13 @@ public class GridObject : MonoBehaviour, IInventoryObject
 
     public Transform parentTransform;
 
+    public GridObjectParent objectParent;
+
+    void OnEnable()
+    {
+        objectParent = GetComponentInParent<GridObjectParent>();
+    }
+
     public Transform GetParentTransform()
     {
         return parentTransform;
@@ -27,7 +34,7 @@ public class GridObject : MonoBehaviour, IInventoryObject
         return gridVector2;
     }
 
-    public event Action<bool, IInventoryObject> AnnouncePlayerHighlightEvent;
+    public event Action<bool, IInventoryObject, GridObjectParent> AnnouncePlayerHighlightEvent;
     public event Action<bool> AnnounceHighlightEvent;
 
     public event Action<bool> PlayerEquippedEvent;
@@ -43,7 +50,7 @@ public class GridObject : MonoBehaviour, IInventoryObject
     public void HighlightedByPlayer(bool input)
     {        
         playerHighlighted = input;
-        AnnouncePlayerHighlightEvent?.Invoke(input, this);
+        AnnouncePlayerHighlightEvent?.Invoke(input, this, objectParent);
     }
 
     public void PickUpPutDown(bool input)

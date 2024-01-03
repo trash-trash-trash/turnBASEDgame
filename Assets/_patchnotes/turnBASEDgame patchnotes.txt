@@ -315,3 +315,11 @@ TODO: Disable camera when out of view for performance?
 -- added EyeBrain.cs, EyePupilView.cs and three states; ReturnToIdle, Idle, DetectPlayer
 
 -- imported FastScriptReload
+
+4.4 
+
+-- added InventoryItemScriptableObject.cs to allow to creating Items SO with custom names, descriptions, stats effected, etc
+
+-- added InventoryTooltip.cs. Tooltip reads the current highlighted Item ParentObj and displays useful information to the player
+
+TODO: add controller support, update to equipping items as well, add sprites and placeholder stuff, work on Items

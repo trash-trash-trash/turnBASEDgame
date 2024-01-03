@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class GridObjectParent : MonoBehaviour
 {
-   // public InventoryGridObjectController controller;
+    public InventoryItemScriptableObject item;
+
+    // public InventoryGridObjectController controller;
    public InventoryGridCubeMover mover;
 
    public InventoryGrid currentGrid;
@@ -20,6 +22,8 @@ public class GridObjectParent : MonoBehaviour
     public Vector2 parentPosition;
 
     public List<Vector2> gridPositions = new List<Vector2>();
+
+    public bool initialised = false;
 
     void OnEnable()
     {
@@ -38,6 +42,8 @@ public class GridObjectParent : MonoBehaviour
 
             gridPositions.Add(obj.ReturnGridVector2());
         }
+
+        initialised = true;
     }
 
     void OnDisable()
@@ -49,7 +55,7 @@ public class GridObjectParent : MonoBehaviour
         }
     }
 
-    private void HighlightChildren(bool input, IInventoryObject iObj)
+    private void HighlightChildren(bool input, IInventoryObject iObj, GridObjectParent parentObj)
     {
         if (input)
         {
