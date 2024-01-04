@@ -323,3 +323,11 @@ TODO: Disable camera when out of view for performance?
 -- added InventoryTooltip.cs. Tooltip reads the current highlighted Item ParentObj and displays useful information to the player
 
 TODO: add controller support, update to equipping items as well, add sprites and placeholder stuff, work on Items
+
+4.5
+
+-- added InventoryKeyboard.cs. Can select and cycle through Inventory Items positively/negatively depending on if shift is held. Can reuse later for controller logic (pressing left/right to select items? L/R buttons?)
+
+-- added 4 placeholder sprites for Item Types
+
+-- note: mouse and keyboard dependant on each other, could centralise to PlayerControls.cs

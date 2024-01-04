@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2b59de8f33e6d48b9c2555b7cc46c4, type: 3}
   m_Name: TObj
   m_EditorClassIdentifier: 
+  itemType: 2
   name: TObj
   description: This one's shaped like a T!
   statsList:
   - stat: 2
     statVariable: -2
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 7f056165ccdd1804b887b77d11a1aae0, type: 3}

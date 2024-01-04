@@ -55,7 +55,7 @@ public class GridObjectParent : MonoBehaviour
         }
     }
 
-    private void HighlightChildren(bool input, IInventoryObject iObj, GridObjectParent parentObj)
+    public void HighlightChildren(bool input, IInventoryObject iObj, GridObjectParent parentObj)
     {
         if (input)
         {

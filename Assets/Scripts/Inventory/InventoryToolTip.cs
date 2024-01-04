@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryToolTip : MonoBehaviour
 {
+    //Inventory ToolTip displays useful information to the Player
+    //turns the Canvas on/off depending on currently highlighted Items
+    //text and image is set by the InventoryItemScriptableObject associated with the GridObjectParent of the highlighted Item
+    
     public InventoryGridItems gridItems;
 
     public GameObject tooltipCanvasGO;
@@ -17,6 +22,8 @@ public class InventoryToolTip : MonoBehaviour
     public TMP_Text itemStats;
     
     public TMP_Text itemDescription;
+
+    public Image itemTypeSprite;
     
     void OnEnable()
     {
@@ -87,9 +94,10 @@ public class InventoryToolTip : MonoBehaviour
             // Append each line to the existing text
             itemStats.text += $"{stat.stat}: {sign}{Mathf.Abs(stat.statVariable)}\n";
         }
-
-
+        
         itemDescription.text = $"<i>{currentObj.description}</i>";
+
+        itemTypeSprite.sprite = currentObj.itemSprite;
     }
 
     private void OnDisable()

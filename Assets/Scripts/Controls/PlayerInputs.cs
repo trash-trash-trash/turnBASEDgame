@@ -415,6 +415,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Tab"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3582d02-02e0-4165-b042-8f0bb40f181f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -424,7 +433,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard + Mouse"",
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -435,8 +444,19 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard + Mouse"",
                     ""action"": ""Shift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6348cdb1-78c4-4da6-87d2-9a7f5a43a9c0"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + Mouse"",
+                    ""action"": ""Tab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -468,6 +488,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_TetrisInventory = asset.FindActionMap("TetrisInventory", throwIfNotFound: true);
         m_TetrisInventory_Rotate = m_TetrisInventory.FindAction("Rotate", throwIfNotFound: true);
         m_TetrisInventory_Shift = m_TetrisInventory.FindAction("Shift", throwIfNotFound: true);
+        m_TetrisInventory_Tab = m_TetrisInventory.FindAction("Tab", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -639,12 +660,14 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private List<ITetrisInventoryActions> m_TetrisInventoryActionsCallbackInterfaces = new List<ITetrisInventoryActions>();
     private readonly InputAction m_TetrisInventory_Rotate;
     private readonly InputAction m_TetrisInventory_Shift;
+    private readonly InputAction m_TetrisInventory_Tab;
     public struct TetrisInventoryActions
     {
         private @PlayerInputs m_Wrapper;
         public TetrisInventoryActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Rotate => m_Wrapper.m_TetrisInventory_Rotate;
         public InputAction @Shift => m_Wrapper.m_TetrisInventory_Shift;
+        public InputAction @Tab => m_Wrapper.m_TetrisInventory_Tab;
         public InputActionMap Get() { return m_Wrapper.m_TetrisInventory; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -660,6 +683,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Shift.started += instance.OnShift;
             @Shift.performed += instance.OnShift;
             @Shift.canceled += instance.OnShift;
+            @Tab.started += instance.OnTab;
+            @Tab.performed += instance.OnTab;
+            @Tab.canceled += instance.OnTab;
         }
 
         private void UnregisterCallbacks(ITetrisInventoryActions instance)
@@ -670,6 +696,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Shift.started -= instance.OnShift;
             @Shift.performed -= instance.OnShift;
             @Shift.canceled -= instance.OnShift;
+            @Tab.started -= instance.OnTab;
+            @Tab.performed -= instance.OnTab;
+            @Tab.canceled -= instance.OnTab;
         }
 
         public void RemoveCallbacks(ITetrisInventoryActions instance)
@@ -719,5 +748,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     {
         void OnRotate(InputAction.CallbackContext context);
         void OnShift(InputAction.CallbackContext context);
+        void OnTab(InputAction.CallbackContext context);
     }
 }

@@ -50,6 +50,8 @@ public class PlayerControls : MonoBehaviour
 
     public event Action<bool> ShiftHeldEvent;
 
+    public event Action<bool> TabHeldEvent;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -73,6 +75,8 @@ public class PlayerControls : MonoBehaviour
         inputs.TetrisInventory.Rotate.performed += Rotate;
         inputs.TetrisInventory.Shift.performed += ShiftHeld;
         inputs.TetrisInventory.Shift.canceled += ShiftHeld;
+        inputs.TetrisInventory.Tab.performed += TabHeld;
+        inputs.TetrisInventory.Tab.canceled += TabHeld;
     }
 
     private void ShiftHeld(InputAction.CallbackContext context)
@@ -87,6 +91,15 @@ public class PlayerControls : MonoBehaviour
     private void Rotate(InputAction.CallbackContext context)
     {
         RotateEvent?.Invoke();
+    }
+
+    private void TabHeld(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            TabHeldEvent?.Invoke(true);
+
+        else
+            TabHeldEvent?.Invoke(false);
     }
 
     private void Movement(InputAction.CallbackContext context)
@@ -127,5 +140,7 @@ public class PlayerControls : MonoBehaviour
         inputs.TetrisInventory.Rotate.performed -= Rotate;
         inputs.TetrisInventory.Rotate.performed -= ShiftHeld;
         inputs.TetrisInventory.Rotate.canceled -= ShiftHeld;
+        inputs.TetrisInventory.Tab.performed -= TabHeld;
+        inputs.TetrisInventory.Tab.canceled -= TabHeld;
     }
 }

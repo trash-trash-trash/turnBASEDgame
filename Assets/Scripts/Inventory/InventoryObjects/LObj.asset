@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2b59de8f33e6d48b9c2555b7cc46c4, type: 3}
   m_Name: LObj
   m_EditorClassIdentifier: 
+  itemType: 1
   name: L Object
   description: An object shaped like an L. Wow!
   statsList:
   - stat: 0
     statVariable: 5
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 3d971493c6c758d469c98210f57b8faf, type: 3}

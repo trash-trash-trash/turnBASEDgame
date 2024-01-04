@@ -2,5 +2,6 @@ public enum ItemType
 {
     Heal,
     Weapon,
-    Armor
+    Armor,
+    Tool
 }
